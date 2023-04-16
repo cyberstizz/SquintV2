@@ -1,7 +1,10 @@
-
+package main.java.com.example.SquintV2.Models;
 
 
 
 
 @Entity
-(name ="users")
+@Table(name ="users")
+public class Users {
+
+}
