@@ -39,4 +39,8 @@ public class Users {
     public String getPasswordHash() {
         return this.password_hash;
     }
+
+    public Void setPasswordHash(String password_hash) {
+        this.password_hash = password_hash;
+    }
 }
