@@ -55,4 +55,8 @@ public class Users {
     public Boolean getAccessible() {
         return this.accessible;
     }
+
+    public Void setAccessible(Boolean accessible) {
+        this.accessible = accessible;
+    }
 }
