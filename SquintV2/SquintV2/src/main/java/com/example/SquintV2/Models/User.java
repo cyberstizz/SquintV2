@@ -43,4 +43,8 @@ public class Users {
     public Void setPasswordHash(String password_hash) {
         this.password_hash = password_hash;
     }
+
+    public String getEmail() {
+        return this.email;
+    }
 }
