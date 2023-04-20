@@ -26,4 +26,9 @@ public class Users {
 
     @Column(name="accesible")
     private Boolean accessible;
+
+
+    public String getUsername() {
+        return this.username;
+    }
 }
