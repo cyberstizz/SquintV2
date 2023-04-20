@@ -35,4 +35,8 @@ public class Users {
     public Void setUsername(String username) {
         this.username = username;
     }
+
+    public String getPasswordHash() {
+        return this.password_hash;
+    }
 }
