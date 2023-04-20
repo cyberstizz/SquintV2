@@ -17,4 +17,7 @@ public class Users {
 
     @Column(name="username")
     private String username;
+
+    @Column(name="password_hash")
+    private String password_hash;
 }
