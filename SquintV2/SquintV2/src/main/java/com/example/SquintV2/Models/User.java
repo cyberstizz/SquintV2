@@ -47,4 +47,8 @@ public class Users {
     public String getEmail() {
         return this.email;
     }
+
+    public Void setEmail(String email) {
+        this.email = email;
+    }
 }
