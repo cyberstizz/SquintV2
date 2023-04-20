@@ -20,4 +20,7 @@ public class Users {
 
     @Column(name="password_hash")
     private String password_hash;
+
+    @Column(name="email")
+    private String email;
 }
