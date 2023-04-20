@@ -32,7 +32,7 @@ public class Users {
         return this.username;
     }
 
-    public Voic setUsername(String username) {
+    public Void setUsername(String username) {
         this.username = username;
     }
 }
