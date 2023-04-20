@@ -31,4 +31,8 @@ public class Users {
     public String getUsername() {
         return this.username;
     }
+
+    public Voic setUsername(String username) {
+        this.username = username;
+    }
 }
