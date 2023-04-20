@@ -15,5 +15,6 @@ public class Users {
     @Id
     private Integer id;
 
-    
+    @Column(name="username")
+    private String username;
 }
