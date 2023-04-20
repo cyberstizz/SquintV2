@@ -23,4 +23,7 @@ public class Users {
 
     @Column(name="email")
     private String email;
+
+    @Column(name="accesible")
+    private Boolean accessible;
 }
