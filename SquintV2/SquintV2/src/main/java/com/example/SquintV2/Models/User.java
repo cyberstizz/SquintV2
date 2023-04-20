@@ -51,4 +51,8 @@ public class Users {
     public Void setEmail(String email) {
         this.email = email;
     }
+
+    public Boolean getAccessible() {
+        return this.accessible;
+    }
 }
