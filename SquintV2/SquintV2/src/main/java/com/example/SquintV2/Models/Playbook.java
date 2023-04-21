@@ -20,6 +20,9 @@ public class Playbook {
     private User user;
 
     @Column(name="reminders")
-    private Date reminders;
+    private Enum reminders;
+
+    @Column(name= "reminder_time")
+    private Date reminder_time;
 
 }
