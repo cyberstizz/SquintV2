@@ -14,3 +14,10 @@ import main.java.com.example.SquintV2.Enums.Reminder;
 import main.java.com.example.SquintV2.Enums.Reschedules;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
+
+
+@Entity
+@Table(name="alarm")
+public class Alarm {
+    
+}
