@@ -1,5 +1,7 @@
 package main.java.com.example.SquintV2.Models;
 
+import java.sql.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,5 +18,8 @@ public class Playbook {
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
+
+    @Column(name="reminders")
+    private Date reminders;
 
 }
