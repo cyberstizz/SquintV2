@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import main.java.com.example.SquintV2.Enums.Reminder;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
 
@@ -20,7 +21,7 @@ public class Playbook {
     private User user;
 
     @Column(name="reminders")
-    private Enum reminders;
+    private Reminder reminders;
 
     @Column(name= "reminder_time")
     private Date reminder_time;
