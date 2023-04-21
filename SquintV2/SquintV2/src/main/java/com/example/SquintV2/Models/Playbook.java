@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import main.java.com.example.SquintV2.Enums.Alarms;
 import main.java.com.example.SquintV2.Enums.Check_completion;
 import main.java.com.example.SquintV2.Enums.Reminder;
 import jakarta.persistence.ManyToOne;
@@ -29,5 +30,8 @@ public class Playbook {
 
     @Column(name= "check_completion")
     private Check_completion check_completion;
+
+    @Column(name= "alarm_types")
+    private Alarms alarm_types;
 
 }
