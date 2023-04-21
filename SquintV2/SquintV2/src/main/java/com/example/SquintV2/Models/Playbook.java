@@ -11,6 +11,7 @@ import main.java.com.example.SquintV2.Enums.Alarms;
 import main.java.com.example.SquintV2.Enums.Check_completion;
 import main.java.com.example.SquintV2.Enums.Conflicts;
 import main.java.com.example.SquintV2.Enums.Reminder;
+import main.java.com.example.SquintV2.Enums.Reschedules;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
 
@@ -39,6 +40,6 @@ public class Playbook {
     private Conflicts conflicts;
 
     @Column(name= "reschedules")
-    private boolean reschedules;
+    private Reschedules reschedules;
 
 }
