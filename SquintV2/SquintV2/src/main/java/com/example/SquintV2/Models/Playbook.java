@@ -38,4 +38,7 @@ public class Playbook {
     @Column(name= "conflicts")
     private Conflicts conflicts;
 
+    @Column(name= "reschedules")
+    private boolean reschedules;
+
 }
