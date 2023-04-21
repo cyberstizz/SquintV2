@@ -9,6 +9,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import main.java.com.example.SquintV2.Enums.Alarms;
 import main.java.com.example.SquintV2.Enums.Check_completion;
+import main.java.com.example.SquintV2.Enums.Conflicts;
 import main.java.com.example.SquintV2.Enums.Reminder;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
@@ -33,5 +34,8 @@ public class Playbook {
 
     @Column(name= "alarm_types")
     private Alarms alarm_types;
+
+    @Column(name= "conflicts")
+    private Conflicts conflicts;
 
 }
