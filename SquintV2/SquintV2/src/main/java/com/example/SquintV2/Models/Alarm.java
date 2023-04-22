@@ -19,5 +19,7 @@ import jakarta.persistence.JoinColumn;
 @Entity
 @Table(name="alarm")
 public class Alarm {
-    
+
+
+    @
 }

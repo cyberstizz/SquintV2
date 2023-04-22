@@ -42,4 +42,18 @@ public class Playbook {
     @Column(name= "reschedules")
     private Reschedules reschedules;
 
+    public reminder getReminder() {
+        return this.reminder;
+    }
+
+    public void setReminder(Reminder reminder) {
+        this.reminder = reminder;
+    }
+
+    public reminder_time getReminderTime() {
+        return this.reminder_time;
+    }
+
+    
+
 }
