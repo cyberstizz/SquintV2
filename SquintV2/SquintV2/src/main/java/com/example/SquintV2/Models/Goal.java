@@ -55,7 +55,11 @@ public class Goal {
         this.description = description;
     }
 
-    public Date getDeadline(Date deadline) {
+    public Date getDeadline() {
         return this.deadline;
+    }
+
+    public void setDeadline(Date deadline) {
+        this.deadline = deadline;
     }
  }
