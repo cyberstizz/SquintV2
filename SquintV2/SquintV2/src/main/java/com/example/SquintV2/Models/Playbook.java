@@ -88,4 +88,7 @@ public class Playbook {
         return this.reschedules;
     }
 
+    public void setReschedules(Reschedules reschedules) {
+        this.reschedules = reschedules;
+    }
 }
