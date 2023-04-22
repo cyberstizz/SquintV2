@@ -2,6 +2,8 @@ package main.java.com.example.SquintV2.Models;
 
 import java.sql.Date;
 
+import javax.annotation.processing.Completion;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -56,6 +58,10 @@ public class Playbook {
 
     public void setReminderTime(reminder_time reminder_time) {
         this.reminder_time = reminder_time;
+    }
+
+    public Check_completion getCheckCompletioin() {
+        return this.check_completion;
     }
 
 
