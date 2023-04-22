@@ -64,5 +64,9 @@ public class Playbook {
         return this.check_completion;
     }
 
+    public void setCheckCompletion(Check_completion check_completion) {
+        this.check_completion = check_completion;
+    }
+
 
 }
