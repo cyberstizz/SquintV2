@@ -54,4 +54,8 @@ public class Goal {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public Date getDeadline(Date deadline) {
+        return this.deadline;
+    }
  }
