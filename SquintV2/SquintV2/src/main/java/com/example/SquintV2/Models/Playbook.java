@@ -76,4 +76,8 @@ public class Playbook {
         this.alarm_types = alarmTypes;
     }
 
+    public Conflicts getConflicts() {
+        return this.conflicts;
+    }
+
 }
