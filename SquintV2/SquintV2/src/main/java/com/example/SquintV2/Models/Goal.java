@@ -13,5 +13,8 @@ import jakarta.persistence.JoinColumn;
 @Entity
 @Table(name="Goal")
 public class Goal {
-    
+
+    @GeneratedValue
+    @Id
+    private Integer goal_id;
 }
