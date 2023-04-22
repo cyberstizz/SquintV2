@@ -30,4 +30,8 @@ public class Goal {
 
     @Column(name = "deadline")
     private Date deadline;
+
+    public User getUserId() {
+        return this.user_id;
+    }
 }
