@@ -54,6 +54,9 @@ public class Playbook {
         return this.reminder_time;
     }
 
-    
+    public void setReminderTime(reminder_time reminder_time) {
+        this.reminder_time = reminder_time;
+    }
+
 
 }
