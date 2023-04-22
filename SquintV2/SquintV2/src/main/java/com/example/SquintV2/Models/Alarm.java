@@ -43,5 +43,9 @@ public class Alarm {
         return this.alarm_time;
     }
 
+    public void setAlarmTime(Date alarm_time) {
+        this.alarm_time = alarm_time;
+    }
+
 
 }   
