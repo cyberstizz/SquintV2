@@ -21,5 +21,7 @@ import jakarta.persistence.JoinColumn;
 public class Alarm {
 
 
-    @
+    @GeneratedValue
+    @Id
+    private Integer alarm_id;
 }
