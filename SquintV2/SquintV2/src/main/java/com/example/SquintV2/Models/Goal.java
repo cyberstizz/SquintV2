@@ -21,4 +21,7 @@ public class Goal {
     @ManyToOne
     @JoinColumn(name="user_id", nullable = false)
     private User user_id;
+
+    @Column(name = "name")
+    private String name;
 }
