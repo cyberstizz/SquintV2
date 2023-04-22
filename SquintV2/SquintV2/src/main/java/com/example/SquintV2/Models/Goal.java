@@ -34,4 +34,8 @@ public class Goal {
     public User getUserId() {
         return this.user_id;
     }
+
+    public void setUserId(User user_id) {
+        this.user_id = user_id;
+    }
 }
