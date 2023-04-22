@@ -24,4 +24,10 @@ public class Alarm {
     @GeneratedValue
     @Id
     private Integer alarm_id;
-}
+
+    @ManyToOne
+    @JoinColumn(name="user_id", nullable = false)
+    private User user_id;
+
+
+}   

@@ -24,7 +24,7 @@ public class Playbook {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    private User user_id;
 
     @Column(name="reminders")
     private Reminder reminders;
