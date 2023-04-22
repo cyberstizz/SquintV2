@@ -84,4 +84,8 @@ public class Playbook {
         this.conflicts = conflicts;
     }
 
+    public Reschedules getReschedules() {
+        return this.reschedules;
+    }
+
 }
