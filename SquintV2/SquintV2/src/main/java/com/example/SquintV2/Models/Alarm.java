@@ -39,5 +39,9 @@ public class Alarm {
         this.user_id = user_id;
     }
 
+    public Date getAlarmTime() {
+        return this.alarm_time;
+    }
+
 
 }   
