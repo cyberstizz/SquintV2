@@ -80,4 +80,8 @@ public class Playbook {
         return this.conflicts;
     }
 
+    public void setConflicts(Conflicts conflicts) {
+        this.conflicts = conflicts;
+    }
+
 }
