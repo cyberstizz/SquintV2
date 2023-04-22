@@ -20,7 +20,6 @@ import jakarta.persistence.JoinColumn;
 @Table(name="alarm")
 public class Alarm {
 
-
     @GeneratedValue
     @Id
     private Integer alarm_id;
@@ -31,6 +30,10 @@ public class Alarm {
 
     @Column(name = "alarm_time")
     private Date alarm_time;
+
+    public User getUserId() {
+        return this.user_id;
+    }
 
 
 }   
