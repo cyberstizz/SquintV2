@@ -38,4 +38,8 @@ public class Goal {
     public void setUserId(User user_id) {
         this.user_id = user_id;
     }
-}
+
+    public String getName() {
+        return this.name;
+    }
+ }
