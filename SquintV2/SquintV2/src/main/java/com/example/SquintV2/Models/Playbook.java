@@ -68,5 +68,8 @@ public class Playbook {
         this.check_completion = check_completion;
     }
 
+    public Alarms getAlarmType() {
+        return this.alarm_types;
+    }
 
 }
