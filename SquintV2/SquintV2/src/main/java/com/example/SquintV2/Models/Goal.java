@@ -27,4 +27,7 @@ public class Goal {
 
     @Column(name = "description")
     private String description;
+
+    @Column(name = "deadline")
+    private Date deadline;
 }
