@@ -72,4 +72,8 @@ public class Playbook {
         return this.alarm_types;
     }
 
+    public void setAlarmTypes(Alarms alarmTypes) {
+        this.alarm_types = alarmTypes;
+    }
+
 }
