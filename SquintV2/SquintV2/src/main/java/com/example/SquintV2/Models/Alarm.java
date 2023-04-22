@@ -29,5 +29,8 @@ public class Alarm {
     @JoinColumn(name="user_id", nullable = false)
     private User user_id;
 
+    @Column(name = "alarm_time")
+    private Date alarm_time;
+
 
 }   
