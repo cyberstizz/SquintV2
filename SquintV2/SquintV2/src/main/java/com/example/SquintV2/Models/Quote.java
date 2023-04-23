@@ -19,4 +19,7 @@ public class Quote {
     @Column(name="quote_type")
     private String quote_type;
 
+    @Column(name="text")
+    private String quote;
+
 }
