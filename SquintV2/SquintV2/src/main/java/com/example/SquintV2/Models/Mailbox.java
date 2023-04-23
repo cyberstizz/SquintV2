@@ -13,5 +13,8 @@ import jakarta.persistence.JoinColumn;
 @Entity
 @Table(name="mailbox")
 public class Mailbox{
-    
+
+
+    @Column(name="message")
+    private String message;
 }
