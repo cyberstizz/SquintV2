@@ -26,4 +26,7 @@ public class Mailbox{
     @JoinColumn(name="user_id", nullable= false)
     private User recipient_id;
 
+    @Column(name="header")
+    private String header;
+
 }
