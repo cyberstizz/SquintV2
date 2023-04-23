@@ -37,8 +37,12 @@ public class Daily_schedule {
         this.user_id = user_id;
     }
 
-    public Date getTimeBlock(Date time_block) {
+    public Date getTimeBlock() {
         return this.time_block;
+    }
+
+    public void setTimeBlock(Date time_block) {
+        this.time_block = time_block;
     }
 
 }
