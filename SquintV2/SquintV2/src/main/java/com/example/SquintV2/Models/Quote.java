@@ -16,4 +16,7 @@ public class Quote {
     @Id
     private Integer quote_id;
 
+    @Column(name="quote_type")
+    private String quote_type;
+
 }
