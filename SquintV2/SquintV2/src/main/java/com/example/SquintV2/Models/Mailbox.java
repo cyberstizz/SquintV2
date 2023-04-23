@@ -32,8 +32,8 @@ public class Mailbox{
     @Column(name="body")
     private String body;
 
-    public User getSenderId() {
-        return this.sender_id;
+    public String getHeader() {
+        return this.header;
     }
 
 }
