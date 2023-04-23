@@ -45,4 +45,8 @@ public class Daily_schedule {
         this.time_block = time_block;
     }
 
+    public String getTask() {
+        return this.task;
+    }
+
 }
