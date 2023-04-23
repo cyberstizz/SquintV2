@@ -26,4 +26,7 @@ public class Daily_schedule {
     @Column(name="time_block")
     private Array<Date> time_block;
 
+    @Column(name="task")
+    private String task;
+
 }
