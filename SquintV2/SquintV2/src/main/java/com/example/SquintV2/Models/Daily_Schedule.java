@@ -13,5 +13,10 @@ import jakarta.persistence.JoinColumn;
 @Entity
 @Table(name="daily_schedule")
 public class Daily_schedule {
+
+
+    @GeneratedValue
+    @Id
+    private Integer schedule_id;
     
 }
