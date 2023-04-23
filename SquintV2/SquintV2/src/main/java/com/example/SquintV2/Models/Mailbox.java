@@ -17,4 +17,9 @@ public class Mailbox{
 
     @Column(name="message")
     private String message;
+
+    @ManyToOne
+    @JoinColumn(name="user_id", nullable= false)
+    private User sender_id;
+
 }
