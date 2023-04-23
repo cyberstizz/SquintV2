@@ -37,4 +37,8 @@ public class Daily_schedule {
         this.user_id = user_id;
     }
 
+    public Date getTimeBlock(Date time_block) {
+        return this.time_block;
+    }
+
 }
