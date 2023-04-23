@@ -30,4 +30,8 @@ public class Quote {
         this.quote_type = quoteType;
     }
 
+    public String getQuote() {
+        return this.quote;
+    }
+
 }
