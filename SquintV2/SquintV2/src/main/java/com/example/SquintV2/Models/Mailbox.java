@@ -14,9 +14,9 @@ import jakarta.persistence.JoinColumn;
 @Table(name="mailbox")
 public class Mailbox{
 
-
-    @Column(name="message")
-    private String message;
+    @GeneratedValue
+    @Id
+    private Integer message_id;
 
     @ManyToOne
     @JoinColumn(name="user_id", nullable= false)
@@ -31,5 +31,7 @@ public class Mailbox{
 
     @Column(name="body")
     private String body;
+
+    public String get
 
 }
