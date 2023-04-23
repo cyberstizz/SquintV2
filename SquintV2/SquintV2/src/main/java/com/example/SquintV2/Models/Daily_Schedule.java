@@ -29,8 +29,12 @@ public class Daily_schedule {
     @Column(name="task")
     private String task;
 
-    public User getUser() {
+    public User getUserId() {
         return this.user_id;
+    }
+
+    public void setUserId(User user_id) {
+        this.user_id = user_id;
     }
 
 }
