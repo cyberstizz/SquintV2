@@ -40,4 +40,8 @@ public class Mailbox{
         this.header = header;
     }
 
+    public String getBody() {
+        return this.body;
+    }
+
 }
