@@ -26,4 +26,8 @@ public class Quote {
         return this.quote_type;
     }
 
+    public void setQuoteType(String quoteType) {
+        this.quote_type = quoteType;
+    }
+
 }
