@@ -29,4 +29,7 @@ public class Mailbox{
     @Column(name="header")
     private String header;
 
+    @Column(name="body")
+    private String body;
+
 }
