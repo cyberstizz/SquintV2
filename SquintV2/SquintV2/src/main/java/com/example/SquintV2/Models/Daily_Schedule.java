@@ -49,4 +49,8 @@ public class Daily_schedule {
         return this.task;
     }
 
+    public void setTask(String task) {
+        this.task = task;
+    }
+
 }
