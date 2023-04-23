@@ -36,4 +36,8 @@ public class Mailbox{
         return this.header;
     }
 
+    public void setHeader(String header) {
+        this.header = header;
+    }
+
 }
