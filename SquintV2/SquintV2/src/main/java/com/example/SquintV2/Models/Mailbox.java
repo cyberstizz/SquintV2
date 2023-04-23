@@ -32,6 +32,10 @@ public class Mailbox{
     @Column(name="body")
     private String body;
 
+    public Integer getMessageId() {
+        return this.messageId;
+    }
+
     public String getHeader() {
         return this.header;
     }
