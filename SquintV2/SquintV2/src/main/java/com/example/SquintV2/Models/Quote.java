@@ -34,4 +34,8 @@ public class Quote {
         return this.quote;
     }
 
+    public void setQuote(String quote) {
+        this.quote = quote;
+    }
+
 }
