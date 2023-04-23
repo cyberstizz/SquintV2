@@ -13,5 +13,9 @@ import jakarta.persistence.JoinColumn;
 @Entity
 @Table(name="friendship")
 public class Friendship{
-    
+
+
+    @GeneratedValue
+    @Id
+    private Integer friendship_id;
 }
