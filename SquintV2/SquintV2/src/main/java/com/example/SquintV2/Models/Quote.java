@@ -22,4 +22,8 @@ public class Quote {
     @Column(name="text")
     private String quote;
 
+    public String getQuoteType() {
+        return this.quote_type;
+    }
+
 }
