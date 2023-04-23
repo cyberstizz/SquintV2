@@ -23,4 +23,7 @@ public class Daily_schedule {
     @JoinColumn(name="user_id", nullable= false)
     private User user_id;
 
+    @Column(name="time_block")
+    private Array<Date> time_block;
+
 }
