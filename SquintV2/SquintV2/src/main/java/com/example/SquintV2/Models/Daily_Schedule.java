@@ -29,4 +29,8 @@ public class Daily_schedule {
     @Column(name="task")
     private String task;
 
+    public User getUser() {
+        return this.user_id;
+    }
+
 }
