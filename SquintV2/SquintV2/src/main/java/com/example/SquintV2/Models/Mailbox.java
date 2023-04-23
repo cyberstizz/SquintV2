@@ -9,3 +9,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
+
+@Entity
+@Table(name="mailbox")
+public class Mailbox{
+    
+}
