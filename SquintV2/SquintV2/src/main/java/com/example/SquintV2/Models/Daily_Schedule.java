@@ -18,5 +18,9 @@ public class Daily_schedule {
     @GeneratedValue
     @Id
     private Integer schedule_id;
-    
+
+    @ManyToOne
+    @JoinColumn(name="user_id", nullable= false)
+    private User user_id;
+
 }
