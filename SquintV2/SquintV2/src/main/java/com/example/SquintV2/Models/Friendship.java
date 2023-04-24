@@ -38,4 +38,9 @@ public class Friendship{
         this.friendship_id = friendship_id;
     }
 
+
+    public User getUserId() {
+        return this.user_id;
+    }
+
 }
