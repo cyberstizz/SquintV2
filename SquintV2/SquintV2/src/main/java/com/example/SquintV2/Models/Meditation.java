@@ -51,4 +51,8 @@ public class Meditation{
         this.current_streak = current_streak;
     }
 
+    public Integer getLongestStreak() {
+        return this.longest_streak;
+    }
+
 }
