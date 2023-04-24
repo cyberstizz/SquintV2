@@ -12,3 +12,6 @@ import jakarta.persistence.JoinColumn;
 
 @Entity
 @Table(name="affirmation")
+public class Affirmation{
+    
+}
