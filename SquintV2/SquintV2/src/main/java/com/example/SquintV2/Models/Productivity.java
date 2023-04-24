@@ -13,5 +13,9 @@ import jakarta.persistence.JoinColumn;
 @Entity
 @Table(name="prodictivity")
 public class Productivity{
-    
+
+
+    @GeneratedValue
+    @Id
+    private Integer productivity_id;
 }
