@@ -56,4 +56,8 @@ public class Book{
         this.pages = pages;
     }
 
+    public Integer getCurrentPage() {
+        return  this.current_page;
+    }
+
 }
