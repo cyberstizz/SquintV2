@@ -34,5 +34,9 @@ public class Photo{
         return this.photo_id;
     }
 
+    public void setInteger(Integer photo_id) {
+        this.photo_id = photo_id;
+    }
+
 
 }
