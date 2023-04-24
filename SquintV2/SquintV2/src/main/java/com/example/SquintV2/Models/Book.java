@@ -52,4 +52,8 @@ public class Book{
         return this.pages;
     }
 
+    public void setPages(Integer pages) {
+        this.pages = pages;
+    }
+
 }
