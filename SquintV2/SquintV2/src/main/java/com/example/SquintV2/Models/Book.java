@@ -12,3 +12,6 @@ import jakarta.persistence.JoinColumn;
 
 @Entity
 @Table(name="book")
+public class Book{
+    
+}
