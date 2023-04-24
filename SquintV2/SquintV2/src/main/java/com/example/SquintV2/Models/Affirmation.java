@@ -13,5 +13,14 @@ import jakarta.persistence.JoinColumn;
 @Entity
 @Table(name="affirmation")
 public class Affirmation{
-    
+
+    @GeneratedValue
+    @Id
+    private Integer affirmation_id;
+
+    @ManyToOne
+    @JoinColumn(name="user_id", nullable=false)
+    private Integer user_id;
+
+
 }
