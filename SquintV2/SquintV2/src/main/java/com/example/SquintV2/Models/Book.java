@@ -48,4 +48,8 @@ public class Book{
         this.user_id = user_id;
     }
 
+    public Integer getPages() {
+        return this.pages;
+    }
+
 }
