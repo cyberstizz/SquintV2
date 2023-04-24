@@ -30,8 +30,12 @@ public class Friendship{
     @Column(name="status")
     private String status;
 
-    public Integer getFreidship_id() {
+    public Integer getFriendship_id() {
         return this.friendship_id;
+    }
+
+    public void setFriendship_id(Integer friendship_id) {
+        this.friendship_id = friendship_id;
     }
 
 }
