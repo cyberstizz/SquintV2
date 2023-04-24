@@ -38,5 +38,9 @@ public class Photo{
         this.photo_id = photo_id;
     }
 
+    public User getUserId() {
+        return this.user_id;
+    }
+
 
 }
