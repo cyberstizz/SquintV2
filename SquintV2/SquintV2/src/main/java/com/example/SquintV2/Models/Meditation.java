@@ -47,4 +47,8 @@ public class Meditation{
         return this.current_streak;
     }
 
+    public void setCurrentStreak(Integer current_streak) {
+        this.current_streak = current_streak;
+    }
+
 }
