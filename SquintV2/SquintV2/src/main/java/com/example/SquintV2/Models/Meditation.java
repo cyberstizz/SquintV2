@@ -27,5 +27,8 @@ public class Meditation{
     @Column(name="longest_streak")
     private Integer longest_streak;
 
+    public Integer getUserId() {
+        return this.user_id;
+    }
 
 }
