@@ -47,4 +47,8 @@ public class Friendship{
         this.user_id = user_id;
     }
 
+    public User getfriendId() {
+        return this.friend_id;
+    }
+
 }
