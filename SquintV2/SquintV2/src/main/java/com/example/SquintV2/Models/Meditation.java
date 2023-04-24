@@ -17,4 +17,9 @@ public class Meditation{
     @ManyToOne
     @JoinColumn(name="user_id", nullable=false)
     private Integer user_id;
+
+    @Column(name="total_time")
+    private String total_time;
+
+
 }
