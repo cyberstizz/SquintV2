@@ -40,4 +40,8 @@ public class Book{
         this.book_id = book_id;
     }
 
+    public Integer getUserId() {
+        return this.user_id;
+    }
+
 }
