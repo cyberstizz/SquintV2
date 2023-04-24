@@ -59,4 +59,8 @@ public class Friendship{
         return this.status;
     }
 
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
 }
