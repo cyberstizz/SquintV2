@@ -55,4 +55,8 @@ public class Friendship{
         this.friend_id = friend_id;
     }
 
+    public String getStatus() {
+        return this.status;
+    }
+
 }
