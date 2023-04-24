@@ -65,7 +65,7 @@ public class Book{
     }
 
     public Date getCompletionDate() {
-        return  this.completion_date;
+        return this.completion_date;
     }
 
 }
