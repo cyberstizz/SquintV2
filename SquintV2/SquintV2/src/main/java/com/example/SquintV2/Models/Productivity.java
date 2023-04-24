@@ -18,4 +18,9 @@ public class Productivity{
     @GeneratedValue
     @Id
     private Integer productivity_id;
+
+    @ManyToOne
+    @JoinColumn(name="user_id", nullable=false)
+
+
 }
