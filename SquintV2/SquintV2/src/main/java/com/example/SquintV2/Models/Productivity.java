@@ -38,5 +38,9 @@ public class Productivity{
         return this.user_id;
     }
 
+    public void setUserId(User user) {
+        this.user_id = user_id;
+    }
+
 
 }
