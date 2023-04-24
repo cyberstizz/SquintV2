@@ -12,7 +12,7 @@ import jakarta.persistence.JoinColumn;
 
 @Entity
 @Table(name="daily_schedule")
-public class Daily_schedule {
+public class DailySchedule {
 
 
     @GeneratedValue
