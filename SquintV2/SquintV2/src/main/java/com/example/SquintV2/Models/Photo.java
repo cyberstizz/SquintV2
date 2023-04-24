@@ -23,5 +23,8 @@ public class Photo{
     @JoinColumn(name="user_id", nullable=false)
     private User user_id;
 
-    
+    @Column(name="path_or_url")
+    private String path_or_url;
+
+
 }
