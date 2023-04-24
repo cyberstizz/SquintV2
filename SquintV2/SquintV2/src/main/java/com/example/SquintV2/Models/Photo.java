@@ -58,5 +58,9 @@ public class Photo{
         return this.goal_id;
     }
 
+    public void setGoalId(Integer goal_id) {
+        this.goal_id = goal_id;
+    }
+
 
 }
