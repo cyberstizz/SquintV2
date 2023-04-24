@@ -23,4 +23,9 @@ public class Meditation{
 
     @Column(name="current_streak")
     private Integer current_streak;
+
+    @Column(name="longest_streak")
+    private Integer longest_streak;
+
+
 }
