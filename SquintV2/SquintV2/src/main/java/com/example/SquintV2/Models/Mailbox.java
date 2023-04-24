@@ -20,11 +20,11 @@ public class Mailbox{
 
     @ManyToOne
     @JoinColumn(name="user_id", nullable= false)
-    private User sender_id;
+    private Integer sender_id;
 
     @ManyToOne
     @JoinColumn(name="user_id", nullable= false)
-    private User recipient_id;
+    private Integer recipient_id;
 
     @Column(name="header")
     private String header;

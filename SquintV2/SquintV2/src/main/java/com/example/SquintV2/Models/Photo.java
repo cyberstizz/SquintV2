@@ -43,7 +43,7 @@ public class Photo{
     }
 
     public void setUserId(Integer user_id) {
-        this.user_id = user_id
+        this.user_id = user_id;
     }
 
 

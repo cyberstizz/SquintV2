@@ -21,12 +21,12 @@ public class Alarm {
 
     @ManyToOne
     @JoinColumn(name="user_id", nullable = false)
-    private User user_id;
+    private Integer user_id;
 
     @Column(name = "alarm_time")
     private Date alarm_time;
 
-    public User getUserId() {
+    public Integer getUserId() {
         return this.user_id;
     }
 
