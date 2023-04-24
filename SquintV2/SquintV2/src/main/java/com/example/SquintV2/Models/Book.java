@@ -29,4 +29,7 @@ public class Book{
     @Column(name="current_page")
     private Integer current_page;
 
+    @Column(name="completion_date")
+    private Date completion_Date;
+
 }
