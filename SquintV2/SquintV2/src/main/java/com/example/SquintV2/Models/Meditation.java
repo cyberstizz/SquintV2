@@ -31,4 +31,8 @@ public class Meditation{
         return this.user_id;
     }
 
+    public void setUserId(Integer user_id) {
+        this.user_id = user_id;
+    }
+
 }
