@@ -22,5 +22,9 @@ public class Affirmation{
     @JoinColumn(name="user_id", nullable=false)
     private Integer user_id;
 
+    public Integer getAffirmationId() {
+        return this.affirmation_id;
+    }
+
 
 }
