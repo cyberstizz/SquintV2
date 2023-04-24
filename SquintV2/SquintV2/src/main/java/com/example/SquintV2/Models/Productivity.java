@@ -26,5 +26,9 @@ public class Productivity{
     @Column(name="date")
     private Date date;
 
+    public Integer getProductivityId() {
+        return this.productivity_id;
+    }
+
 
 }
