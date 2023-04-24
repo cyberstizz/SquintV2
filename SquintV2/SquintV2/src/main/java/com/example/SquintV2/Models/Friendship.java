@@ -43,4 +43,8 @@ public class Friendship{
         return this.user_id;
     }
 
+    public void setUserId(User user_id) {
+        this.user_id = user_id;
+    }
+
 }
