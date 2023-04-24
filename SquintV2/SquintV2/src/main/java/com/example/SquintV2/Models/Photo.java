@@ -50,5 +50,9 @@ public class Photo{
         return this.path_or_url;
     }
 
+    public void setPathOrUrl(String path_or_url) {
+        this.path_or_url = path_or_url;
+    }
+
 
 }
