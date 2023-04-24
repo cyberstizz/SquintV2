@@ -43,4 +43,8 @@ public class Productivity{
     }
 
 
+    public Date getDate() {
+        return this.date;
+    }
+
 }
