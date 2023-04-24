@@ -55,4 +55,8 @@ public class Meditation{
         return this.longest_streak;
     }
 
+    public void setLongestStreak(Ingeger longest_streak) {
+        this.longest_streak = longest_streak;
+    }
+
 }
