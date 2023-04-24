@@ -43,4 +43,8 @@ public class Meditation{
         this.total_time = total_time;
     }
 
+    public Integer getCurrentStreak() {
+        return this.current_streak;
+    }
+
 }
