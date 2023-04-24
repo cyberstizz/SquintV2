@@ -34,5 +34,9 @@ public class Productivity{
         this.productivity_id = productivity_id;
     }
 
+    public User getUserId() {
+        return this.user_id;
+    }
+
 
 }
