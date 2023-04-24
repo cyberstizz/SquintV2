@@ -46,5 +46,9 @@ public class Photo{
         this.user_id = user_id;
     }
 
+    public String getPathOrUrl() {
+        return this.path_or_url;
+    }
+
 
 }
