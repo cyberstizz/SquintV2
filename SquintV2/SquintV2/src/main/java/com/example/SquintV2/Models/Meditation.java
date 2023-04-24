@@ -21,5 +21,6 @@ public class Meditation{
     @Column(name="total_time")
     private String total_time;
 
-
+    @Column(name="current_streak")
+    private Integer current_streak;
 }
