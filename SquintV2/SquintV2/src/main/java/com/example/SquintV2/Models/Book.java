@@ -57,7 +57,11 @@ public class Book{
     }
 
     public Integer getCurrentPage() {
-        return  this.current_page;
+        return this.current_page;
+    }
+
+    public void setCurrentPage(Integer current_page) {
+        this.current_page = current_page;
     }
 
 }
