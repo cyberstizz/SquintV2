@@ -30,5 +30,9 @@ public class Productivity{
         return this.productivity_id;
     }
 
+    public void setProductivityId(Integer productivity_id) {
+        this.productivity_id = productivity_id;
+    }
+
 
 }
