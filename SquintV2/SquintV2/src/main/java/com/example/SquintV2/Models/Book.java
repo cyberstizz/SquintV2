@@ -36,4 +36,8 @@ public class Book{
         return this.book_id;
     }
 
+    public void setBookId(Integer book_id) {
+        this.book_id = book_id;
+    }
+
 }
