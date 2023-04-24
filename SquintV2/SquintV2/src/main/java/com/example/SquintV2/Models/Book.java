@@ -23,4 +23,7 @@ public class Book{
     @JoinColumn(name="user_id")
     private Integer user_id;
 
+    @Column(name="pages")
+    private Integer pages;
+
 }
