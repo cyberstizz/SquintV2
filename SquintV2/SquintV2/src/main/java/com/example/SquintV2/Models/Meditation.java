@@ -35,4 +35,9 @@ public class Meditation{
         this.user_id = user_id;
     }
 
+
+    public String getTotalTime() {
+        return this.total_time;
+    }
+
 }
