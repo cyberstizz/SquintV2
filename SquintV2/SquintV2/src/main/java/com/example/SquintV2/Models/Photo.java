@@ -38,8 +38,12 @@ public class Photo{
         this.photo_id = photo_id;
     }
 
-    public User getUserId() {
+    public Integer getUserId() {
         return this.user_id;
+    }
+
+    public void setUserId(Integer user_id) {
+        this.user_id = user_id
     }
 
 

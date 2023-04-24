@@ -21,7 +21,7 @@ public class Productivity{
 
     @ManyToOne
     @JoinColumn(name="user_id", nullable=false)
-    private User user_id;
+    private Integer user_id;
 
     @Column(name="date")
     private Date date;
@@ -34,11 +34,11 @@ public class Productivity{
         this.productivity_id = productivity_id;
     }
 
-    public User getUserId() {
+    public Integer getUserId() {
         return this.user_id;
     }
 
-    public void setUserId(User user) {
+    public void setUserId(Integer user_id) {
         this.user_id = user_id;
     }
 

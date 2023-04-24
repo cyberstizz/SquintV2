@@ -20,7 +20,7 @@ public class Goal {
 
     @ManyToOne
     @JoinColumn(name="user_id", nullable = false)
-    private User user_id;
+    private Integer user_id;
 
     @Column(name = "name")
     private String name;
@@ -31,11 +31,11 @@ public class Goal {
     @Column(name = "deadline")
     private Date deadline;
 
-    public User getUserId() {
+    public Integer getUserId() {
         return this.user_id;
     }
 
-    public void setUserId(User user_id) {
+    public void setUserId(Integer user_id) {
         this.user_id = user_id;
     }
 
