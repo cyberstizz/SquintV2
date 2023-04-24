@@ -47,8 +47,12 @@ public class Friendship{
         this.user_id = user_id;
     }
 
-    public User getfriendId() {
+    public User getFriendId() {
         return this.friend_id;
+    }
+
+    public void setFriendId() {
+        this.friend_id = friend_id;
     }
 
 }
