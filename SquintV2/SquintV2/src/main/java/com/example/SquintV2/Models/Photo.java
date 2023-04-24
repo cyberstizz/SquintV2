@@ -12,3 +12,10 @@ import jakarta.persistence.JoinColumn;
 
 @Entity
 @Table(name="photo")
+public class Photo{
+
+
+    @GeneratedValue
+    @Id
+    private Integer photo_id;
+}
