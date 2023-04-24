@@ -26,5 +26,13 @@ public class Photo{
     @Column(name="path_or_url")
     private String path_or_url;
 
+    @ManyToOne
+    @JoinColumn(name="goal_id", nullable=true)
+    private Integer goal_id;
+
+    public Integer getPhotoId() {
+        return this.photo_id;
+    }
+
 
 }
