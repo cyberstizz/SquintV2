@@ -54,5 +54,9 @@ public class Photo{
         this.path_or_url = path_or_url;
     }
 
+    public Integer getGoalId() {
+        return this.goal_id;
+    }
+
 
 }
