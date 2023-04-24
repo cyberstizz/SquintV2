@@ -32,4 +32,8 @@ public class Book{
     @Column(name="completion_date")
     private Date completion_Date;
 
+    public Integer getBookId() {
+        return this.book_id;
+    }
+
 }
