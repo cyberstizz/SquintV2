@@ -19,5 +19,8 @@ public class Book{
     @Id
     private Integer book_id;
 
-    
+    @ManyToOne
+    @JoinColumn(name="user_id")
+    private Integer user_id;
+
 }
