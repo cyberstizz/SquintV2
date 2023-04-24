@@ -13,5 +13,11 @@ import jakarta.persistence.JoinColumn;
 @Entity
 @Table(name="book")
 public class Book{
+
+
+    @GeneratedValue
+    @Id
+    private Integer book_id;
+
     
 }
