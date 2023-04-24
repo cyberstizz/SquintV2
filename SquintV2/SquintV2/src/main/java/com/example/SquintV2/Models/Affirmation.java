@@ -26,5 +26,9 @@ public class Affirmation{
         return this.affirmation_id;
     }
 
+    public void setAffirmationId(Integer affirmation_id) {
+        this.affirmation_id = affirmation_id;
+    }
+
 
 }
