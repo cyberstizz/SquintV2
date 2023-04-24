@@ -30,7 +30,7 @@ public class Book{
     private Integer current_page;
 
     @Column(name="completion_date")
-    private Date completion_Date;
+    private Date completion_date;
 
     public Integer getBookId() {
         return this.book_id;
@@ -62,6 +62,10 @@ public class Book{
 
     public void setCurrentPage(Integer current_page) {
         this.current_page = current_page;
+    }
+
+    public Date getCompletionDate() {
+        return  this.completion_date;
     }
 
 }
