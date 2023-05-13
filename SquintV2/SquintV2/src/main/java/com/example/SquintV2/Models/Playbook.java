@@ -21,7 +21,6 @@ import jakarta.persistence.JoinColumn;
 @Table(value ="playbook")
 public class Playbook {
 
-    @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user_id;
 
