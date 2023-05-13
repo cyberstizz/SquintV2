@@ -21,7 +21,7 @@ import main.java.com.example.SquintV2.Enums.Reschedules;
 public class Playbook {
 
     @Id @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = primaryKeyType.PARTITIONED)
-    private User user_id;
+    private Integer user_id;
 
     @Column(name="reminders")
     private Reminder reminders;
