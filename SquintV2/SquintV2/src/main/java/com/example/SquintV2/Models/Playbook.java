@@ -21,7 +21,7 @@ import jakarta.persistence.JoinColumn;
 @Table(value ="playbook")
 public class Playbook {
 
-    @JoinColumn(name = "user_id", nullable = false)
+    @Id(name = "user_id", nullable = false)
     private User user_id;
 
     @Column(name="reminders")
