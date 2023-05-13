@@ -14,14 +14,13 @@ import main.java.com.example.SquintV2.Enums.Check_completion;
 import main.java.com.example.SquintV2.Enums.Conflicts;
 import main.java.com.example.SquintV2.Enums.Reminder;
 import main.java.com.example.SquintV2.Enums.Reschedules;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.JoinColumn;
+
 
 
 @Table(value ="playbook")
 public class Playbook {
 
-    @Id(name = "user_id", nullable = false)
+    @Id @PrimaryKeyColumn(name = "user_id", nullable = false)
     private User user_id;
 
     @Column(name="reminders")
