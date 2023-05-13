@@ -20,7 +20,7 @@ import main.java.com.example.SquintV2.Enums.Reschedules;
 @Table(value ="playbook")
 public class Playbook {
 
-    @Id @PrimaryKeyColumn(name = "user_id", nullable = false)
+    @Id @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = primaryKeyType.PARTITIONED)
     private User user_id;
 
     @Column(name="reminders")
