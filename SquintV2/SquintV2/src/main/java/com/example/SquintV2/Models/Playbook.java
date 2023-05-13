@@ -18,7 +18,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
 
 
-@Table(name ="playbook")
+@Table(value ="playbook")
 public class Playbook {
 
     @ManyToOne
