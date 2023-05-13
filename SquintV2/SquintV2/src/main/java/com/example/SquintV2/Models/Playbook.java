@@ -18,7 +18,6 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
 
 
-@Entity
 @Table(name ="playbook")
 public class Playbook {
 
