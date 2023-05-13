@@ -23,7 +23,7 @@ public class Playbook {
     @Id @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = primaryKeyType.PARTITIONED)
     private Integer user_id;
 
-    @Column(name="reminders")
+    @Column("reminders")
     private Reminder reminders;
 
     @Column(name= "reminder_time")
