@@ -40,6 +40,7 @@ public class Playbook {
     private Alarms alarm_types;
 
     @Column("conflicts")
+    @CassandraType(type = Conflicts)
     private Conflicts conflicts;
 
     @Column("reschedules")
