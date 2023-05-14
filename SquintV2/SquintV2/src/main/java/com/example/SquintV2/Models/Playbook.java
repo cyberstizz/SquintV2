@@ -27,20 +27,20 @@ public class Playbook {
     @CassandraType(type = Reminder)
     private Reminder reminders;
 
-    @Column(name= "reminder_time")
+    @Column("reminder_time")
     @CassandraType(type = ReminderTime)
     private ReminderTime reminder_time;
 
-    @Column(name= "check_completion")
+    @Column("check_completion")
     private Check_completion check_completion;
 
-    @Column(name= "alarm_types")
+    @Column("alarm_types")
     private Alarms alarm_types;
 
-    @Column(name= "conflicts")
+    @Column("conflicts")
     private Conflicts conflicts;
 
-    @Column(name= "reschedules")
+    @Column("reschedules")
     private Reschedules reschedules;
 
     public reminder getReminder() {
