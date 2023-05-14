@@ -27,6 +27,7 @@ public class Playbook {
     private Reminder reminders;
 
     @Column(name= "reminder_time")
+    @CassandraType(type = Enum)
     private Date reminder_time;
 
     @Column(name= "check_completion")
