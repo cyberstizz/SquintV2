@@ -12,6 +12,7 @@ import main.java.com.example.SquintV2.Enums.Alarms;
 import main.java.com.example.SquintV2.Enums.Check_completion;
 import main.java.com.example.SquintV2.Enums.Conflicts;
 import main.java.com.example.SquintV2.Enums.Reminder;
+import main.java.com.example.SquintV2.Enums.ReminderTime;
 import main.java.com.example.SquintV2.Enums.Reschedules;
 
 
@@ -27,8 +28,8 @@ public class Playbook {
     private Reminder reminders;
 
     @Column(name= "reminder_time")
-    @CassandraType(type = Enum)
-    private Date reminder_time;
+    @CassandraType(type = ReminderTime)
+    private ReminderTime reminder_time;
 
     @Column(name= "check_completion")
     private Check_completion check_completion;
