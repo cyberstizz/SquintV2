@@ -36,6 +36,7 @@ public class Playbook {
     private Check_completion check_completion;
 
     @Column("alarm_types")
+    @CassandraType(type = Alarms)
     private Alarms alarm_types;
 
     @Column("conflicts")
