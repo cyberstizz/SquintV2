@@ -44,6 +44,7 @@ public class Playbook {
     private Conflicts conflicts;
 
     @Column("reschedules")
+    @CassandraType(type = Reschedules)
     private Reschedules reschedules;
 
     public reminder getReminder() {
