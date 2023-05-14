@@ -23,7 +23,7 @@ public class Playbook {
     private Integer user_id;
 
     @Column("reminders")
-    @CassandraType(type = Enum)
+    @CassandraType(type = Reminder)
     private Reminder reminders;
 
     @Column(name= "reminder_time")
