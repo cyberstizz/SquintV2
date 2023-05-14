@@ -32,6 +32,7 @@ public class Playbook {
     private ReminderTime reminder_time;
 
     @Column("check_completion")
+    @CassandraType(type = Check_completion)
     private Check_completion check_completion;
 
     @Column("alarm_types")
