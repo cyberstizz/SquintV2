@@ -10,7 +10,6 @@ import jakarta.persistence.Table;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
 
-@Entity
 @Table(name="books")
 public class Books{
 
