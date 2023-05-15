@@ -1,6 +1,7 @@
 package main.java.com.example.SquintV2.Models;
 
 import java.sql.Date;
+import java.util.UUID;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -30,7 +31,7 @@ public class Goals {
     @Column(name = "deadline")
     private Date deadline;
 
-    public Integer getUserId() {
+    public UUID getUserId() {
         return this.user_id;
     }
 
