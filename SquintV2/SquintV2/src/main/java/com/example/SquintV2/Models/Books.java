@@ -31,8 +31,9 @@ public class Books{
     @CassandraType(type = Text)
     private String author;
 
-    @Column(name="pages")
-    private Integer pages;
+    @Column(name="total_pages")
+    @CassandraType(type = Integer)
+    private Integer total_pages;
 
     @Column(name="current_page")
     private Integer current_page;
