@@ -2,6 +2,8 @@ package main.java.com.example.SquintV2.Models;
 
 import java.sql.Date;
 
+import org.w3c.dom.Text;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -18,9 +20,11 @@ public class Books{
     private UUID user_id;
     
     @Column("book_id")
+    @CassandraType(type = Integer)
     private Integer book_id;
 
     @Column("book_title")
+    @CassandraType(type = Text)
     private String book_title;
 
     @Column(name="pages")
