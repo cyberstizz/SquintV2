@@ -1,6 +1,7 @@
 package main.java.com.example.SquintV2.Models;
 
 import java.sql.Date;
+import java.time.LocalDate;
 import java.util.UUID;
 
 import org.w3c.dom.Text;
@@ -40,7 +41,8 @@ public class Books{
     private Integer current_page;
 
     @Column(name="completion_date")
-    private Date completion_date;
+    @CassandraType(type = LocalDate)
+    private LocalDate completion_date;
 
     public Integer getBookId() {
         return this.book_id;
