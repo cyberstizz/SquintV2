@@ -27,6 +27,10 @@ public class Books{
     @CassandraType(type = Text)
     private String book_title;
 
+    @Column(name="author")
+    @CassandraType(type = Text)
+    private String author;
+
     @Column(name="pages")
     private Integer pages;
 
