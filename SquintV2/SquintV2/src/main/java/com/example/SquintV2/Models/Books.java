@@ -20,6 +20,9 @@ public class Books{
     @Column("book_id")
     private Integer book_id;
 
+    @Column("book_title")
+    private Integer book_id;
+
     @Column(name="pages")
     private Integer pages;
 
