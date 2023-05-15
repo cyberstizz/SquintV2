@@ -14,11 +14,9 @@ import jakarta.persistence.JoinColumn;
 @Table(name="Goals")
 public class Goals {
 
-    @GeneratedValue
     @Id
     private Integer goal_id;
 
-    @ManyToOne
     @JoinColumn(name="user_id", nullable = false)
     private Integer user_id;
 
