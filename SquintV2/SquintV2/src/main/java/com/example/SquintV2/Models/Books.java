@@ -11,8 +11,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
 
 @Entity
-@Table(name="book")
-public class Book{
+@Table(name="books")
+public class Books{
 
 
     @GeneratedValue
