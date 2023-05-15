@@ -14,11 +14,12 @@ import jakarta.persistence.JoinColumn;
 @Table(name="Goals")
 public class Goals {
 
-    @Id
-    private Integer goal_id;
 
-    @JoinColumn(name="user_id", nullable = false)
-    private Integer user_id;
+    @Id @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = primaryKeyType.PARTITIONED)
+    private UUID user_id;
+
+    @Id@PrimaryKeyColumn(name = "goal_id", ordinal = 0, type = primaryKeyType.CLUSTERED)
+    private Integer goal_id;
 
     @Column(name = "name")
     private String name;

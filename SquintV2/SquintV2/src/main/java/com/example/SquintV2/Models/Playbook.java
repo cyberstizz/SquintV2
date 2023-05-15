@@ -1,6 +1,7 @@
 package main.java.com.example.SquintV2.Models;
 
 import java.sql.Date;
+import java.util.UUID;
 
 import javax.annotation.processing.Completion;
 
@@ -21,7 +22,7 @@ import main.java.com.example.SquintV2.Enums.Reschedules;
 public class Playbook {
 
     @Id @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = primaryKeyType.PARTITIONED)
-    private Integer user_id;
+    private UUID user_id;
 
     @Column("reminders")
     @CassandraType(type = Reminder)
