@@ -11,8 +11,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
 
 @Entity
-@Table(name="Goal")
-public class Goal {
+@Table(name="Goals")
+public class Goals {
 
     @GeneratedValue
     @Id
