@@ -14,7 +14,6 @@ import jakarta.persistence.JoinColumn;
 public class Books{
 
 
-    @GeneratedValue
     @Id
     private Integer book_id;
 
