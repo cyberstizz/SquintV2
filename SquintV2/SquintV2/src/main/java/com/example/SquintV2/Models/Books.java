@@ -14,6 +14,9 @@ import jakarta.persistence.JoinColumn;
 public class Books{
 
 
+    @Id @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = primaryKeyType.PARTITIONED)
+    private UUID user_id;
+    
     @Id
     private Integer book_id;
 
