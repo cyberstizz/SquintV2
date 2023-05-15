@@ -29,7 +29,7 @@ public class Goals {
     private String description;
 
     @Column(name = "deadline")
-    private Date deadline;
+    private LocalDate deadline;
 
     public UUID getUserId() {
         return this.user_id;
