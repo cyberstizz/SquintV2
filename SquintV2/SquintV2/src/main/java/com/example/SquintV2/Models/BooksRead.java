@@ -14,8 +14,8 @@ import jakarta.persistence.Table;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
 
-@Table(name="books")
-public class Books{
+@Table(name="books_read")
+public class BooksRead{
 
 
     @Id @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = primaryKeyType.PARTITIONED)
