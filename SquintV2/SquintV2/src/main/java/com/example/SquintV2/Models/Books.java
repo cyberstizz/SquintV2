@@ -1,6 +1,7 @@
 package main.java.com.example.SquintV2.Models;
 
 import java.sql.Date;
+import java.util.UUID;
 
 import org.w3c.dom.Text;
 
@@ -19,9 +20,8 @@ public class Books{
     @Id @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = primaryKeyType.PARTITIONED)
     private UUID user_id;
     
-    @Column("book_id")
-    @CassandraType(type = Integer)
-    private Integer book_id;
+    @Id @PrimaryKeyColumn(name = "book_id", ordinal = 1, type = primaryKeyType.CLUSTERED)
+    private UUID book_id;
 
     @Column("book_title")
     @CassandraType(type = Text)
