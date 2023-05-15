@@ -36,6 +36,7 @@ public class Books{
     private Integer total_pages;
 
     @Column(name="current_page")
+    @CassandraType(type = Integer)
     private Integer current_page;
 
     @Column(name="completion_date")
