@@ -39,6 +39,14 @@ public class Goals {
         this.user_id = user_id;
     }
 
+    public UUID getGoalId() {
+        return this.goal_id;
+    }
+
+    public void setGoalId(UUID goal_id) {
+        this.goal_id = goal_id;
+    }
+
     public String getName() {
         return this.name;
     }
