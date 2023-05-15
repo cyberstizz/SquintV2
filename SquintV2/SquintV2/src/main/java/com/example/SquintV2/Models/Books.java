@@ -21,7 +21,7 @@ public class Books{
     private Integer book_id;
 
     @Column("book_title")
-    private Integer book_id;
+    private String book_title;
 
     @Column(name="pages")
     private Integer pages;
