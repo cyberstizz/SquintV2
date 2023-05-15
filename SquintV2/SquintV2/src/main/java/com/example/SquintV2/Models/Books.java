@@ -20,10 +20,6 @@ public class Books{
     @Id
     private Integer book_id;
 
-    @ManyToOne
-    @JoinColumn(name="user_id")
-    private Integer user_id;
-
     @Column(name="pages")
     private Integer pages;
 
