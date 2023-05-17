@@ -1,29 +1,29 @@
 package main.java.com.example.SquintV2.Models;
 
-import java.sql.Date;
+import java.time.LocalDate;
+import java.util.UUID;
+
+import org.w3c.dom.Text;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.JoinColumn;
 
-@Entity
+import jakarta.persistence.metamodel.PrimaryKey;
+import jakarta.persistence.metamodel.PrimaryKeyType;
+import com.datastax.oss.driver.api.core.type.DataTypes;
+import com.datastax.oss.driver.api.core.type.codec.TypeCodecs;
+
 @Table(name="mailbox")
 public class Mailbox{
 
-    @GeneratedValue
     @Id
     private Integer message_id;
 
-    @ManyToOne
-    @JoinColumn(name="user_id", nullable= false)
+    @Column(name="user_id", nullable= false)
     private Integer sender_id;
 
-    @ManyToOne
-    @JoinColumn(name="user_id", nullable= false)
+    @Column(name="user_id", nullable= false)
     private Integer recipient_id;
 
     @Column(name="header")

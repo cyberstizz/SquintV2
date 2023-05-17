@@ -1,0 +1,622 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------< [0;36mcom.example:SquintV2[0;1m >------------------------[m
+[[1;34mINFO[m] [1mBuilding SquintV2 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.0:resources[m [1m(default-resources)[m @ [36mSquintV2[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 0 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mSquintV2[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 22 source files to /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/target/classes
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] COMPILATION ERROR : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Productivity.java:[12,37] cannot find symbol
+  symbol:   class PrimaryKey
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Productivity.java:[13,37] cannot find symbol
+  symbol:   class PrimaryKeyType
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Productivity.java:[28,13] cannot find symbol
+  symbol:   class Date
+  location: class main.java.com.example.SquintV2.Models.Productivity
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Productivity.java:[47,12] cannot find symbol
+  symbol:   class Date
+  location: class main.java.com.example.SquintV2.Models.Productivity
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Productivity.java:[51,25] cannot find symbol
+  symbol:   class Date
+  location: class main.java.com.example.SquintV2.Models.Productivity
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Users.java:[12,37] cannot find symbol
+  symbol:   class PrimaryKey
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Users.java:[13,37] cannot find symbol
+  symbol:   class PrimaryKeyType
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/DailySchedule.java:[12,37] cannot find symbol
+  symbol:   class PrimaryKey
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/DailySchedule.java:[13,37] cannot find symbol
+  symbol:   class PrimaryKeyType
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/DailySchedule.java:[29,13] cannot find symbol
+  symbol:   class Array
+  location: class main.java.com.example.SquintV2.Models.DailySchedule
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/DailySchedule.java:[29,19] cannot find symbol
+  symbol:   class Date
+  location: class main.java.com.example.SquintV2.Models.DailySchedule
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/DailySchedule.java:[38,27] cannot find symbol
+  symbol:   class User
+  location: class main.java.com.example.SquintV2.Models.DailySchedule
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/DailySchedule.java:[42,12] cannot find symbol
+  symbol:   class Date
+  location: class main.java.com.example.SquintV2.Models.DailySchedule
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/DailySchedule.java:[46,30] cannot find symbol
+  symbol:   class Date
+  location: class main.java.com.example.SquintV2.Models.DailySchedule
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Quote.java:[12,37] cannot find symbol
+  symbol:   class PrimaryKey
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Quote.java:[13,37] cannot find symbol
+  symbol:   class PrimaryKeyType
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[12,37] cannot find symbol
+  symbol:   class PrimaryKey
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[13,37] cannot find symbol
+  symbol:   class PrimaryKeyType
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[68,12] cannot find symbol
+  symbol:   class Date
+  location: class main.java.com.example.SquintV2.Models.Goals
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[72,29] cannot find symbol
+  symbol:   class Date
+  location: class main.java.com.example.SquintV2.Models.Goals
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Affirmation.java:[12,37] cannot find symbol
+  symbol:   class PrimaryKey
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Affirmation.java:[13,37] cannot find symbol
+  symbol:   class PrimaryKeyType
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/SquintV2Application.java:[3,32] cannot access org.springframework.boot.SpringApplication
+  bad class file: /home/charleslambdev/.m2/repository/org/springframework/boot/spring-boot/3.0.5/spring-boot-3.0.5.jar(/org/springframework/boot/SpringApplication.class)
+    class file has wrong version 61.0, should be 55.0
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/SquintV2Application.java:[4,46] cannot access org.springframework.boot.autoconfigure.SpringBootApplication
+  bad class file: /home/charleslambdev/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.0.5/spring-boot-autoconfigure-3.0.5.jar(/org/springframework/boot/autoconfigure/SpringBootApplication.class)
+    class file has wrong version 61.0, should be 55.0
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/SquintV2Application.java:[6,2] cannot find symbol
+  symbol: class SpringBootApplication
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Friendship.java:[12,37] cannot find symbol
+  symbol:   class PrimaryKey
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Friendship.java:[13,37] cannot find symbol
+  symbol:   class PrimaryKeyType
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Friendship.java:[27,13] cannot find symbol
+  symbol:   class UUid
+  location: class main.java.com.example.SquintV2.Models.Friendship
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Friendship.java:[49,27] cannot find symbol
+  symbol:   class User
+  location: class main.java.com.example.SquintV2.Models.Friendship
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Meditation.java:[12,37] cannot find symbol
+  symbol:   class PrimaryKey
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Meditation.java:[13,37] cannot find symbol
+  symbol:   class PrimaryKeyType
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/BooksRead.java:[12,37] cannot find symbol
+  symbol:   class PrimaryKey
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/BooksRead.java:[13,37] cannot find symbol
+  symbol:   class PrimaryKeyType
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Photo.java:[12,37] cannot find symbol
+  symbol:   class PrimaryKey
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Photo.java:[13,37] cannot find symbol
+  symbol:   class PrimaryKeyType
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Alarm.java:[12,37] cannot find symbol
+  symbol:   class PrimaryKey
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Alarm.java:[13,37] cannot find symbol
+  symbol:   class PrimaryKeyType
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Alarm.java:[29,13] cannot find symbol
+  symbol:   class Date
+  location: class main.java.com.example.SquintV2.Models.Alarm
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Alarm.java:[39,12] cannot find symbol
+  symbol:   class Date
+  location: class main.java.com.example.SquintV2.Models.Alarm
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Alarm.java:[43,30] cannot find symbol
+  symbol:   class Date
+  location: class main.java.com.example.SquintV2.Models.Alarm
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[13,37] cannot find symbol
+  symbol:   class PrimaryKey
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[14,37] cannot find symbol
+  symbol:   class PrimaryKeyType
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Mailbox.java:[12,37] cannot find symbol
+  symbol:   class PrimaryKey
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Mailbox.java:[13,37] cannot find symbol
+  symbol:   class PrimaryKeyType
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[12,37] cannot find symbol
+  symbol:   class PrimaryKey
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[13,37] cannot find symbol
+  symbol:   class PrimaryKeyType
+  location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[58,12] cannot find symbol
+  symbol:   class reminder
+  location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[66,12] cannot find symbol
+  symbol:   class reminder_time
+  location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[70,33] cannot find symbol
+  symbol:   class Date
+  location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/DailySchedule.java:[22,10] cannot find symbol
+  symbol:   class PrimaryKeyColumn
+  location: class main.java.com.example.SquintV2.Models.DailySchedule
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[21,10] cannot find symbol
+  symbol:   class PrimaryKeyColumn
+  location: class main.java.com.example.SquintV2.Models.Goals
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[21,65] cannot find symbol
+  symbol:   variable primaryKeyType
+  location: class main.java.com.example.SquintV2.Models.Goals
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[24,9] cannot find symbol
+  symbol:   class PrimaryKeyColumn
+  location: class main.java.com.example.SquintV2.Models.Goals
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[24,64] cannot find symbol
+  symbol:   variable primaryKeyType
+  location: class main.java.com.example.SquintV2.Models.Goals
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Affirmation.java:[22,6] cannot find symbol
+  symbol:   class PrimaryKey
+  location: class main.java.com.example.SquintV2.Models.Affirmation
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Friendship.java:[25,6] cannot find symbol
+  symbol:   class ID
+  location: class main.java.com.example.SquintV2.Models.Friendship
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Friendship.java:[26,6] cannot find symbol
+  symbol:   class PrimaryKeyColumn
+  location: class main.java.com.example.SquintV2.Models.Friendship
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Friendship.java:[29,6] cannot find symbol
+  symbol:   class ID
+  location: class main.java.com.example.SquintV2.Models.Friendship
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Friendship.java:[30,6] cannot find symbol
+  symbol:   class PrimaryKeyColumn
+  location: class main.java.com.example.SquintV2.Models.Friendship
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Photo.java:[30,6] cannot find symbol
+  symbol:   class ManyToOne
+  location: class main.java.com.example.SquintV2.Models.Photo
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Photo.java:[31,6] cannot find symbol
+  symbol:   class JoinColumn
+  location: class main.java.com.example.SquintV2.Models.Photo
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[23,6] cannot find symbol
+  symbol:   class PrimaryKeyColumn
+  location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[23,61] cannot find symbol
+  symbol:   variable primaryKeyType
+  location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[26,10] cannot find symbol
+  symbol:   class PrimaryKeyColumn
+  location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[26,65] cannot find symbol
+  symbol:   variable primaryKeyType
+  location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[29,13] cannot find symbol
+  symbol:   method value()
+  location: @interface jakarta.persistence.Column
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[30,6] cannot find symbol
+  symbol:   class CassandraType
+  location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[30,27] cannot find symbol
+  symbol:   variable Text
+  location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[34,6] cannot find symbol
+  symbol:   class CassandraType
+  location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[34,27] cannot find symbol
+  symbol:   variable Text
+  location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[38,6] cannot find symbol
+  symbol:   class CassandraType
+  location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[38,27] cannot find symbol
+  symbol:   variable Integer
+  location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[42,6] cannot find symbol
+  symbol:   class CassandraType
+  location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[42,27] cannot find symbol
+  symbol:   variable Integer
+  location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[46,6] cannot find symbol
+  symbol:   class CassandraType
+  location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[46,27] cannot find symbol
+  symbol:   variable LocalDate
+  location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[28,8] cannot find symbol
+  symbol:   method value()
+  location: @interface jakarta.persistence.Table
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[31,10] cannot find symbol
+  symbol:   class PrimaryKeyColumn
+  location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[31,65] cannot find symbol
+  symbol:   variable primaryKeyType
+  location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[34,13] cannot find symbol
+  symbol:   method value()
+  location: @interface jakarta.persistence.Column
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[35,6] cannot find symbol
+  symbol:   class CassandraType
+  location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[35,27] cannot find symbol
+  symbol:   variable Reminder
+  location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[38,13] cannot find symbol
+  symbol:   method value()
+  location: @interface jakarta.persistence.Column
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[39,6] cannot find symbol
+  symbol:   class CassandraType
+  location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[39,27] cannot find symbol
+  symbol:   variable ReminderTime
+  location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[42,13] cannot find symbol
+  symbol:   method value()
+  location: @interface jakarta.persistence.Column
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[43,6] cannot find symbol
+  symbol:   class CassandraType
+  location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[43,27] cannot find symbol
+  symbol:   variable Check_completion
+  location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[46,13] cannot find symbol
+  symbol:   method value()
+  location: @interface jakarta.persistence.Column
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[47,6] cannot find symbol
+  symbol:   class CassandraType
+  location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[47,27] cannot find symbol
+  symbol:   variable Alarms
+  location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[50,13] cannot find symbol
+  symbol:   method value()
+  location: @interface jakarta.persistence.Column
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[51,6] cannot find symbol
+  symbol:   class CassandraType
+  location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[51,27] cannot find symbol
+  symbol:   variable Conflicts
+  location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[54,13] cannot find symbol
+  symbol:   method value()
+  location: @interface jakarta.persistence.Column
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[55,6] cannot find symbol
+  symbol:   class CassandraType
+  location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[55,27] cannot find symbol
+  symbol:   variable Reschedules
+  location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[41,24] incompatible types: java.lang.Integer cannot be converted to java.util.UUID
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[45,20] incompatible types: java.lang.Integer cannot be converted to java.util.UUID
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[49,24] incompatible types: java.util.UUID cannot be converted to java.lang.Integer
+[[1;34mINFO[m] 100 errors 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  4.616 s
+[[1;34mINFO[m] Finished at: 2023-05-17T15:53:57-04:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m on project [36mSquintV2[m: [1;31mCompilation failure[m: Compilation failure: 
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Productivity.java:[12,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKey
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Productivity.java:[13,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyType
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Productivity.java:[28,13] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Date
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Productivity
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Productivity.java:[47,12] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Date
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Productivity
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Productivity.java:[51,25] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Date
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Productivity
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Users.java:[12,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKey
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Users.java:[13,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyType
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/DailySchedule.java:[12,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKey
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/DailySchedule.java:[13,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyType
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/DailySchedule.java:[29,13] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Array
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.DailySchedule
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/DailySchedule.java:[29,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Date
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.DailySchedule
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/DailySchedule.java:[38,27] cannot find symbol
+[[1;31mERROR[m]   symbol:   class User
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.DailySchedule
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/DailySchedule.java:[42,12] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Date
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.DailySchedule
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/DailySchedule.java:[46,30] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Date
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.DailySchedule
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Quote.java:[12,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKey
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Quote.java:[13,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyType
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[12,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKey
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[13,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyType
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[68,12] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Date
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Goals
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[72,29] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Date
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Goals
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Affirmation.java:[12,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKey
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Affirmation.java:[13,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyType
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/SquintV2Application.java:[3,32] cannot access org.springframework.boot.SpringApplication
+[[1;31mERROR[m]   bad class file: /home/charleslambdev/.m2/repository/org/springframework/boot/spring-boot/3.0.5/spring-boot-3.0.5.jar(/org/springframework/boot/SpringApplication.class)
+[[1;31mERROR[m]     class file has wrong version 61.0, should be 55.0
+[[1;31mERROR[m]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/SquintV2Application.java:[4,46] cannot access org.springframework.boot.autoconfigure.SpringBootApplication
+[[1;31mERROR[m]   bad class file: /home/charleslambdev/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.0.5/spring-boot-autoconfigure-3.0.5.jar(/org/springframework/boot/autoconfigure/SpringBootApplication.class)
+[[1;31mERROR[m]     class file has wrong version 61.0, should be 55.0
+[[1;31mERROR[m]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/SquintV2Application.java:[6,2] cannot find symbol
+[[1;31mERROR[m]   symbol: class SpringBootApplication
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Friendship.java:[12,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKey
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Friendship.java:[13,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyType
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Friendship.java:[27,13] cannot find symbol
+[[1;31mERROR[m]   symbol:   class UUid
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Friendship
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Friendship.java:[49,27] cannot find symbol
+[[1;31mERROR[m]   symbol:   class User
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Friendship
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Meditation.java:[12,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKey
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Meditation.java:[13,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyType
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/BooksRead.java:[12,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKey
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/BooksRead.java:[13,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyType
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Photo.java:[12,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKey
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Photo.java:[13,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyType
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Alarm.java:[12,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKey
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Alarm.java:[13,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyType
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Alarm.java:[29,13] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Date
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Alarm
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Alarm.java:[39,12] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Date
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Alarm
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Alarm.java:[43,30] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Date
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Alarm
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[13,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKey
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[14,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyType
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Mailbox.java:[12,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKey
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Mailbox.java:[13,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyType
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[12,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKey
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[13,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyType
+[[1;31mERROR[m]   location: package jakarta.persistence.metamodel
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[58,12] cannot find symbol
+[[1;31mERROR[m]   symbol:   class reminder
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[66,12] cannot find symbol
+[[1;31mERROR[m]   symbol:   class reminder_time
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[70,33] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Date
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/DailySchedule.java:[22,10] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyColumn
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.DailySchedule
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[21,10] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyColumn
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Goals
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[21,65] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable primaryKeyType
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Goals
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[24,9] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyColumn
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Goals
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[24,64] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable primaryKeyType
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Goals
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Affirmation.java:[22,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKey
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Affirmation
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Friendship.java:[25,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class ID
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Friendship
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Friendship.java:[26,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyColumn
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Friendship
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Friendship.java:[29,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class ID
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Friendship
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Friendship.java:[30,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyColumn
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Friendship
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Photo.java:[30,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class ManyToOne
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Photo
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Photo.java:[31,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class JoinColumn
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Photo
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[23,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyColumn
+[[1;31mERROR[m]   location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[23,61] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable primaryKeyType
+[[1;31mERROR[m]   location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[26,10] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyColumn
+[[1;31mERROR[m]   location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[26,65] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable primaryKeyType
+[[1;31mERROR[m]   location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[29,13] cannot find symbol
+[[1;31mERROR[m]   symbol:   method value()
+[[1;31mERROR[m]   location: @interface jakarta.persistence.Column
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[30,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class CassandraType
+[[1;31mERROR[m]   location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[30,27] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable Text
+[[1;31mERROR[m]   location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[34,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class CassandraType
+[[1;31mERROR[m]   location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[34,27] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable Text
+[[1;31mERROR[m]   location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[38,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class CassandraType
+[[1;31mERROR[m]   location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[38,27] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable Integer
+[[1;31mERROR[m]   location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[42,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class CassandraType
+[[1;31mERROR[m]   location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[42,27] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable Integer
+[[1;31mERROR[m]   location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[46,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class CassandraType
+[[1;31mERROR[m]   location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Books.java:[46,27] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable LocalDate
+[[1;31mERROR[m]   location: class com.example.SquintV2.Models.Books
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[28,8] cannot find symbol
+[[1;31mERROR[m]   symbol:   method value()
+[[1;31mERROR[m]   location: @interface jakarta.persistence.Table
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[31,10] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrimaryKeyColumn
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[31,65] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable primaryKeyType
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[34,13] cannot find symbol
+[[1;31mERROR[m]   symbol:   method value()
+[[1;31mERROR[m]   location: @interface jakarta.persistence.Column
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[35,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class CassandraType
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[35,27] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable Reminder
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[38,13] cannot find symbol
+[[1;31mERROR[m]   symbol:   method value()
+[[1;31mERROR[m]   location: @interface jakarta.persistence.Column
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[39,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class CassandraType
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[39,27] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable ReminderTime
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[42,13] cannot find symbol
+[[1;31mERROR[m]   symbol:   method value()
+[[1;31mERROR[m]   location: @interface jakarta.persistence.Column
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[43,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class CassandraType
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[43,27] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable Check_completion
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[46,13] cannot find symbol
+[[1;31mERROR[m]   symbol:   method value()
+[[1;31mERROR[m]   location: @interface jakarta.persistence.Column
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[47,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class CassandraType
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[47,27] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable Alarms
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[50,13] cannot find symbol
+[[1;31mERROR[m]   symbol:   method value()
+[[1;31mERROR[m]   location: @interface jakarta.persistence.Column
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[51,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class CassandraType
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[51,27] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable Conflicts
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[54,13] cannot find symbol
+[[1;31mERROR[m]   symbol:   method value()
+[[1;31mERROR[m]   location: @interface jakarta.persistence.Column
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[55,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class CassandraType
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Playbook.java:[55,27] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable Reschedules
+[[1;31mERROR[m]   location: class main.java.com.example.SquintV2.Models.Playbook
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[41,24] incompatible types: java.lang.Integer cannot be converted to java.util.UUID
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[45,20] incompatible types: java.lang.Integer cannot be converted to java.util.UUID
+[[1;31mERROR[m] /home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/java/com/example/SquintV2/Models/Goals.java:[49,24] incompatible types: java.util.UUID cannot be converted to java.lang.Integer
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

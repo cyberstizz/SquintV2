@@ -1,31 +1,34 @@
 package main.java.com.example.SquintV2.Models;
 
-import java.sql.Date;
+import java.time.LocalDate;
+import java.util.UUID;
+
+import org.w3c.dom.Text;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.JoinColumn;
 
-@Entity
+import jakarta.persistence.metamodel.PrimaryKey;
+import jakarta.persistence.metamodel.PrimaryKeyType;
+import com.datastax.oss.driver.api.core.type.DataTypes;
+import com.datastax.oss.driver.api.core.type.codec.TypeCodecs;
+
 @Table(name="friendship")
 public class Friendship{
 
 
-    @GeneratedValue
+
     @Id
     private Integer friendship_id;
 
-    @ManyToOne
-    @JoinColumn(name="user_id", nullable= false)
-    private User user_id;
+    @ID
+    @PrimaryKeyColumn
+    private UUID user_id;
 
-    @ManyToOne
-    @JoinColumn(name="user_id", nullable= false)
-    private User friend_id;
+    @ID
+    @PrimaryKeyColumn
+    private UUID friend_id;
 
     @Column(name="status")
     private String status;
@@ -39,15 +42,15 @@ public class Friendship{
     }
 
 
-    public User getUserId() {
+    public UUID getUserId() {
         return this.user_id;
     }
 
-    public void setUserId(User user_id) {
+    public void setUserId(UUID user_id) {
         this.user_id = user_id;
     }
 
-    public User getFriendId() {
+    public UUID getFriendId() {
         return this.friend_id;
     }
 

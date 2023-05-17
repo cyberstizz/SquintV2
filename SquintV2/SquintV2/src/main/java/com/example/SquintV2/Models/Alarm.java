@@ -1,26 +1,28 @@
 package main.java.com.example.SquintV2.Models;
 
-import java.sql.Date;
+import java.time.LocalDate;
+import java.util.UUID;
+
+import org.w3c.dom.Text;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.JoinColumn;
+
+import jakarta.persistence.metamodel.PrimaryKey;
+import jakarta.persistence.metamodel.PrimaryKeyType;
+import com.datastax.oss.driver.api.core.type.DataTypes;
+import com.datastax.oss.driver.api.core.type.codec.TypeCodecs;
 
 
-@Entity
+
 @Table(name="alarm")
 public class Alarm {
 
-    @GeneratedValue
     @Id
     private Integer alarm_id;
 
-    @ManyToOne
-    @JoinColumn(name="user_id", nullable = false)
+    @Column(name="user_id", nullable = false)
     private Integer user_id;
 
     @Column(name = "alarm_time")
@@ -30,7 +32,7 @@ public class Alarm {
         return this.user_id;
     }
 
-    public void setUserId(User user_id) {
+    public void setUserId(UUID user_id) {
         this.user_id = user_id;
     }
 
