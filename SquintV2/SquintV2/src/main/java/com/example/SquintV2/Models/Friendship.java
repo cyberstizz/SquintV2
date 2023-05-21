@@ -1,29 +1,29 @@
 package main.java.com.example.SquintV2.Models;
 
+import org.springframework.data.annotation.Id;
+
+
 import java.util.UUID;
 
 import org.springframework.data.cassandra.core.mapping.Column;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
 import org.springframework.data.cassandra.core.mapping.Table;
+import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
+
 
 
 
 @Table(value="friendship")
 public class Friendship{
 
-
-
     @Id
+    @PrimaryKeyColumn(name = "friendship_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private Integer friendship_id;
 
     @Id
-    @PrimaryKeyColumn(name = user_id)
+    @PrimaryKeyColumn(name = "user_id", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private UUID user_id;
-
-    @Id
-    @PrimaryKeyColumn
-    private UUID friend_id;
 
     @Column(value ="status")
     private String status;

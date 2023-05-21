@@ -1,12 +1,9 @@
 package com.example.SquintV2.Models;
 
-import java.sql.Date;
 import java.time.LocalDate;
-import java.util.UUID;
-
-import org.w3c.dom.Text;
 
 import jakarta.persistence.Id;
+
 
 import java.util.UUID;
 
@@ -14,38 +11,34 @@ import org.springframework.data.cassandra.core.mapping.Column;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
 import org.springframework.data.cassandra.core.mapping.Table;
+import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 
 
 
-@Table(name="books")
+@Table(value ="books")
 public class Books{
 
 
     @Id 
-    @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = primaryKeyType.PARTITIONED)
+    @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private UUID user_id;
     
-    @Id @PrimaryKeyColumn(name = "book_id", ordinal = 1, type = primaryKeyType.CLUSTERED)
+    @Id @PrimaryKeyColumn(name = "book_id", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private UUID book_id;
 
-    @Column("book_title")
-    @CassandraType(type = Text)
+    @Column(value = "book_title")
     private String book_title;
 
-    @Column(name="author")
-    @CassandraType(type = Text)
+    @Column(value="author")
     private String author;
 
-    @Column(name="total_pages")
-    @CassandraType(type = Integer)
+    @Column(value="total_pages")
     private Integer total_pages;
 
     @Column(name="current_page")
-    @CassandraType(type = Integer)
     private Integer current_page;
 
     @Column(name="completion_date")
-    @CassandraType(type = LocalDate)
     private LocalDate completion_date;
 
     public Integer getBookId() {

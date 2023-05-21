@@ -14,16 +14,16 @@ import org.springframework.data.cassandra.core.mapping.Table;
 
 
 
-@Table(name="alarm")
+@Table(value="alarm")
 public class Alarm {
 
     @Id
     private Integer alarm_id;
 
-    @Column(name="user_id", nullable = false)
+    @Column(value ="user_id")
     private Integer user_id;
 
-    @Column(name = "alarm_time")
+    @Column(value = "alarm_time")
     private LocalDate alarm_time;
 
     public Integer getUserId() {

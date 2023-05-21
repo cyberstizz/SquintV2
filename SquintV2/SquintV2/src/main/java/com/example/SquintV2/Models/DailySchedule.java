@@ -14,20 +14,20 @@ import org.springframework.data.cassandra.core.mapping.Table;
 
 
 
-@Table(name="dailySchedule")
+@Table(value="dailySchedule")
 public class DailySchedule {
 
 
     @Id 
     private Integer schedule_id;
 
-    @Column(name="user_id", nullable= false)
+    @Column(value ="user_id")
     private UUID user_id;
 
-    @Column(name="time_block")
+    @Column(value ="time_block")
     private List<LocalDate> time_block;
 
-    @Column(name="task")
+    @Column(value ="task")
     private String task;
 
     public UUID getUserId() {

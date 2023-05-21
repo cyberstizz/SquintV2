@@ -10,20 +10,20 @@ import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
 import org.springframework.data.cassandra.core.mapping.Table;
 
-@Table(name="photo")
+@Table(value="photo")
 public class Photo{
 
 
     @Id
     private Integer photo_id;
 
-    @Column(value ="user_id", nullable=false)
+    @Column(value ="user_id")
     private UUID user_id;
 
     @Column(value ="path_or_url")
     private String path_or_url;
 
-    @Column(value ="goal_id", nullable=true)
+    @Column(value ="goal_id")
     private Integer goal_id;
 
     public Integer getPhotoId() {
