@@ -9,10 +9,6 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-import jakarta.persistence.metamodel.PrimaryKey;
-import jakarta.persistence.metamodel.PrimaryKeyType;
-import com.datastax.oss.driver.api.core.type.DataTypes;
-import com.datastax.oss.driver.api.core.type.codec.TypeCodecs;
 
 
 @Table(name="meditation")

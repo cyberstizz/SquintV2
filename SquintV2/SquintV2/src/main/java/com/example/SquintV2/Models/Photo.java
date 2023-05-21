@@ -3,16 +3,12 @@ package main.java.com.example.SquintV2.Models;
 import java.time.LocalDate;
 import java.util.UUID;
 
-import org.w3c.dom.Text;
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
-import jakarta.persistence.metamodel.PrimaryKey;
-import jakarta.persistence.metamodel.PrimaryKeyType;
-import com.datastax.oss.driver.api.core.type.DataTypes;
-import com.datastax.oss.driver.api.core.type.codec.TypeCodecs;
+import org.springframework.data.cassandra.core.mapping.Column;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
+import org.springframework.data.cassandra.core.mapping.Table;
 
 @Table(name="photo")
 public class Photo{
@@ -21,14 +17,13 @@ public class Photo{
     @Id
     private Integer photo_id;
 
-    @Column(name="user_id", nullable=false)
+    @Column(value ="user_id", nullable=false)
     private UUID user_id;
 
-    @Column(name="path_or_url")
+    @Column(value ="path_or_url")
     private String path_or_url;
 
-    @ManyToOne
-    @JoinColumn(name="goal_id", nullable=true)
+    @Column(value ="goal_id", nullable=true)
     private Integer goal_id;
 
     public Integer getPhotoId() {

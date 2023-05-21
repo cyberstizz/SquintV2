@@ -3,16 +3,13 @@ package main.java.com.example.SquintV2.Models;
 import java.time.LocalDate;
 import java.util.UUID;
 
-import org.w3c.dom.Text;
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
-import jakarta.persistence.metamodel.PrimaryKey;
-import jakarta.persistence.metamodel.PrimaryKeyType;
-import com.datastax.oss.driver.api.core.type.DataTypes;
-import com.datastax.oss.driver.api.core.type.codec.TypeCodecs;
+import org.springframework.data.cassandra.core.mapping.Column;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
+import org.springframework.data.cassandra.core.mapping.Table;
+
 
 
 
@@ -55,7 +52,7 @@ public class Playbook {
     @CassandraType(type = Reschedules)
     private Reschedules reschedules;
 
-    public reminder getReminder() {
+    public Reminder getReminder() {
         return this.reminder;
     }
 
@@ -63,11 +60,11 @@ public class Playbook {
         this.reminder = reminder;
     }
 
-    public reminder_time getReminderTime() {
+    public ReminderTime getReminderTime() {
         return this.reminder_time;
     }
 
-    public void setReminderTime(Date reminder_time) {
+    public void setReminderTime(LocalDate reminder_time) {
         this.reminder_time = reminder_time;
     }
 

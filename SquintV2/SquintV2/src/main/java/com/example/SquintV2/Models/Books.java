@@ -6,14 +6,16 @@ import java.util.UUID;
 
 import org.w3c.dom.Text;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
-import jakarta.persistence.metamodel.PrimaryKey;
-import jakarta.persistence.metamodel.PrimaryKeyType;
-import com.datastax.oss.driver.api.core.type.DataTypes;
-import com.datastax.oss.driver.api.core.type.codec.TypeCodecs;
+import java.util.UUID;
+
+import org.springframework.data.cassandra.core.mapping.Column;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
+import org.springframework.data.cassandra.core.mapping.Table;
+
+
 
 @Table(name="books")
 public class Books{

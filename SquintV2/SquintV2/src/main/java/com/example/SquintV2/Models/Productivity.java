@@ -9,10 +9,6 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-import jakarta.persistence.metamodel.PrimaryKey;
-import jakarta.persistence.metamodel.PrimaryKeyType;
-import com.datastax.oss.driver.api.core.type.DataTypes;
-import com.datastax.oss.driver.api.core.type.codec.TypeCodecs;
 
 @Table(name="productivity")
 public class Productivity{
@@ -25,7 +21,7 @@ public class Productivity{
     private Integer user_id;
 
     @Column(name="date")
-    private Date date;
+    private LocalDate date;
 
     public Integer getProductivityId() {
         return this.productivity_id;
@@ -44,11 +40,11 @@ public class Productivity{
     }
 
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return this.date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 

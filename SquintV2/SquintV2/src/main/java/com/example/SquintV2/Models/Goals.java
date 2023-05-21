@@ -9,19 +9,15 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-import jakarta.persistence.metamodel.PrimaryKey;
-import jakarta.persistence.metamodel.PrimaryKeyType;
-import com.datastax.oss.driver.api.core.type.DataTypes;
-import com.datastax.oss.driver.api.core.type.codec.TypeCodecs;
 
 @Table(name="Goals")
 public class Goals {
 
 
-    @Id @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = primaryKeyType.PARTITIONED)
+    @Id 
     private UUID user_id;
 
-    @Id@PrimaryKeyColumn(name = "goal_id", ordinal = 0, type = primaryKeyType.CLUSTERED)
+    @Id
     private Integer goal_id;
 
     @Column(name = "name")
@@ -65,11 +61,11 @@ public class Goals {
         this.description = description;
     }
 
-    public Date getDeadline() {
+    public LocalDate getDeadline() {
         return this.deadline;
     }
 
-    public void setDeadline(Date deadline) {
+    public void setDeadline(LocalDate deadline) {
         this.deadline = deadline;
     }
  }

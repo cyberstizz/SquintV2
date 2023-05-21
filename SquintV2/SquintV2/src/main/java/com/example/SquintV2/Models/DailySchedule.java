@@ -1,32 +1,31 @@
 package main.java.com.example.SquintV2.Models;
 
+import java.util.List;
 import java.time.LocalDate;
 import java.util.UUID;
 
-import org.w3c.dom.Text;
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
-import jakarta.persistence.metamodel.PrimaryKey;
-import jakarta.persistence.metamodel.PrimaryKeyType;
-import com.datastax.oss.driver.api.core.type.DataTypes;
-import com.datastax.oss.driver.api.core.type.codec.TypeCodecs;
+
+import org.springframework.data.cassandra.core.mapping.Column;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
+import org.springframework.data.cassandra.core.mapping.Table;
+
 
 
 @Table(name="dailySchedule")
 public class DailySchedule {
 
 
-    @Id @PrimaryKeyColumn()
+    @Id 
     private Integer schedule_id;
 
     @Column(name="user_id", nullable= false)
     private UUID user_id;
 
     @Column(name="time_block")
-    private Array<Date> time_block;
+    private List<LocalDate> time_block;
 
     @Column(name="task")
     private String task;
@@ -35,15 +34,15 @@ public class DailySchedule {
         return this.user_id;
     }
 
-    public void setUserId(User user_id) {
+    public void setUserId(UUID user_id) {
         this.user_id = user_id;
     }
 
-    public Date getTimeBlock() {
+    public LocalDate getTimeBlock() {
         return this.time_block;
     }
 
-    public void setTimeBlock(Date time_block) {
+    public void setTimeBlock(LocalDate time_block) {
         this.time_block = time_block;
     }
 

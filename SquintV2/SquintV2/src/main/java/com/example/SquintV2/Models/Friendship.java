@@ -1,20 +1,15 @@
 package main.java.com.example.SquintV2.Models;
 
-import java.time.LocalDate;
 import java.util.UUID;
 
-import org.w3c.dom.Text;
+import org.springframework.data.cassandra.core.mapping.Column;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
+import org.springframework.data.cassandra.core.mapping.Table;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
-import jakarta.persistence.metamodel.PrimaryKey;
-import jakarta.persistence.metamodel.PrimaryKeyType;
-import com.datastax.oss.driver.api.core.type.DataTypes;
-import com.datastax.oss.driver.api.core.type.codec.TypeCodecs;
 
-@Table(name="friendship")
+@Table(value="friendship")
 public class Friendship{
 
 
@@ -22,15 +17,15 @@ public class Friendship{
     @Id
     private Integer friendship_id;
 
-    @ID
-    @PrimaryKeyColumn
+    @Id
+    @PrimaryKeyColumn(name = user_id)
     private UUID user_id;
 
-    @ID
+    @Id
     @PrimaryKeyColumn
     private UUID friend_id;
 
-    @Column(name="status")
+    @Column(value ="status")
     private String status;
 
     public Integer getFriendship_id() {
@@ -54,7 +49,7 @@ public class Friendship{
         return this.friend_id;
     }
 
-    public void setFriendId() {
+    public void setFriendId(UUID friend_id) {
         this.friend_id = friend_id;
     }
 
