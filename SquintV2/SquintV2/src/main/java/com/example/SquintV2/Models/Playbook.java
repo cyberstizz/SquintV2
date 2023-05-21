@@ -49,18 +49,18 @@ public class Playbook {
     private Reschedules reschedules;
 
     public Reminder getReminder() {
-        return this.reminder;
+        return this.reminders;
     }
 
-    public void setReminder(Reminder reminder) {
-        this.reminder = reminder;
+    public void setReminder(Reminder reminders) {
+        this.reminders = reminders;
     }
 
     public ReminderTime getReminderTime() {
         return this.reminder_time;
     }
 
-    public void setReminderTime(LocalDate reminder_time) {
+    public void setReminderTime(ReminderTime reminder_time) {
         this.reminder_time = reminder_time;
     }
 

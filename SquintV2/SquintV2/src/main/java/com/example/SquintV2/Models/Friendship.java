@@ -25,6 +25,9 @@ public class Friendship{
     @PrimaryKeyColumn(name = "user_id", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private UUID user_id;
 
+    @Column(value = "friend_id")
+    private UUID friend_id;
+
     @Column(value ="status")
     private String status;
 

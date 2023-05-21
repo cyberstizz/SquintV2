@@ -28,7 +28,7 @@ public class Mailbox{
     private String body;
 
     public Integer getMessageId() {
-        return this.messageId;
+        return this.message_id;
     }
 
     public String getHeader() {

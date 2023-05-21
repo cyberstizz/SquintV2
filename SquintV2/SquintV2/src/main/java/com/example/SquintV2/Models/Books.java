@@ -57,7 +57,7 @@ public class Books{
     }
 
     public Integer getTotalPages() {
-        return this.pages;
+        return this.total_pages;
     }
 
     public void setTotalPages(Integer total_pages) {
