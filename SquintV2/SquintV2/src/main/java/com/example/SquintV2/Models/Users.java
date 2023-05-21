@@ -3,7 +3,6 @@ package main.java.com.example.SquintV2.Models;
 import java.time.LocalDate;
 import java.util.UUID;
 
-import org.w3c.dom.Text;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
@@ -33,7 +32,7 @@ public class Users {
         return this.username;
     }
 
-    public Void setUsername(String username) {
+    public void setUsername(String username) {
         this.username = username;
     }
 
@@ -41,7 +40,7 @@ public class Users {
         return this.password_hash;
     }
 
-    public Void setPasswordHash(String password_hash) {
+    public void setPasswordHash(String password_hash) {
         this.password_hash = password_hash;
     }
 
@@ -49,7 +48,7 @@ public class Users {
         return this.email;
     }
 
-    public Void setEmail(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -57,7 +56,7 @@ public class Users {
         return this.accessible;
     }
 
-    public Void setAccessible(Boolean accessible) {
+    public void setAccessible(Boolean accessible) {
         this.accessible = accessible;
     }
 }

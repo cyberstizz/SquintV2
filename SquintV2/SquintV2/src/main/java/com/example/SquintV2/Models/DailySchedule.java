@@ -38,11 +38,11 @@ public class DailySchedule {
         this.user_id = user_id;
     }
 
-    public LocalDate getTimeBlock() {
+    public List<LocalDate> getTimeBlock() {
         return this.time_block;
     }
 
-    public void setTimeBlock(LocalDate time_block) {
+    public void setTimeBlock(List<LocalDate> time_block) {
         this.time_block = time_block;
     }
 

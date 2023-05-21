@@ -8,7 +8,6 @@ import jakarta.persistence.Id;
 import java.util.UUID;
 
 import org.springframework.data.cassandra.core.mapping.Column;
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
 import org.springframework.data.cassandra.core.mapping.Table;
 import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
@@ -35,34 +34,34 @@ public class Books{
     @Column(value="total_pages")
     private Integer total_pages;
 
-    @Column(name="current_page")
+    @Column(value ="current_page")
     private Integer current_page;
 
-    @Column(name="completion_date")
+    @Column(value ="completion_date")
     private LocalDate completion_date;
 
-    public Integer getBookId() {
+    public UUID getBookId() {
         return this.book_id;
     }
 
-    public void setBookId(Integer book_id) {
+    public void setBookId(UUID book_id) {
         this.book_id = book_id;
     }
 
-    public Integer getUserId() {
+    public UUID getUserId() {
         return this.user_id;
     }
 
-    public void setUserId(Integer user_id) {
+    public void setUserId(UUID user_id) {
         this.user_id = user_id;
     }
 
-    public Integer getPages() {
+    public Integer getTotalPages() {
         return this.pages;
     }
 
-    public void setPages(Integer pages) {
-        this.pages = pages;
+    public void setTotalPages(Integer total_pages) {
+        this.total_pages = total_pages;
     }
 
     public Integer getCurrentPage() {
@@ -73,7 +72,7 @@ public class Books{
         this.current_page = current_page;
     }
 
-    public Date getCompletionDate() {
+    public LocalDate getCompletionDate() {
         return this.completion_date;
     }
 

@@ -18,15 +18,15 @@ import org.springframework.data.cassandra.core.mapping.Table;
 public class Alarm {
 
     @Id
-    private Integer alarm_id;
+    private UUID alarm_id;
 
     @Column(value ="user_id")
-    private Integer user_id;
+    private UUID user_id;
 
     @Column(value = "alarm_time")
     private LocalDate alarm_time;
 
-    public Integer getUserId() {
+    public UUID getUserId() {
         return this.user_id;
     }
 

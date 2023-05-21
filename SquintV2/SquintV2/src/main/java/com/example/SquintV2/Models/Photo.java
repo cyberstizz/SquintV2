@@ -15,7 +15,7 @@ public class Photo{
 
 
     @Id
-    private Integer photo_id;
+    private UUID photo_id;
 
     @Column(value ="user_id")
     private UUID user_id;
@@ -26,7 +26,7 @@ public class Photo{
     @Column(value ="goal_id")
     private Integer goal_id;
 
-    public Integer getPhotoId() {
+    public UUID getPhotoId() {
         return this.photo_id;
     }
 
@@ -38,7 +38,7 @@ public class Photo{
         return this.user_id;
     }
 
-    public void setUserId(Integer user_id) {
+    public void setUserId(UUID user_id) {
         this.user_id = user_id;
     }
 

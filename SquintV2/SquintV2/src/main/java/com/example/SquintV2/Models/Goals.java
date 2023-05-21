@@ -18,7 +18,7 @@ public class Goals {
     private UUID user_id;
 
     @Id
-    private Integer goal_id;
+    private UUID goal_id;
 
     @Column(name = "name")
     private String name;
@@ -33,7 +33,7 @@ public class Goals {
         return this.user_id;
     }
 
-    public void setUserId(Integer user_id) {
+    public void setUserId(UUID user_id) {
         this.user_id = user_id;
     }
 
