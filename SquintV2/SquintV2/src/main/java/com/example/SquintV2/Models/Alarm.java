@@ -18,9 +18,11 @@ import org.springframework.data.cassandra.core.mapping.Table;
 public class Alarm {
 
     @Id
+    @PrimaryKeyColumn(name = "alarm_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private UUID alarm_id;
 
-    @Column(value ="user_id")
+    @Id
+    @PrimaryKeyColumn(name = "user_id", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private UUID user_id;
 
     @Column(value = "alarm_time")
