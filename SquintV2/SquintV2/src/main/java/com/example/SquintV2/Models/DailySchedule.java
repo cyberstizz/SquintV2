@@ -23,11 +23,13 @@ public class DailySchedule {
     @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private UUID user_id;
 
+    @Column(value ="time_block")
+    @PrimaryKeyColumn(name = "time_block", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
+    private List<LocalDate> time_block;
+   
+    @Id
     @Column(value = "schedule_id")
     private UUID schedule_id;
-
-    @Column(value ="time_block")
-    private List<LocalDate> time_block;
 
     @Column(value ="task")
     private String task;
