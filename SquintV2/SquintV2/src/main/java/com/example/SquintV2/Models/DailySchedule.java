@@ -23,7 +23,7 @@ public class DailySchedule {
     @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private UUID user_id;
 
-    @Column(value ="time_block")
+    @Id
     @PrimaryKeyColumn(name = "time_block", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private List<LocalDate> time_block;
    
