@@ -13,7 +13,12 @@ import jakarta.persistence.Table;
 @Table(name="books_read")
 public class BooksRead{
 
+    @Id
+    @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
+    private UUID user_id;
 
+    @Column(value = "books_read")
+    private Integer books_read;
  
 
 }
