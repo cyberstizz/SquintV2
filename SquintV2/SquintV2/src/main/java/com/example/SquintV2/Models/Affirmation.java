@@ -15,6 +15,7 @@ import jakarta.persistence.Table;
 public class Affirmation{
 
     @Id
+    @PrimaryKeyColumn(name = "affirmation_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private Integer affirmation_id;
 
     @Column(name="user_id", nullable=false)
