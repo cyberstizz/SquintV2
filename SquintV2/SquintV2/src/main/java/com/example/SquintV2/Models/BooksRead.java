@@ -22,6 +22,22 @@ public class BooksRead{
 
     @Column(value = "books_read")
     private Integer books_read;
+
+    public UUID getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(UUID user_id) {
+        this.user_id = user_id;
+    }
+
+    public Integer getBooks_read() {
+        return books_read;
+    }
+
+    public void setBooks_read(Integer books_read) {
+        this.books_read = books_read;
+    }
  
 
 }
