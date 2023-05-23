@@ -2,7 +2,7 @@ package main.java.com.example.SquintV2.Repositories;
 
 import org.springframework.data.cassandra.repository.CassandraRepository;
 
-public interface FriendshpRepository extends CassandraRepository<Playbook, UUID>{
+public interface FriendshipRepository extends CassandraRepository<Playbook, UUID>{
 
 }
 
