@@ -18,7 +18,8 @@ public class Affirmation{
     @PrimaryKeyColumn(name = "affirmation_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private Integer affirmation_id;
 
-    @Id @PrimaryKeyColumn(name = "user_id", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
+    @Id 
+    @PrimaryKeyColumn(name = "user_id", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private Integer user_id;
 
     public Integer getAffirmationId() {
