@@ -18,11 +18,13 @@ import org.springframework.data.cassandra.core.mapping.Table;
 public class DailySchedule {
 
 
-    @Id 
-    private Integer schedule_id;
 
-    @Column(value ="user_id")
+    @Id
+    @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private UUID user_id;
+
+    @Column(value = "schedule_id")
+    private UUID schedule_id;
 
     @Column(value ="time_block")
     private List<LocalDate> time_block;
