@@ -2,7 +2,7 @@ package main.java.com.example.SquintV2.Models;
 
 import org.springframework.data.annotation.Id;
 
-
+import java.time.LocalDate;
 import java.util.UUID;
 
 import org.springframework.data.cassandra.core.mapping.Column;
@@ -20,9 +20,12 @@ public class Friendship{
     @Id
     @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private UUID user_id;
-    
+
     @Id
-    @PrimaryKeyColumn(name = "friendship_id", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
+    @PrimaryKeyColumn(name = "date", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
+    private LocalDate date;
+    
+    @Column(value = "friendship_id")
     private UUID friendship_id;
 
 
