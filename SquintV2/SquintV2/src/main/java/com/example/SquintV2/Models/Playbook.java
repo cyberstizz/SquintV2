@@ -31,22 +31,22 @@ public class Playbook {
     @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private UUID user_id;
 
-    @Column("reminders")
+    @Column(value = "reminders")
     private Reminder reminders;
 
-    @Column("reminder_time")
+    @Column(value = "reminder_time")
     private ReminderTime reminder_time;
 
-    @Column("check_completion")
+    @Column(value = "check_completion")
     private Check_completion check_completion;
 
-    @Column("alarm_types")
+    @Column(value = "alarm_types")
     private Alarms alarm_types;
 
-    @Column("conflicts")
+    @Column(value = "conflicts")
     private Conflicts conflicts;
 
-    @Column("reschedules")
+    @Column(value = "reschedules")
     private Reschedules reschedules;
 
     public Reminder getReminder() {
