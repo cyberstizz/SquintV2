@@ -27,8 +27,8 @@ public class Task {
     @PrimaryKeyColumn(name = "time_block", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private LocalDate time_block;
 
-    @Column(value ="task")
-    private String task;
+    @Column(value ="task_name")
+    private String task_name;
 
     public UUID getUserId() {
         return this.user_id;
@@ -46,12 +46,12 @@ public class Task {
         this.time_block = time_block;
     }
 
-    public String getTask() {
-        return this.task;
+    public String getTaskName() {
+        return this.task_name;
     }
 
-    public void setTask(String task) {
-        this.task = task;
+    public void setTaskName(String task_name) {
+        this.task_name = task_name;
     }
 
 }
