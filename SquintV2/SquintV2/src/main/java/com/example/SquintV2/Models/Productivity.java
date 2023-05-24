@@ -39,29 +39,54 @@ public class Productivity{
     @Column(value = "Report_completed")
     private Boolean Report_completed;
 
-    public Integer getProductivityId() {
-        return this.productivity_id;
+    public UUID getUser_id() {
+        return user_id;
     }
 
-    public void setProductivityId(Integer productivity_id) {
-        this.productivity_id = productivity_id;
-    }
-
-    public Integer getUserId() {
-        return this.user_id;
-    }
-
-    public void setUserId(Integer user_id) {
+    public void setUser_id(UUID user_id) {
         this.user_id = user_id;
     }
 
-
     public LocalDate getDate() {
-        return this.date;
+        return date;
     }
 
     public void setDate(LocalDate date) {
         this.date = date;
     }
+
+    public BigDecimal getScore() {
+        return score;
+    }
+
+    public void setScore(BigDecimal score) {
+        this.score = score;
+    }
+
+    public BigDecimal getTasks_completed() {
+        return tasks_completed;
+    }
+
+    public void setTasks_completed(BigDecimal tasks_completed) {
+        this.tasks_completed = tasks_completed;
+    }
+
+    public BigDecimal getTime_management() {
+        return time_management;
+    }
+
+    public void setTime_management(BigDecimal time_management) {
+        this.time_management = time_management;
+    }
+
+    public Boolean getReport_completed() {
+        return Report_completed;
+    }
+
+    public void setReport_completed(Boolean report_completed) {
+        Report_completed = report_completed;
+    }
+
+    
 
 }
