@@ -28,7 +28,7 @@ public class Photo{
     private String path_or_url;
 
     @Column(value ="goal_id")
-    private Integer goal_id;
+    private UUID goal_id;
 
     public UUID getPhotoId() {
         return this.photo_id;
