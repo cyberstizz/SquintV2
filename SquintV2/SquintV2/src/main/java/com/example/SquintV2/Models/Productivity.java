@@ -101,8 +101,15 @@ public class Productivity{
         Productivity = productivity;
     }
 
-    
+    public Boolean getAccessible() {
+        return accessible;
+    }
 
+    public void setAccessible(Boolean accessible) {
+        this.accessible = accessible;
+    }
+
+  
     
 
 }
