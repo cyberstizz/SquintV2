@@ -19,8 +19,11 @@ public class Meditation{
     @Column(name="user_id", nullable=false)
     private Integer user_id;
 
+    @Column(name="total_sessions")
+    private Integer total_sessions;
+    
     @Column(name="total_time")
-    private String total_time;
+    private Integer total_time;
 
     @Column(name="current_streak")
     private Integer current_streak;
