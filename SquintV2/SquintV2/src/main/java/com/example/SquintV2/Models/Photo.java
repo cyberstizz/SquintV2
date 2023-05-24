@@ -17,6 +17,10 @@ public class Photo{
     @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private UUID user_id;
 
+    @Id
+    @PrimaryKeyColumn(name = "deadline", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
+    private LocalDate deadline;
+    
     @Column(value = "photo_id")
     private UUID photo_id;
 
