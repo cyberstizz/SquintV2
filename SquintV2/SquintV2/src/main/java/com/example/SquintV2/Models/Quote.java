@@ -1,23 +1,26 @@
 package main.java.com.example.SquintV2.Models;
 
+import org.springframework.data.annotation.Id;
+
 import java.time.LocalDate;
 import java.util.UUID;
 
-import org.w3c.dom.Text;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import org.springframework.data.cassandra.core.mapping.Column;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
+import org.springframework.data.cassandra.core.mapping.Table;
+import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 
 
 @Table(name="quote")
 public class Quote {
 
     @Id
-    private Integer quote_id;
-
-    @Column(name="quote_type")
+    @PrimaryKeyColumn(name = "quote_type", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private String quote_type;
+
+    @Column(name="quote_author")
+    private String quote_author;
 
     @Column(name="text")
     private String quote;
