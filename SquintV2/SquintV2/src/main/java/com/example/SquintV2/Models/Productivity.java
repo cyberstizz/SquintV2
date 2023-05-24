@@ -5,6 +5,9 @@ import org.springframework.data.annotation.Id;
 import java.time.LocalDate;
 import java.util.UUID;
 
+import java.math.BigDecimal;
+
+
 import org.springframework.data.cassandra.core.mapping.Column;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
@@ -24,8 +27,8 @@ public class Productivity{
     @PrimaryKeyColumn(name = "date", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private LocalDate date;
 
-    @Column(value = "tasks_completed")
-    private Integer tasks_completed;
+    @Column(value = "score")
+    private Integer score;
 
     public Integer getProductivityId() {
         return this.productivity_id;
