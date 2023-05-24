@@ -15,18 +15,27 @@ import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 public class Mailbox{
 
     @Id
-    private Integer message_id;
+    @PrimaryKeyColumn(name = "recipient_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
+    private UUID recipient_id;
 
-    @Column(name="user_id", nullable= false)
-    private Integer sender_id;
+    @Id
+    @PrimaryKeyColumn(name = "sender_id", ordinal = 1, type = PrimaryKeyType.PARTITIONED)
+    private UUID sender_id;
 
-    @Column(name="user_id", nullable= false)
-    private Integer recipient_id;
+    @Id
+    @PrimaryKeyColumn(name = "date", ordinal = 2, type = PrimaryKeyType.CLUSTERED)
+    private LocalDate date;
+    
+    @Column(value = "message_id")
+    private UUID message_id;
 
-    @Column(name="header")
+    @Column(value = "status")
+    private String status;
+
+    @Column(value = "header")
     private String header;
-
-    @Column(name="body")
+    
+    @Column(value = "body")
     private String body;
 
     public Integer getMessageId() {
