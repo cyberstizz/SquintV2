@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface MaiilboxRepository extends CassandraRepository<Mailbox, UUID>{
+public interface MailboxRepository extends CassandraRepository<Mailbox, UUID>{
 
 }
 
