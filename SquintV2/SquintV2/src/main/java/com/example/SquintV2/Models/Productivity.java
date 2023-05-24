@@ -24,6 +24,9 @@ public class Productivity{
     @PrimaryKeyColumn(name = "date", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private LocalDate date;
 
+    @Column(value = "tasks_completed")
+    private Integer tasks_completed;
+
     public Integer getProductivityId() {
         return this.productivity_id;
     }
