@@ -18,12 +18,13 @@ import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 public class Friendship{
 
     @Id
-    @PrimaryKeyColumn(name = "friendship_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
+    @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
+    private UUID user_id;
+    
+    @Id
+    @PrimaryKeyColumn(name = "friendship_id", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private UUID friendship_id;
 
-    @Id
-    @PrimaryKeyColumn(name = "user_id", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
-    private UUID user_id;
 
     @Column(value = "friend_id")
     private UUID friend_id;
