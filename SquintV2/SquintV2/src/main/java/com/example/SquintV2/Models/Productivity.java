@@ -28,7 +28,7 @@ public class Productivity{
     private LocalDate date;
 
     @Column(value = "score")
-    private Integer score;
+    private BigDecimal score;
 
     public Integer getProductivityId() {
         return this.productivity_id;
