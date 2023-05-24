@@ -13,12 +13,12 @@ import org.springframework.data.cassandra.core.mapping.Table;
 @Table(value="photo")
 public class Photo{
 
-
     @Id
-    private UUID photo_id;
-
-    @Column(value ="user_id")
+    @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private UUID user_id;
+
+    @Column(value = "photo_id")
+    private UUID photo_id;
 
     @Column(value ="path_or_url")
     private String path_or_url;
