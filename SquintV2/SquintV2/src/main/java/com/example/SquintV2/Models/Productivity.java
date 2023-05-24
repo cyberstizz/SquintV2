@@ -90,6 +90,16 @@ public class Productivity{
         Report_completed = report_completed;
     }
 
+    public BigDecimal getProductivity() {
+        return Productivity;
+    }
+
+    public void setProductivity(BigDecimal productivity) {
+        Productivity = productivity;
+    }
+
+    
+
     
 
 }
