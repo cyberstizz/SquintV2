@@ -35,37 +35,46 @@ public class Friendship{
     @Column(value ="status")
     private String status;
 
-    public UUID getFriendship_id() {
-        return this.friendship_id;
+    public UUID getUser_id() {
+        return user_id;
     }
 
-    public void setFriendship_id(Integer friendship_id) {
-        this.friendship_id = friendship_id;
-    }
-
-
-    public UUID getUserId() {
-        return this.user_id;
-    }
-
-    public void setUserId(UUID user_id) {
+    public void setUser_id(UUID user_id) {
         this.user_id = user_id;
     }
 
-    public UUID getFriendId() {
-        return this.friend_id;
+    public LocalDate getDate() {
+        return date;
     }
 
-    public void setFriendId(UUID friend_id) {
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public UUID getFriendship_id() {
+        return friendship_id;
+    }
+
+    public void setFriendship_id(UUID friendship_id) {
+        this.friendship_id = friendship_id;
+    }
+
+    public UUID getFriend_id() {
+        return friend_id;
+    }
+
+    public void setFriend_id(UUID friend_id) {
         this.friend_id = friend_id;
     }
 
     public String getStatus() {
-        return this.status;
+        return status;
     }
 
     public void setStatus(String status) {
         this.status = status;
     }
+
+   
 
 }
