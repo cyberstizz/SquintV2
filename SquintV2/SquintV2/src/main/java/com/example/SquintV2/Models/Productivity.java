@@ -36,6 +36,9 @@ public class Productivity{
     @Column(value = "time_management")
     private BigDecimal time_management;
 
+    @Column(value = "Report_completed")
+    private Boolean Report_completed;
+
     public Integer getProductivityId() {
         return this.productivity_id;
     }
