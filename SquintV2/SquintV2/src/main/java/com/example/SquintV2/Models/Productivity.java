@@ -17,10 +17,8 @@ public class Productivity{
 
 
     @Id
-    private Integer productivity_id;
-
-    @Column(name="user_id", nullable=false)
-    private Integer user_id;
+    @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
+    private UUID user_id;
 
     @Column(name="date")
     private LocalDate date;
