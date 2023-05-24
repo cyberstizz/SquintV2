@@ -26,10 +26,6 @@ public class Task {
     @Id
     @PrimaryKeyColumn(name = "time_block", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private LocalDate time_block;
-   
-
-    @Column(value = "schedule_id")
-    private UUID schedule_id;
 
     @Column(value ="task")
     private String task;
