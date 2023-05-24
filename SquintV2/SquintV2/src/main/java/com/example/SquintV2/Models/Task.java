@@ -25,7 +25,7 @@ public class Task {
 
     @Id
     @PrimaryKeyColumn(name = "time_block", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
-    private List<LocalDate> time_block;
+    private LocalDate time_block;
    
 
     @Column(value = "schedule_id")
