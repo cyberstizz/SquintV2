@@ -42,11 +42,11 @@ public class Task {
         this.user_id = user_id;
     }
 
-    public List<LocalDate> getTimeBlock() {
+    public LocalDate getTimeBlock() {
         return this.time_block;
     }
 
-    public void setTimeBlock(List<LocalDate> time_block) {
+    public void setTimeBlock(LocalDate time_block) {
         this.time_block = time_block;
     }
 
