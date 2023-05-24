@@ -20,7 +20,8 @@ public class Productivity{
     @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private UUID user_id;
 
-    @Column(name="date")
+    @Id
+    @PrimaryKeyColumn(name = "date", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private LocalDate date;
 
     public Integer getProductivityId() {
