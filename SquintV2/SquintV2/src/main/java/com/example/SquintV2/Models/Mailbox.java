@@ -38,12 +38,48 @@ public class Mailbox{
     @Column(value = "body")
     private String body;
 
-    public Integer getMessageId() {
-        return this.message_id;
+    public UUID getRecipient_id() {
+        return recipient_id;
+    }
+
+    public void setRecipient_id(UUID recipient_id) {
+        this.recipient_id = recipient_id;
+    }
+
+    public UUID getSender_id() {
+        return sender_id;
+    }
+
+    public void setSender_id(UUID sender_id) {
+        this.sender_id = sender_id;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public UUID getMessage_id() {
+        return message_id;
+    }
+
+    public void setMessage_id(UUID message_id) {
+        this.message_id = message_id;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getHeader() {
-        return this.header;
+        return header;
     }
 
     public void setHeader(String header) {
@@ -51,11 +87,13 @@ public class Mailbox{
     }
 
     public String getBody() {
-        return this.body;
+        return body;
     }
 
     public void setBody(String body) {
         this.body = body;
     }
+
+    
 
 }
