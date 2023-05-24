@@ -39,6 +39,9 @@ public class Productivity{
     @Column(value = "Report_completed")
     private Boolean Report_completed;
 
+    @Column(value = "Productivity")
+    private BigDecimal Productivity;
+
     public UUID getUser_id() {
         return user_id;
     }
