@@ -31,7 +31,7 @@ public class Friendship{
     @Column(value ="status")
     private String status;
 
-    public Integer getFriendship_id() {
+    public UUID getFriendship_id() {
         return this.friendship_id;
     }
 
