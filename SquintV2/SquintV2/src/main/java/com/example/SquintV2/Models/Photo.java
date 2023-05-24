@@ -30,37 +30,47 @@ public class Photo{
     @Column(value ="goal_id")
     private UUID goal_id;
 
-    public UUID getPhotoId() {
-        return this.photo_id;
+    public UUID getUser_id() {
+        return user_id;
     }
 
-    public void setInteger(UUID photo_id) {
-        this.photo_id = photo_id;
-    }
-
-    public UUID getUserId() {
-        return this.user_id;
-    }
-
-    public void setUserId(UUID user_id) {
+    public void setUser_id(UUID user_id) {
         this.user_id = user_id;
     }
 
-    public String getPathOrUrl() {
-        return this.path_or_url;
+    public LocalDate getDeadline() {
+        return deadline;
     }
 
-    public void setPathOrUrl(String path_or_url) {
+    public void setDeadline(LocalDate deadline) {
+        this.deadline = deadline;
+    }
+
+    public UUID getPhoto_id() {
+        return photo_id;
+    }
+
+    public void setPhoto_id(UUID photo_id) {
+        this.photo_id = photo_id;
+    }
+
+    public String getPath_or_url() {
+        return path_or_url;
+    }
+
+    public void setPath_or_url(String path_or_url) {
         this.path_or_url = path_or_url;
     }
 
-    public Integer getGoalId() {
-        return this.goal_id;
+    public UUID getGoal_id() {
+        return goal_id;
     }
 
-    public void setGoalId(Integer goal_id) {
+    public void setGoal_id(UUID goal_id) {
         this.goal_id = goal_id;
     }
+
+    
 
 
 }
