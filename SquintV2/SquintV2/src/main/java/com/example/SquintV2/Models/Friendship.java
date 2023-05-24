@@ -19,7 +19,7 @@ public class Friendship{
 
     @Id
     @PrimaryKeyColumn(name = "friendship_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
-    private Integer friendship_id;
+    private UUID friendship_id;
 
     @Id
     @PrimaryKeyColumn(name = "user_id", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
