@@ -42,8 +42,8 @@ public class Productivity{
     @Column(value = "Productivity")
     private BigDecimal Productivity;
 
-    @Column(value = "public")
-    private Boolean public;
+    @Column(value = "accessible")
+    private Boolean accessible;
 
     public UUID getUser_id() {
         return user_id;
