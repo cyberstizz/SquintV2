@@ -15,7 +15,7 @@ import org.springframework.data.cassandra.core.mapping.Table;
 
 
 @Table(value="dailySchedule")
-public class DailySchedule {
+public class Task {
 
 
 
@@ -27,7 +27,7 @@ public class DailySchedule {
     @PrimaryKeyColumn(name = "time_block", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private List<LocalDate> time_block;
    
-    @Id
+
     @Column(value = "schedule_id")
     private UUID schedule_id;
 
