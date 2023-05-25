@@ -23,9 +23,8 @@ public class DailyScheduleItem {
     @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private UUID user_id;
 
-    @Id
-    @PrimaryKeyColumn(name = "time_block", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
-    private List<LocalDate> schedule;
+    @Column(value = "schedule_item")
+    private LocalDate schedule_item;
 
     @Column(value ="task_name")
     private String task_name;
