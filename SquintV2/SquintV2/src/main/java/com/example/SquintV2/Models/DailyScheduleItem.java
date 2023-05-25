@@ -32,28 +32,37 @@ public class DailyScheduleItem {
     @Column(value ="task_description")
     private String task_description;
 
-    public UUID getUserId() {
-        return this.user_id;
+    public UUID getUser_id() {
+        return user_id;
     }
 
-    public void setUserId(UUID user_id) {
+    public void setUser_id(UUID user_id) {
         this.user_id = user_id;
     }
 
-    public LocalDate getTimeBlock() {
-        return this.time_block;
+    public LocalDate getSchedule_item() {
+        return schedule_item;
     }
 
-    public void setTimeBlock(LocalDate time_block) {
-        this.time_block = time_block;
+    public void setSchedule_item(LocalDate schedule_item) {
+        this.schedule_item = schedule_item;
     }
 
-    public String getTaskName() {
-        return this.task_name;
+    public String getTask_name() {
+        return task_name;
     }
 
-    public void setTaskName(String task_name) {
+    public void setTask_name(String task_name) {
         this.task_name = task_name;
     }
 
+    public String getTask_description() {
+        return task_description;
+    }
+
+    public void setTask_description(String task_description) {
+        this.task_description = task_description;
+    }
+
+    
 }
