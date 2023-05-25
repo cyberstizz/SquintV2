@@ -14,8 +14,8 @@ import org.springframework.data.cassandra.core.mapping.Table;
 
 
 
-@Table(value="task")
-public class Task {
+@Table(value="daily_schedule")
+public class DailySchedule {
 
 
 
