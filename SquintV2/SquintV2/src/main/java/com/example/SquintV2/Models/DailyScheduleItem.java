@@ -29,6 +29,9 @@ public class DailyScheduleItem {
     @Column(value ="task_name")
     private String task_name;
 
+    @Column(value ="task_description")
+    private String task_description;
+
     public UUID getUserId() {
         return this.user_id;
     }
