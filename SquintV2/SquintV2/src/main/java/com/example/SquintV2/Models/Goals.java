@@ -34,43 +34,45 @@ public class Goals {
     @Column(value = "goal_description")
     private String goal_description;
 
-    public UUID getUserId() {
-        return this.user_id;
+    public UUID getUser_id() {
+        return user_id;
     }
 
-    public void setUserId(UUID user_id) {
+    public void setUser_id(UUID user_id) {
         this.user_id = user_id;
     }
 
-    public UUID getGoalId() {
-        return this.goal_id;
+    public LocalDate getGoal_deadline() {
+        return goal_deadline;
     }
 
-    public void setGoalId(UUID goal_id) {
+    public void setGoal_deadline(LocalDate goal_deadline) {
+        this.goal_deadline = goal_deadline;
+    }
+
+    public UUID getGoal_id() {
+        return goal_id;
+    }
+
+    public void setGoal_id(UUID goal_id) {
         this.goal_id = goal_id;
     }
 
-    public String getName() {
-        return this.name;
+    public String getGoal_name() {
+        return goal_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setGoal_name(String goal_name) {
+        this.goal_name = goal_name;
     }
 
-    public String getDescription() {
-        return this.description;
+    public String getGoal_description() {
+        return goal_description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setGoal_description(String goal_description) {
+        this.goal_description = goal_description;
     }
 
-    public LocalDate getDeadline() {
-        return this.deadline;
-    }
-
-    public void setDeadline(LocalDate deadline) {
-        this.deadline = deadline;
-    }
+    
  }
