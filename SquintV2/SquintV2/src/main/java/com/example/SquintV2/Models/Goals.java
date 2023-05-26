@@ -1,13 +1,16 @@
 package main.java.com.example.SquintV2.Models;
 
+import java.util.List;
 import java.time.LocalDate;
 import java.util.UUID;
 
-import org.w3c.dom.Text;
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+
+
+import org.springframework.data.cassandra.core.mapping.Column;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
+import org.springframework.data.cassandra.core.mapping.Table;
 
 
 @Table(name="Goals")
