@@ -25,6 +25,9 @@ public class Goals {
     @PrimaryKeyColumn(name = "goal_deadline", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private LocalDate goal_deadline;
 
+    @Column(name = "goal_id")
+    private UUID name;
+    
     @Column(name = "name")
     private String name;
 
