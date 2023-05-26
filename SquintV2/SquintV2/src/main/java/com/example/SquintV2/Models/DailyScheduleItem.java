@@ -17,13 +17,11 @@ import org.springframework.data.cassandra.core.mapping.Table;
 @Table(value="daily_schedule_item")
 public class DailyScheduleItem {
 
-
-
     @Id
     @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private UUID user_id;
 
-    @Column(value = "schedule_item")
+    @PrimaryKeyColumn(name = "schedule_item", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private LocalDate schedule_item;
 
     @Column(value ="task_name")
