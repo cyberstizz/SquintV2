@@ -30,6 +30,9 @@ public class Users {
     @Column(value = "email")
     private String email;
 
+    @Column(value = "daily_schedule")
+    private List<DailyScheduleItem> dailySchedule;
+
     @Column(value = "biography")
     private String biography;
 
