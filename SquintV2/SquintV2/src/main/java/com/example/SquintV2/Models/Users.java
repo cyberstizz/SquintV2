@@ -82,6 +82,14 @@ public class Users {
         this.email = email;
     }
 
+    public List<DailyScheduleItem> getDailySchedule() {
+        return dailySchedule;
+    }
+
+    public void setDailySchedule(List<DailyScheduleItem> dailySchedule) {
+        this.dailySchedule = dailySchedule;
+    }
+
     public String getBiography() {
         return biography;
     }
