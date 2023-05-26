@@ -17,10 +17,12 @@ import org.springframework.data.cassandra.core.mapping.Table;
 public class Goals {
 
 
-    @Id 
+    @Id
+    @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private UUID user_id;
 
     @Id
+    @PrimaryKeyColumn(name = "goal_id", ordinal = 1, type = PrimaryKeyType.PARTITIONED)
     private UUID goal_id;
 
     @Column(name = "name")
