@@ -26,16 +26,13 @@ public class Goals {
     private LocalDate goal_deadline;
 
     @Column(name = "goal_id")
-    private UUID name;
+    private UUID goal_id;
     
     @Column(name = "name")
     private String name;
 
     @Column(name = "description")
     private String description;
-
-    @Column(name = "deadline")
-    private LocalDate deadline;
 
     public UUID getUserId() {
         return this.user_id;
