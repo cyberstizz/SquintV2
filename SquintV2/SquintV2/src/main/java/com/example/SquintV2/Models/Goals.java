@@ -22,8 +22,8 @@ public class Goals {
     private UUID user_id;
 
     @Id
-    @PrimaryKeyColumn(name = "goal_id", ordinal = 1, type = PrimaryKeyType.PARTITIONED)
-    private UUID goal_id;
+    @PrimaryKeyColumn(name = "goal_deadline", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
+    private LocalDate goal_deadline;
 
     @Column(name = "name")
     private String name;
