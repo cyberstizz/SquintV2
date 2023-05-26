@@ -25,14 +25,14 @@ public class Goals {
     @PrimaryKeyColumn(name = "goal_deadline", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private LocalDate goal_deadline;
 
-    @Column(name = "goal_id")
+    @Column(value = "goal_id")
     private UUID goal_id;
     
-    @Column(name = "name")
-    private String name;
+    @Column(value = "goal_name")
+    private String goal_name;
 
-    @Column(name = "description")
-    private String description;
+    @Column(value = "goal_description")
+    private String goal_description;
 
     public UUID getUserId() {
         return this.user_id;
