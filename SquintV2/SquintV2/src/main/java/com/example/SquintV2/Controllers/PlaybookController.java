@@ -22,5 +22,16 @@ public class PlaybookController {
     }
 
 
+    @GetMapping("/{userId}")
+    public ResponseEntity<Playbook> getPlaybookSettings(@PathVariable UUID userId) {
+        Playbook playbook = playbookService.getPlaybookSettings(userId);
+        if (playbook != null) {
+            return ResponseEntity.ok(playbook);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+
 
 }
