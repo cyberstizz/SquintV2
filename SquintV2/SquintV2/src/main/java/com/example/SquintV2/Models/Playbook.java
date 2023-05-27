@@ -16,7 +16,7 @@ import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 
 
 import main.java.com.example.SquintV2.Enums.Alarms;
-import main.java.com.example.SquintV2.Enums.Check_completion;
+import main.java.com.example.SquintV2.Enums.CheckCompletion;
 import main.java.com.example.SquintV2.Enums.Conflicts;
 import main.java.com.example.SquintV2.Enums.Reminder;
 import main.java.com.example.SquintV2.Enums.ReminderTime;
@@ -65,11 +65,11 @@ public class Playbook {
         this.reminder_time = reminder_time;
     }
 
-    public Check_completion getCheckCompletioin() {
+    public CheckCompletion getCheckCompletioin() {
         return this.check_completion;
     }
 
-    public void setCheckCompletion(Check_completion check_completion) {
+    public void setCheckCompletion(CheckCompletion check_completion) {
         this.check_completion = check_completion;
     }
 
