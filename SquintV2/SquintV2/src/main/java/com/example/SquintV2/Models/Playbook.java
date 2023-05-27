@@ -38,7 +38,7 @@ public class Playbook {
     private ReminderTime reminder_time;
 
     @Column(value = "check_completion")
-    private Check_completion check_completion;
+    private CheckCompletion check_completion;
 
     @Column(value = "alarm_types")
     private Alarms alarm_types;
