@@ -16,6 +16,10 @@ public class PlaybookController {
     private final PlaybookService playbookService;
 
 
+    @Autowired
+    public PlaybookController(PlaybookService playbookService) {
+        this.playbookService = playbookService;
+    }
 
 
 
