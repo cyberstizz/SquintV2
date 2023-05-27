@@ -1,6 +1,7 @@
 package main.java.com.example.SquintV2.Models;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.UUID;
 
 import jakarta.persistence.Id;
