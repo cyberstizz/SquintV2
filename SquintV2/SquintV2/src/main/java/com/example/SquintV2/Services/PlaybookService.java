@@ -2,7 +2,9 @@ package main.java.com.example.SquintV2.Services;
 
 import main.java.com.example.SquintV2.Models.Playbook;
 import main.java.com.example.SquintV2.Repositories.PlaybookRepository;
+import main.java.com.example.SquintV2.Exceptions.NotFoundException;
 
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +21,9 @@ public class PlaybookService {
     }
 
     public Playbook getPlaybookSettings(UUID userId) {
-        return playbookRepository.findById(userId)
-                .orElseThrow(() -> new NotFoundException("Playbook settings not found for user: " + userId));
+        Optional<Playbook> playbook = playbookRepository.findById(userId);
+        return playbook.orElse(null);
+            
     }
 
 }
