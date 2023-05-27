@@ -33,5 +33,12 @@ public class PlaybookController {
     }
 
 
+    @PutMapping("/{userId}")
+    public ResponseEntity<Playbook> updatePlaybookSettings(@PathVariable UUID userId, @RequestBody Playbook updatedSettings) {
+        Playbook updatedPlaybook = playbookService.updatePlaybookSettings(userId, updatedSettings);
+        return ResponseEntity.ok(updatedPlaybook);
+    }
+
+
 
 }
