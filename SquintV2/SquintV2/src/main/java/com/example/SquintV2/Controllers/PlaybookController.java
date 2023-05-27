@@ -13,6 +13,8 @@ import java.util.UUID;
 @RequestMapping("/playbook")
 public class PlaybookController {
 
+    private final PlaybookService playbookService;
+
 
 
 
