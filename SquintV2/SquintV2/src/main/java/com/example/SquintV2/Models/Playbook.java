@@ -65,7 +65,7 @@ public class Playbook {
         this.reminder_time = reminder_time;
     }
 
-    public CheckCompletion getCheckCompletioin() {
+    public CheckCompletion getCheckCompletion() {
         return this.check_completion;
     }
 
@@ -73,11 +73,11 @@ public class Playbook {
         this.check_completion = check_completion;
     }
 
-    public Alarms getAlarmType() {
+    public Alarms getAlarms() {
         return this.alarm_types;
     }
 
-    public void setAlarmTypes(Alarms alarmTypes) {
+    public void setAlarms(Alarms alarmTypes) {
         this.alarm_types = alarmTypes;
     }
 
