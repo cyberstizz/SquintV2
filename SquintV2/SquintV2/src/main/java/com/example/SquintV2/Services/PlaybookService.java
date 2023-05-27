@@ -25,4 +25,19 @@ public class PlaybookService {
             
     }
 
+    public Playbook updatePlaybookSettings(UUID userId, Playbook updatedSettings) {
+        Playbook existingPlaybook = playbookRepository.findById(userId)
+                .orElseThrow(() -> new NotFoundException("Playbook settings not found for user: " + userId));
+
+        // Update the individual settings
+        existingPlaybook.setReminder(updatedSettings.getReminder());
+        existingPlaybook.setReminderTime(updatedSettings.getReminderTime());
+        existingPlaybook.setCheckCompletion(updatedSettings.getCheckCompletion());
+        existingPlaybook.setAlarmTypes(updatedSettings.getAlarmTypes());
+        existingPlaybook.setConflicts(updatedSettings.getConflicts());
+        existingPlaybook.setReschedules(updatedSettings.getReschedules());
+
+        return playbookRepository.save(existingPlaybook);
+    }
+
 }
