@@ -13,7 +13,7 @@ import org.springframework.data.cassandra.core.mapping.Table;
 import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 
 
-@Table(name="books_read")
+@Table(value = "books_read")
 public class BooksRead{
 
     @Id

@@ -12,7 +12,7 @@ import org.springframework.data.cassandra.core.mapping.Table;
 import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 
 
-@Table(name="quote")
+@Table(value = "quote")
 public class Quote {
 
     @Id

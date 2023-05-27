@@ -15,7 +15,7 @@ import org.springframework.data.cassandra.core.mapping.Table;
 import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 
 
-@Table(name="productivity")
+@Table(value = "productivity")
 public class Productivity{
 
 

@@ -13,7 +13,7 @@ import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 
 
 
-@Table(name="meditation")
+@Table(value = "meditation")
 public class Meditation{
 
     @Id
