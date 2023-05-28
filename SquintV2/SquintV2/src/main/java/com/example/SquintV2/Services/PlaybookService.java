@@ -1,6 +1,7 @@
 package main.java.com.example.SquintV2.Services;
 
 import main.java.com.example.SquintV2.Models.Playbook;
+import main.java.com.example.SquintV2.Models.Alarm;
 import main.java.com.example.SquintV2.Repositories.PlaybookRepository;
 import main.java.com.example.SquintV2.Repositories.AlarmRepository;
 
@@ -19,7 +20,8 @@ public class PlaybookService {
 
 
     @Autowired
-    public PlaybookService(PlaybookRepository playbookRepository) {
+        this.alarmRepository = alarmRepository;
+        public PlaybookService(PlaybookRepository playbookRepository, AlarmRepository alarmRepository) {
         this.playbookRepository = playbookRepository;
         this.alarmRepository = alarmRepository;
 
