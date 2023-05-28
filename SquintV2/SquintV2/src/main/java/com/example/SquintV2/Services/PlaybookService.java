@@ -51,4 +51,14 @@ public class PlaybookService {
         return playbookRepository.save(existingPlaybook);
     }
 
+    public Alarm updateAlarm(UUID alarmId, Alarm updatedAlarm) {
+        Alarm existingAlarm = alarmRepository.findById(alarmId)
+                .orElseThrow(() -> new RuntimeException("Alarm not found: " + alarmId));
+
+        // Update the individual alarm properties
+        existingAlarm.setAlarmTime(updatedAlarm.getAlarmTime());
+
+        return alarmRepository.save(existingAlarm);
+    }
+
 }
