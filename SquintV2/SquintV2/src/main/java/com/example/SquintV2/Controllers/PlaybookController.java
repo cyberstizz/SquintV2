@@ -1,5 +1,6 @@
 package main.java.com.example.SquintV2.Controllers;
 
+import main.java.com.example.SquintV2.Models.Alarm;
 import main.java.com.example.SquintV2.Models.Playbook;
 import main.java.com.example.SquintV2.Services.PlaybookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,6 +55,13 @@ public class PlaybookController {
             return ResponseEntity.noContent().build();
         }
     }
+
+
+    @PutMapping("/alarms/{alarmId}")
+    public ResponseEntity<Alarm> updateAlarm(@PathVariable UUID alarmId, @RequestBody Alarm updatedAlarm) {
+        Alarm updatedAlarm = playbookService.updateAlarm(alarmId, updatedAlarm);
+        return ResponseEntity.ok(updatedAlarm);
+}
 
 
 
