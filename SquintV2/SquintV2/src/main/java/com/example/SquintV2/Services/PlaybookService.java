@@ -61,4 +61,9 @@ public class PlaybookService {
         return alarmRepository.save(existingAlarm);
     }
 
+    public Playbook createPlaybookSettings(UUID userId, Playbook playbook) {
+        playbook.setUserId(userId);
+        return playbookRepository.save(playbook);
+    }
+
 }
