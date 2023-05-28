@@ -15,10 +15,14 @@ import org.springframework.stereotype.Service;
 public class PlaybookService {
 
     private final PlaybookRepository playbookRepository;
+    private final AlarmRepository alarmRepository;
+
 
     @Autowired
     public PlaybookService(PlaybookRepository playbookRepository) {
         this.playbookRepository = playbookRepository;
+        this.alarmRepository = alarmRepository;
+
     }
 
     public Playbook getPlaybookSettings(UUID userId) {
