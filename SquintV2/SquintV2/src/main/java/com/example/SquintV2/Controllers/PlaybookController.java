@@ -39,6 +39,11 @@ public class PlaybookController {
         return ResponseEntity.ok(updatedPlaybook);
     }
 
+    @PostMapping("/{userId}")
+    public ResponseEntity<Playbook> createPlaybookSettings(@PathVariable UUID userId, @RequestBody Playbook playbook) {
+        Playbook createdPlaybook = playbookService.createPlaybookSettings(userId, playbook);
+        return ResponseEntity.status(HttpStatus.CREATED).body(createdPlaybook);
+
 
 
 }
