@@ -59,7 +59,7 @@ public class PlaybookController {
 
     @PutMapping("/alarms/{alarmId}")
     public ResponseEntity<Alarm> updateAlarm(@PathVariable UUID alarmId, @RequestBody Alarm updatedAlarm) {
-        Alarm updatedAlarm = playbookService.updateAlarm(alarmId, updatedAlarm);
+        Alarm updatedAlarmResult = playbookService.updateAlarm(alarmId, updatedAlarmResult);
         return ResponseEntity.ok(updatedAlarm);
 }
 
