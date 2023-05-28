@@ -63,6 +63,12 @@ public class PlaybookController {
         return ResponseEntity.ok(updatedAlarm);
 }
 
+    @PostMapping("/{userId}/alarms")
+    public ResponseEntity<Alarm> createAlarm(@PathVariable UUID userId, @RequestBody Alarm alarm) {
+        Alarm createdAlarm = playbookService.createAlarm(userId, alarm);
+        return ResponseEntity.status(HttpStatus.CREATED).body(createdAlarm);
+}
+
 
 
 }
