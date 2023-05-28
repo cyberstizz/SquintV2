@@ -45,5 +45,16 @@ public class PlaybookController {
         return ResponseEntity.status(HttpStatus.CREATED).body(createdPlaybook);
 
 
+    @GetMapping("/{userId}/alarms")
+    public ResponseEntity<List<Alarm>> getAlarmsForUser(@PathVariable UUID userId) {
+        List<Alarm> alarms = playbookService.getAlarmsForUser(userId);
+        if (!alarms.isEmpty()) {
+            return ResponseEntity.ok(alarms);
+        } else {
+            return ResponseEntity.noContent().build();
+        }
+    }
+
+
 
 }
