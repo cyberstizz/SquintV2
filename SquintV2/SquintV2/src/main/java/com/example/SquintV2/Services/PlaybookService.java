@@ -66,4 +66,9 @@ public class PlaybookService {
         return playbookRepository.save(playbook);
     }
 
+    public Alarm createAlarm(UUID userId, Alarm alarm) {
+        alarm.setUserId(userId);
+        return alarmRepository.save(alarm);
+    }
+
 }
