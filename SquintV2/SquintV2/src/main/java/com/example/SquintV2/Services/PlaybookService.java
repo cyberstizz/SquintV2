@@ -25,17 +25,17 @@ public class PlaybookService {
       this.alarmRepository = alarmRepository;
 
     }
-
+        //grabs all of the playbook setttings for a specified user
     public Playbook getPlaybookSettings(UUID userId) {
         Optional<Playbook> playbook = playbookRepository.findById(userId);
         return playbook.orElse(null);
             
     }
-
+        //grabs all of the alarms for a specified user
     public List<Alarm> getAlarmsForUser(UUID userId) {
         return alarmRepository.findByUserId(userId);
     }
-
+        //updates the playbook settings for a specified user
     public Playbook updatePlaybookSettings(UUID userId, Playbook updatedSettings) {
         Playbook existingPlaybook = playbookRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("Playbook settings not found for user: " + userId));
@@ -50,7 +50,7 @@ public class PlaybookService {
 
         return playbookRepository.save(existingPlaybook);
     }
-
+        //updates the alarm for a specified user
     public Alarm updateAlarm(UUID alarmId, Alarm updatedAlarm) {
         Alarm existingAlarm = alarmRepository.findById(alarmId)
                 .orElseThrow(() -> new RuntimeException("Alarm not found: " + alarmId));
@@ -61,11 +61,12 @@ public class PlaybookService {
         return alarmRepository.save(existingAlarm);
     }
 
+        //create an intial playbook with settings
     public Playbook createPlaybookSettings(UUID userId, Playbook playbook) {
         playbook.setUserId(userId);
         return playbookRepository.save(playbook);
     }
-
+        //creates a new alarm for a user
     public Alarm createAlarm(UUID userId, Alarm alarm) {
         alarm.setUserId(userId);
         return alarmRepository.save(alarm);
