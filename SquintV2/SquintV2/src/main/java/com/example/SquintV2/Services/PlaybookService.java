@@ -20,10 +20,9 @@ public class PlaybookService {
 
 
     @Autowired
-        this.alarmRepository = alarmRepository;
-        public PlaybookService(PlaybookRepository playbookRepository, AlarmRepository alarmRepository) {
-        this.playbookRepository = playbookRepository;
-        this.alarmRepository = alarmRepository;
+    public PlaybookService(PlaybookRepository playbookRepository, AlarmRepository alarmRepository) {
+      this.playbookRepository = playbookRepository;
+      this.alarmRepository = alarmRepository;
 
     }
 
@@ -31,6 +30,10 @@ public class PlaybookService {
         Optional<Playbook> playbook = playbookRepository.findById(userId);
         return playbook.orElse(null);
             
+    }
+
+    public List<Alarm> getAlarmsForUser(UUID userId) {
+        return alarmRepository.findByUserId(userId);
     }
 
     public Playbook updatePlaybookSettings(UUID userId, Playbook updatedSettings) {
