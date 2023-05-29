@@ -51,5 +51,12 @@ public class GoalsController {
     }
 
 
+    @PutMapping
+    public ResponseEntity<Goals> updateGoal(@RequestBody Goals updatedGoal) {
+        Goals updated = goalService.updateGoal(updatedGoal);
+        return ResponseEntity.ok(updated);
+    }
+
+
 
 }
