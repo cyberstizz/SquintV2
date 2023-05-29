@@ -40,12 +40,12 @@ public class Task {
         this.user_id = user_id;
     }
 
-    public LocalDate getSchedule_item() {
-        return schedule_item;
+    public LocalDate getTask_deadline() {
+        return task_deadline;
     }
 
-    public void setSchedule_item(LocalDate schedule_item) {
-        this.schedule_item = schedule_item;
+    public void setTask_deadline(LocalDate task_deadline) {
+        this.task_deadline = task_deadline;
     }
 
     public String getTask_name() {
@@ -63,6 +63,8 @@ public class Task {
     public void setTask_description(String task_description) {
         this.task_description = task_description;
     }
+
+    
 
     
 }
