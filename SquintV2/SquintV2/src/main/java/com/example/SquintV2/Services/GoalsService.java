@@ -14,4 +14,12 @@ import java.util.UUID;
 public class GoalService {
 
 
+    private final GoalsRepository goalsRepository;
+
+    @Autowired
+    public GoalService(GoalsRepository goalsRepository) {
+        this.goalsRepository = goalsRepository;
+    }
+
+
 }
