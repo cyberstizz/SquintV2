@@ -17,7 +17,7 @@ import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 
 
 @Table(value="daily_schedule_item")
-public class Task {
+public class Tasks {
 
     @Id
     @PrimaryKeyColumn(name = "user_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
