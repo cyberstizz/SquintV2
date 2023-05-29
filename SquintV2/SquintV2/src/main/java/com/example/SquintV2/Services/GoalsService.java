@@ -33,5 +33,9 @@ public class GoalService {
         return goalsRepository.save(goal);
     }
 
+    public Goals updateGoal(Goals updatedGoal) {
+        return goalsRepository.save(updatedGoal);
+    }
+
 
 }
