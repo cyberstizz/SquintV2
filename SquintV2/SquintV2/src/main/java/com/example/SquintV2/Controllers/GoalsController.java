@@ -23,4 +23,17 @@ public class GoalsController {
         this.goalService = goalService;
     }
 
+
+    @GetMapping("/{userId}")
+    public ResponseEntity<List<Goals>> getAllGoalsForUser(@PathVariable UUID userId) {
+        List<Goals> goals = goalService.getAllGoalsForUser(userId);
+        if (!goals.isEmpty()) {
+            return ResponseEntity.ok(goals);
+        } else {
+            return ResponseEntity.noContent().build();
+        }
+
+        
+    }
+
 }
