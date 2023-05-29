@@ -33,7 +33,15 @@ public class GoalsController {
             return ResponseEntity.noContent().build();
         }
 
-        
+
+        @GetMapping("/{goalId}")
+    public ResponseEntity<Goals> getGoalById(@PathVariable UUID goalId) {
+        return goalService.getGoalById(goalId)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+
     }
 
 }
