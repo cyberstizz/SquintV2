@@ -21,5 +21,9 @@ public class GoalService {
         this.goalsRepository = goalsRepository;
     }
 
+    public List<Goals> getAllGoalsForUser(UUID userId) {
+        return goalsRepository.findAllByUserId(userId);
+    }
+
 
 }
