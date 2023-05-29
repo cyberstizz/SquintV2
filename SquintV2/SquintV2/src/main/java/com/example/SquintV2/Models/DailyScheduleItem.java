@@ -24,7 +24,7 @@ public class Task {
     private UUID user_id;
 
     @PrimaryKeyColumn(name = "schedule_item", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
-    private LocalDate schedule_item;
+    private LocalDate task_deadline;
 
     @Column(value ="task_name")
     private String task_name;
