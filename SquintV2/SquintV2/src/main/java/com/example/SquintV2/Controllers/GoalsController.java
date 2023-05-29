@@ -44,6 +44,12 @@ public class GoalsController {
     }
 
 
+    @PostMapping
+    public ResponseEntity<Goals> createGoal(@RequestBody Goals goal) {
+        Goals createdGoal = goalService.createGoal(goal);
+        return ResponseEntity.status(HttpStatus.CREATED).body(createdGoal);
     }
+
+
 
 }
