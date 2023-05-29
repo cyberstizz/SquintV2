@@ -58,5 +58,12 @@ public class GoalsController {
     }
 
 
+    @DeleteMapping("/{goalId}")
+    public ResponseEntity<Void> deleteGoal(@PathVariable UUID goalId) {
+        goalService.deleteGoal(goalId);
+        return ResponseEntity.noContent().build();
+    }
+
+
 
 }
