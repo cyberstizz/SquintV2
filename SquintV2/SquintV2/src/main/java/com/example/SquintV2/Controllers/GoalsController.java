@@ -15,5 +15,7 @@ import java.util.UUID;
 @RequestMapping("/goals")
 public class GoalsController {
 
+    private final GoalService goalService;
+
 
 }
