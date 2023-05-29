@@ -37,5 +37,9 @@ public class GoalService {
         return goalsRepository.save(updatedGoal);
     }
 
+    public void deleteGoal(UUID goalId) {
+        goalsRepository.deleteById(goalId);
+    }
+    
 
 }
