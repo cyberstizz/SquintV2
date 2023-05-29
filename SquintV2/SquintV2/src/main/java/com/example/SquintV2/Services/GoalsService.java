@@ -29,5 +29,9 @@ public class GoalService {
         return goalsRepository.findById(goalId);
     }
 
+    public Goals createGoal(Goals goal) {
+        return goalsRepository.save(goal);
+    }
+
 
 }
