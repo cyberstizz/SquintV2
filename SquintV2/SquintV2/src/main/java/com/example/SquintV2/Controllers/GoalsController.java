@@ -18,4 +18,9 @@ public class GoalsController {
     private final GoalService goalService;
 
 
+    @Autowired
+    public GoalsController(GoalService goalService) {
+        this.goalService = goalService;
+    }
+
 }
