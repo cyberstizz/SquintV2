@@ -11,3 +11,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.time.LocalDate;
 import java.util.List;
+
+
+@Controller
+public class SquintController {
+
+
+
+}
