@@ -8,6 +8,7 @@ import java.util.UUID;
 
 @Repository
 public interface AlarmRepository extends CassandraRepository<Alarm, UUID>{
+    List<Alarm> findByUserId(UUID userId);
 
 }
 
