@@ -19,5 +19,11 @@ public class SquintController {
     private final TaskService taskService;
     private final GoalsService goalsService;
 
+    @Autowired
+    public SquintController(TaskService taskService, GoalsService goalsService) {
+        this.taskService = taskService;
+        this.goalsService = goalsService;
+    }
+
 
 }
