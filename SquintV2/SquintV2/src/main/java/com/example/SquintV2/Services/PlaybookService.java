@@ -41,8 +41,8 @@ public class PlaybookService {
                 .orElseThrow(() -> new RuntimeException("Playbook settings not found for user: " + userId));
 
         // Update the individual settings
-        existingPlaybook.setReminder(updatedSettings.getReminder());
-        existingPlaybook.setReminderTime(updatedSettings.getReminderTime());
+        existingPlaybook.setReminders(updatedSettings.getReminder());
+        existingPlaybook.setReminder_time(updatedSettings.getReminderTime());
         existingPlaybook.setCheckCompletion(updatedSettings.getCheckCompletion());
         existingPlaybook.setAlarms(updatedSettings.getAlarms());
         existingPlaybook.setConflicts(updatedSettings.getConflicts());
