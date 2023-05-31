@@ -28,6 +28,13 @@ public class TasksService {
                 .orElseThrow(() -> new RuntimeException("Tasks not found: " + tasksId));
     }
 
+    public Tasks createTasks(Tasks tasks) {
+        // Set any necessary attributes for the tasks
+        // tasks.set...
+
+        return tasksRepository.save(tasks);
+    }
+
 
 
 }
