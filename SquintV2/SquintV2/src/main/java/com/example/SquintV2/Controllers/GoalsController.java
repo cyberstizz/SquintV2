@@ -20,13 +20,13 @@ public class GoalsController {
 
     @Autowired
     public GoalsController(GoalsService goalsService) {
-        this.goalService = goalService;
+        this.goalsService = goalsService;
     }
 
 
     @GetMapping("/{userId}")
     public ResponseEntity<List<Goals>> getAllGoalsForUser(@PathVariable UUID userId) {
-        List<Goals> goals = goalService.getAllGoalsForUser(userId);
+        List<Goals> goals = goalsService.getAllGoalsForUser(userId);
         if (!goals.isEmpty()) {
             return ResponseEntity.ok(goals);
         } else {
@@ -38,7 +38,7 @@ public class GoalsController {
 
         @GetMapping("/{goalId}")
     public ResponseEntity<Goals> getGoalById(@PathVariable UUID goalId) {
-        return goalService.getGoalById(goalId)
+        return goalsService.getGoalById(goalId)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
@@ -46,21 +46,21 @@ public class GoalsController {
 
     @PostMapping
     public ResponseEntity<Goals> createGoal(@RequestBody Goals goal) {
-        Goals createdGoal = goalService.createGoal(goal);
+        Goals createdGoal = goalsService.createGoal(goal);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdGoal);
     }
 
 
     @PutMapping
     public ResponseEntity<Goals> updateGoal(@RequestBody Goals updatedGoal) {
-        Goals updated = goalService.updateGoal(updatedGoal);
+        Goals updated = goalsService.updateGoal(updatedGoal);
         return ResponseEntity.ok(updated);
     }
 
 
     @DeleteMapping("/{goalId}")
     public ResponseEntity<Void> deleteGoal(@PathVariable UUID goalId) {
-        goalService.deleteGoal(goalId);
+        goalsService.deleteGoal(goalId);
         return ResponseEntity.noContent().build();
     }
 
