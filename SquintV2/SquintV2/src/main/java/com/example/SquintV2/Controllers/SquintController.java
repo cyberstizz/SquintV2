@@ -16,6 +16,8 @@ import java.util.List;
 @Controller
 public class SquintController {
 
+    private final TaskService taskService;
+    private final GoalsService goalsService;
 
 
 }
