@@ -35,7 +35,7 @@ public class GoalsService {
         List<Goals> goalsForDay = new ArrayList<>();
     
         for (Goals goal : userGoals) {
-            if (goal.getStartDate().equals(day)) {
+            if (goal.getGoal_deadline().equals(day)) {
                 goalsForDay.add(goal);
             }
         }
