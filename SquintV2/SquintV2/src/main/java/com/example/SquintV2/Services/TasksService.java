@@ -28,6 +28,19 @@ public class TasksService {
                 .orElseThrow(() -> new RuntimeException("Tasks not found: " + tasksId));
     }
 
+    public List<Tasks> getTasksForUserAndDay(UUID userId, LocalDate day) {
+        List<Tasks> userTasks = tasksRepository.findByUserId(userId);
+        List<Tasks> tasksForDay = new ArrayList<>();
+    
+        for (Tasks task : userTasks) {
+            if (task.getTask_deadline().equals(day)) {
+                tasksForDay.add(task);
+            }
+        }
+    
+        return tasksForDay;
+    }
+
     public Tasks createTasks(Tasks tasks) {
         // Set any necessary attributes for the tasks
         // tasks.set...
@@ -43,6 +56,10 @@ public class TasksService {
         // existingTasks.set...
 
         return tasksRepository.save(existingTasks);
+    }
+
+    public void deleteTasks(UUID tasksId) {
+        tasksRepository.deleteById(tasksId);
     }
 
 
