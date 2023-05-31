@@ -19,6 +19,9 @@ public class TasksService {
         this.tasksRepository = tasksRepository;
     }
 
+    public List<Tasks> getAllTasks() {
+        return tasksRepository.findAll();
+    }
 
 
 
