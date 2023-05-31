@@ -34,7 +34,7 @@ public class Users {
     private String email;
 
     @Column(value = "daily_schedule")
-    private List<DailyScheduleItem> dailySchedule;
+    private List<Tasks> dailySchedule;
 
     @Column(value = "biography")
     private String biography;
@@ -85,11 +85,11 @@ public class Users {
         this.email = email;
     }
 
-    public List<DailyScheduleItem> getDailySchedule() {
+    public List<Tasks> getDailySchedule() {
         return dailySchedule;
     }
 
-    public void setDailySchedule(List<DailyScheduleItem> dailySchedule) {
+    public void setDailySchedule(List<Tasks> dailySchedule) {
         this.dailySchedule = dailySchedule;
     }
 

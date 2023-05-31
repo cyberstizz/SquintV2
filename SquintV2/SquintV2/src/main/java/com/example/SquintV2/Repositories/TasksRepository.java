@@ -7,7 +7,7 @@ import java.util.UUID;
 
 
 @Repository
-public interface TasksRepository extends CassandraRepository<user_id, UUID>{
+public interface TasksRepository extends CassandraRepository<Tasks, UUID>{
 
 }
 

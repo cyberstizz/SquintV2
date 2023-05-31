@@ -1,7 +1,7 @@
 package main.java.com.example.SquintV2.Controllers;
 
 import main.java.com.example.SquintV2.Models.Goals;
-import main.java.com.example.SquintV2.Services.GoalService;
+import main.java.com.example.SquintV2.Services.GoalsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,11 +15,11 @@ import java.util.UUID;
 @RequestMapping("/goals")
 public class GoalsController {
 
-    private final GoalService goalService;
+    private final GoalsService goalsService;
 
 
     @Autowired
-    public GoalsController(GoalService goalService) {
+    public GoalsController(GoalsService goalsService) {
         this.goalService = goalService;
     }
 

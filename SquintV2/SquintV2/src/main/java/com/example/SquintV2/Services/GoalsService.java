@@ -17,7 +17,7 @@ public class GoalsService {
     private final GoalsRepository goalsRepository;
 
     @Autowired
-    public GoalService(GoalsRepository goalsRepository) {
+    public GoalsService(GoalsRepository goalsRepository) {
         this.goalsRepository = goalsRepository;
     }
 
