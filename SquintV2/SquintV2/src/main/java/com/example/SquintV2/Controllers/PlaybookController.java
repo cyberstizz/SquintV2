@@ -9,6 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
+import java.util.List;
+
 
 @RestController
 @RequestMapping("/playbook")
@@ -44,6 +46,7 @@ public class PlaybookController {
     public ResponseEntity<Playbook> createPlaybookSettings(@PathVariable UUID userId, @RequestBody Playbook playbook) {
         Playbook createdPlaybook = playbookService.createPlaybookSettings(userId, playbook);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdPlaybook);
+    }
 
 
     @GetMapping("/{userId}/alarms")

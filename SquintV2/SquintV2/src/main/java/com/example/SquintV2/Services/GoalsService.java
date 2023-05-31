@@ -11,7 +11,7 @@ import java.util.UUID;
 
 
 @Service
-public class GoalService {
+public class GoalsService {
 
 
     private final GoalsRepository goalsRepository;
