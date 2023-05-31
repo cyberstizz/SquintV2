@@ -63,7 +63,7 @@ public class PlaybookService {
 
         //create an intial playbook with settings
     public Playbook createPlaybookSettings(UUID userId, Playbook playbook) {
-        playbook.setUserId(userId);
+        playbook.setUser_id(userId);
         return playbookRepository.save(playbook);
     }
         //creates a new alarm for a user

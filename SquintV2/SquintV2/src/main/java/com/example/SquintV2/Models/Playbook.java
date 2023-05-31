@@ -49,40 +49,48 @@ public class Playbook {
     @Column(value = "reschedules")
     private Reschedules reschedules;
 
-    public Reminder getReminder() {
-        return this.reminders;
+    public UUID getUser_id() {
+        return user_id;
     }
 
-    public void setReminder(Reminder reminders) {
+    public void setUser_id(UUID user_id) {
+        this.user_id = user_id;
+    }
+
+    public Reminder getReminders() {
+        return reminders;
+    }
+
+    public void setReminders(Reminder reminders) {
         this.reminders = reminders;
     }
 
-    public ReminderTime getReminderTime() {
-        return this.reminder_time;
+    public ReminderTime getReminder_time() {
+        return reminder_time;
     }
 
-    public void setReminderTime(ReminderTime reminder_time) {
+    public void setReminder_time(ReminderTime reminder_time) {
         this.reminder_time = reminder_time;
     }
 
-    public CheckCompletion getCheckCompletion() {
-        return this.check_completion;
+    public CheckCompletion getCheck_completion() {
+        return check_completion;
     }
 
-    public void setCheckCompletion(CheckCompletion check_completion) {
+    public void setCheck_completion(CheckCompletion check_completion) {
         this.check_completion = check_completion;
     }
 
-    public Alarms getAlarms() {
-        return this.alarm_types;
+    public Alarms getAlarm_types() {
+        return alarm_types;
     }
 
-    public void setAlarms(Alarms alarmTypes) {
-        this.alarm_types = alarmTypes;
+    public void setAlarm_types(Alarms alarm_types) {
+        this.alarm_types = alarm_types;
     }
 
     public Conflicts getConflicts() {
-        return this.conflicts;
+        return conflicts;
     }
 
     public void setConflicts(Conflicts conflicts) {
@@ -90,10 +98,12 @@ public class Playbook {
     }
 
     public Reschedules getReschedules() {
-        return this.reschedules;
+        return reschedules;
     }
 
     public void setReschedules(Reschedules reschedules) {
         this.reschedules = reschedules;
     }
+
+    
 }
