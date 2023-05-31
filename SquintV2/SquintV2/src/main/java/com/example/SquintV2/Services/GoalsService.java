@@ -29,6 +29,20 @@ public class GoalsService {
         return goalsRepository.findById(goalId);
     }
 
+
+    public List<Goals> getGoalsForUserAndDay(UUID userId, LocalDate day) {
+        List<Goals> userGoals = goalsRepository.findByUserId(userId);
+        List<Goals> goalsForDay = new ArrayList<>();
+    
+        for (Goals goal : userGoals) {
+            if (goal.getStartDate().equals(day)) {
+                goalsForDay.add(goal);
+            }
+        }
+    
+        return goalsForDay;
+    }
+
     public Goals createGoal(Goals goal) {
         return goalsRepository.save(goal);
     }
