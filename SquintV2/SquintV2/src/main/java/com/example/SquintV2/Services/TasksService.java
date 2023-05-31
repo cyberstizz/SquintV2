@@ -12,8 +12,12 @@ import java.util.UUID;
 @Service
 public class TasksService {
 
-        private final TasksRepository taskrepository;
+        private final TasksRepository tasksrepository;
 
+        @Autowired
+    public TasksService(TasksRepository tasksRepository) {
+        this.tasksRepository = tasksRepository;
+    }
 
 
 
