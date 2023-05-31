@@ -32,8 +32,8 @@ public class PlaybookService {
             
     }
         //grabs all of the alarms for a specified user
-    public List<Alarm> getAlarmsForUser(UUID userId) {
-        return alarmRepository.findByUserId(userId);
+    public List<Alarm> getAlarmsForUser(UUID user_Id) {
+        return alarmRepository.findByUserId(user_Id);
     }
         //updates the playbook settings for a specified user
     public Playbook updatePlaybookSettings(UUID userId, Playbook updatedSettings) {
