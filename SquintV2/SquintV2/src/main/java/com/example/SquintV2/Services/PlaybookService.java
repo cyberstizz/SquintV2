@@ -44,7 +44,7 @@ public class PlaybookService {
         existingPlaybook.setReminders(updatedSettings.getReminder());
         existingPlaybook.setReminder_time(updatedSettings.getReminderTime());
         existingPlaybook.setCheck_completion(updatedSettings.getCheckCompletion());
-        existingPlaybook.setAlarms(updatedSettings.getAlarms());
+        existingPlaybook.setAlarm_types(updatedSettings.getAlarms());
         existingPlaybook.setConflicts(updatedSettings.getConflicts());
         existingPlaybook.setReschedules(updatedSettings.getReschedules());
 
