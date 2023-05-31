@@ -23,6 +23,11 @@ public class TasksService {
         return tasksRepository.findAll();
     }
 
+    public Tasks getTasksById(UUID tasksId) {
+        return tasksRepository.findById(tasksId)
+                .orElseThrow(() -> new RuntimeException("Tasks not found: " + tasksId));
+    }
+
 
 
 }
