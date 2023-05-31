@@ -35,6 +35,16 @@ public class TasksService {
         return tasksRepository.save(tasks);
     }
 
+    public Tasks updateTasks(UUID tasksId, Tasks updatedTasks) {
+        Tasks existingTasks = tasksRepository.findById(tasksId)
+                .orElseThrow(() -> new RuntimeException("Tasks not found: " + tasksId));
+
+        // Update the individual attributes of existingTasks using updatedTasks
+        // existingTasks.set...
+
+        return tasksRepository.save(existingTasks);
+    }
+
 
 
 }
