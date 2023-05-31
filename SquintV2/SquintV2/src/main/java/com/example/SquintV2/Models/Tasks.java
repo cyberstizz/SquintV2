@@ -16,7 +16,7 @@ import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 
 
 
-@Table(value="daily_schedule_item")
+@Table(value="Tasks")
 public class Tasks {
 
     @Id
