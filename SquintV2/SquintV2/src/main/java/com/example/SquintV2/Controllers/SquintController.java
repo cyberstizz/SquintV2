@@ -27,7 +27,7 @@ public class SquintController {
 
 
     @GetMapping("/dashboard")
-    public String showDashboard(Model model) {
+    public String showSquintDashboard(Model model) {
         // Get current date
         LocalDate currentDate = LocalDate.now();
 
