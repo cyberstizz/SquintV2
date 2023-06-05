@@ -61,5 +61,24 @@ public class SquintController {
 
         return "dashboard";
     }
+
+
+    @GetMapping("/dashboard/week")
+    public String showTasksAndGoalsForWeek(Model model) {
+        // Get current date
+        LocalDate currentDate = LocalDate.now();
+
+        // Fetch tasks for the current week
+        List<Task> tasks = taskService.getTasksForUserAndWeek(currentDate);
+
+        // Fetch goals for the current week
+        List<Goals> goals = goalsService.getGoalsForUserAndWeek(currentDate);
+
+        // Add tasks and goals to the model
+        model.addAttribute("tasks", tasks);
+        model.addAttribute("goals", goals);
+
+        return "dashboard";
+    }
 }
 
