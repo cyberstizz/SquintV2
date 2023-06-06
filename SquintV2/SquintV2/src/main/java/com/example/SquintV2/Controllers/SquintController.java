@@ -10,7 +10,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @Controller
@@ -44,23 +46,18 @@ public class SquintController {
         return "dashboard";
     }
 
-    @GetMapping("/dashboard/day")
-    public String showTasksAndGoalsForDay(Model model) {
-        // Get current date
+    @GetMapping("/tasks-and-goals/day")
+    public ResponseEntity<?> getTasksAndGoalsForDay() {
         LocalDate currentDate = LocalDate.now();
+        List<Task> tasks = taskService.getTasksForDay(currentDate);
+        List<Goals> goals = goalsService.getGoalsForDay(currentDate);
 
-        // Fetch tasks for the current day
-        List<Task> tasks = taskService.getTasksForUserAndDay(currentDate);
+        Map<String, Object> response = new HashMap<>();
+        response.put("tasks", tasks);
+        response.put("goals", goals);
 
-        // Fetch goals for the current day
-        List<Goals> goals = goalsService.getGoalsForUserAndDay(currentDate);
-
-        // Add tasks and goals to the model
-        model.addAttribute("tasks", tasks);
-        model.addAttribute("goals", goals);
-
-        return "dashboard";
-    }
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }    
 
 
     @GetMapping("/dashboard/week")
