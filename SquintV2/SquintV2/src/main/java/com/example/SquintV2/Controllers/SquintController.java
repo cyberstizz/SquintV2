@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.time.LocalDate;
+import java.time.temporal.TemporalAdjusters;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -77,24 +78,22 @@ public class SquintController {
     }
 
 
-    
 
-    @GetMapping("/dashboard/month")
-    public String showTasksAndGoalsForMonth(Model model) {
-        // Get current date
+
+    @GetMapping("/tasks-and-goals/month")
+    public ResponseEntity<?> getTasksAndGoalsForMonth() {
+        // Logic to fetch tasks and goals for the current month
         LocalDate currentDate = LocalDate.now();
+        LocalDate startOfMonth = currentDate.with(TemporalAdjusters.firstDayOfMonth());
+        LocalDate endOfMonth = currentDate.with(TemporalAdjusters.lastDayOfMonth());
+        List<Task> tasks = taskService.getTasksForMonth(startOfMonth, endOfMonth);
+        List<Goals> goals = goalsService.getGoalsForMonth(startOfMonth, endOfMonth);
 
-        // Fetch tasks for the current month
-        List<Task> tasks = taskService.getTasksForUserAndMonth(currentDate);
+        Map<String, Object> response = new HashMap<>();
+        response.put("tasks", tasks);
+        response.put("goals", goals);
 
-        // Fetch goals for the current month
-        List<Goals> goals = goalsService.getGoalsForUserAndMonth(currentDate);
-
-        // Add tasks and goals to the model
-        model.addAttribute("tasks", tasks);
-        model.addAttribute("goals", goals);
-
-        return "dashboard";
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }
 
