@@ -45,6 +45,24 @@ public class GoalsService {
         return goalsForDay;
     }
 
+
+    public List<Goals> getGoalsForUserAndWeek(UUID userId, LocalDate currentDate) {
+        LocalDate startOfWeek = currentDate.with(DayOfWeek.MONDAY);
+        LocalDate endOfWeek = startOfWeek.plus(6, ChronoUnit.DAYS);
+
+        List<Goals> userGoals = goalsRepository.findByUserId(userId);
+        List<Goals> goalsForWeek = new ArrayList<>();
+
+        for (Goals goal : userGoals) {
+            LocalDate goalDeadline = goal.getGoal_deadline();
+            if (!goalDeadline.isBefore(startOfWeek) && !goalDeadline.isAfter(endOfWeek)) {
+                goalsForWeek.add(goal);
+            }
+        }
+
+        return goalsForWeek;
+    }
+
     public Goals createGoal(Goals goal) {
         return goalsRepository.save(goal);
     }
