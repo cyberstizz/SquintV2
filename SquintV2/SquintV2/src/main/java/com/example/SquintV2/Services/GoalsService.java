@@ -63,6 +63,26 @@ public class GoalsService {
         return goalsForWeek;
     }
 
+
+    public List<Goals> getGoalsForUserAndMonth(UUID userId, LocalDate currentDate) {
+        LocalDate startOfMonth = currentDate.withDayOfMonth(1);
+        LocalDate endOfMonth = startOfMonth.withDayOfMonth(startOfMonth.lengthOfMonth());
+
+        List<Goals> userGoals = goalsRepository.findByUserId(userId);
+        List<Goals> goalsForMonth = new ArrayList<>();
+
+        for (Goals goal : userGoals) {
+            LocalDate goalDeadline = goal.getGoal_deadline();
+            if (!goalDeadline.isBefore(startOfMonth) && !goalDeadline.isAfter(endOfMonth)) {
+                goalsForMonth.add(goal);
+            }
+        }
+
+        return goalsForMonth;
+    }
+
+    
+
     public Goals createGoal(Goals goal) {
         return goalsRepository.save(goal);
     }
