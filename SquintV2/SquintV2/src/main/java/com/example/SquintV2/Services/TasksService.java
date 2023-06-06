@@ -42,6 +42,24 @@ public class TasksService {
         return tasksForDay;
     }
 
+
+    public List<Tasks> getTasksForUserAndWeek(UUID userId, LocalDate currentDate) {
+        LocalDate startOfWeek = currentDate.with(DayOfWeek.MONDAY);
+        LocalDate endOfWeek = startOfWeek.plus(6, ChronoUnit.DAYS);
+
+        List<Tasks> userTasks = tasksRepository.findByUserId(userId);
+        List<Tasks> tasksForWeek = new ArrayList<>();
+
+        for (Tasks task : userTasks) {
+            LocalDate taskDeadline = task.getTask_deadline();
+            if (!taskDeadline.isBefore(startOfWeek) && !taskDeadline.isAfter(endOfWeek)) {
+                tasksForWeek.add(task);
+            }
+        }
+
+        return tasksForWeek;
+    }
+
     public Tasks createTasks(Tasks tasks) {
         // Set any necessary attributes for the tasks
         // tasks.set...
