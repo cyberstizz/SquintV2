@@ -60,6 +60,24 @@ public class TasksService {
         return tasksForWeek;
     }
 
+
+    public List<Tasks> getTasksForUserAndMonth(UUID userId, LocalDate currentDate) {
+        LocalDate startOfMonth = currentDate.withDayOfMonth(1);
+        LocalDate endOfMonth = startOfMonth.withDayOfMonth(startOfMonth.lengthOfMonth());
+
+        List<Tasks> userTasks = tasksRepository.findByUserId(userId);
+        List<Tasks> tasksForMonth = new ArrayList<>();
+
+        for (Tasks task : userTasks) {
+            LocalDate taskDeadline = task.getTask_deadline();
+            if (!taskDeadline.isBefore(startOfMonth) && !taskDeadline.isAfter(endOfMonth)) {
+                tasksForMonth.add(task);
+            }
+        }
+
+        return tasksForMonth;
+    }
+
     public Tasks createTasks(Tasks tasks) {
         // Set any necessary attributes for the tasks
         // tasks.set...
