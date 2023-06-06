@@ -60,23 +60,24 @@ public class SquintController {
     }    
 
 
-    @GetMapping("/dashboard/week")
-    public String showTasksAndGoalsForWeek(Model model) {
-        // Get current date
+    @GetMapping("/tasks-and-goals/week")
+    public ResponseEntity<?> getTasksAndGoalsForWeek() {
+        // Logic to fetch tasks and goals for the current week
         LocalDate currentDate = LocalDate.now();
+        LocalDate startOfWeek = currentDate.with(TemporalAdjusters.previousOrSame(DayOfWeek.MONDAY));
+        LocalDate endOfWeek = currentDate.with(TemporalAdjusters.nextOrSame(DayOfWeek.SUNDAY));
+        List<Task> tasks = taskService.getTasksForWeek(startOfWeek, endOfWeek);
+        List<Goals> goals = goalsService.getGoalsForWeek(startOfWeek, endOfWeek);
 
-        // Fetch tasks for the current week
-        List<Task> tasks = taskService.getTasksForUserAndWeek(currentDate);
+        Map<String, Object> response = new HashMap<>();
+        response.put("tasks", tasks);
+        response.put("goals", goals);
 
-        // Fetch goals for the current week
-        List<Goals> goals = goalsService.getGoalsForUserAndWeek(currentDate);
-
-        // Add tasks and goals to the model
-        model.addAttribute("tasks", tasks);
-        model.addAttribute("goals", goals);
-
-        return "dashboard";
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
+
+    
 
     @GetMapping("/dashboard/month")
     public String showTasksAndGoalsForMonth(Model model) {
