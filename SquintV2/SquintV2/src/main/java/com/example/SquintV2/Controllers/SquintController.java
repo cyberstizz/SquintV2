@@ -95,5 +95,10 @@ public class SquintController {
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
+    @GetMapping("dashboard/update-task")
+    public ResponseEntity<?> updateTasks(UUID tasksId, Tasks updatedTasks){
+        
+    }
 }
 
