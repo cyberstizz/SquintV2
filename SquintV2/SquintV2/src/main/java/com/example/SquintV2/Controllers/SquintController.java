@@ -97,7 +97,7 @@ public class SquintController {
     }
 
     @GetMapping("dashboard/update-task")
-    public ResponseEntity<?> updateTasks(UUID tasksId, Tasks updatedTasks){
+    public ResponseEntity<?> updateATask(UUID tasksId, Tasks updatedTasks){
 
         TaskService.updateTasks
 
