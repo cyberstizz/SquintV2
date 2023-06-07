@@ -14,6 +14,7 @@ import java.time.temporal.TemporalAdjusters;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 
 @Controller
@@ -99,7 +100,7 @@ public class SquintController {
     @GetMapping("dashboard/update-task")
     public ResponseEntity<?> updateATask(UUID tasksId, Tasks updatedTasks){
 
-        TaskService.updateTasks
+        TaskService.updateTasks(tasksId, updatedTasks);
 
     }
 }
