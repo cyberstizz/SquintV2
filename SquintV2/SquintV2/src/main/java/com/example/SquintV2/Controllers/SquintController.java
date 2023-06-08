@@ -120,5 +120,12 @@ public class SquintController {
         return new ResponseEntity<>(createdGoal, HttpStatus.CREATED);
     }
 
+
+    @DeleteMapping("/{goalId}")
+    public ResponseEntity<?> deleteGoal(@PathVariable UUID goalId) {
+        goalsService.deleteGoal(goalId);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
 }
 
