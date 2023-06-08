@@ -81,7 +81,7 @@ public class SquintController {
     }
 
     @PutMapping("/{taskId}")
-    public ResponseEntity<?> updateTask(@PathVariable UUID taskId, @RequestBody Task updatedTask) {
+    public ResponseEntity<?> updateTasks(@PathVariable UUID taskId, @RequestBody Task updatedTask) {
 
         Task task = taskService.getTasksById(taskId);
 
