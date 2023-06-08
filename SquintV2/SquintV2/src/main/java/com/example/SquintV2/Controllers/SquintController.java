@@ -116,14 +116,14 @@ public class SquintController {
 
     @PostMapping
     public ResponseEntity<?> createGoal(@RequestBody Goals newGoal) {
-        Goals createdGoal = goalsService.createGoal(newGoal);
+        Goals createdGoal = GoalsService.createGoal(newGoal);
         return new ResponseEntity<>(createdGoal, HttpStatus.CREATED);
     }
 
 
     @DeleteMapping("/{goalId}")
     public ResponseEntity<?> deleteGoal(@PathVariable UUID goalId) {
-        goalsService.deleteGoal(goalId);
+        GoalsService.deleteGoal(goalId);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
