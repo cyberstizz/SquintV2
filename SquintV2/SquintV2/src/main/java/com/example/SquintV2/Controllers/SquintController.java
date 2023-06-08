@@ -138,7 +138,7 @@ public class SquintController {
         existingGoal.setDescription(updatedGoal.getDescription());
         existingGoal.setDeadline(updatedGoal.getDeadline());
 
-        Goals updatedGoal = goalsService.updateGoal(goalId, existingGoal);
+        Goals updatedGoalEntity = goalsService.updateGoal(goalId, existingGoal);
         return new ResponseEntity<>(updatedGoal, HttpStatus.OK);
     }
 
