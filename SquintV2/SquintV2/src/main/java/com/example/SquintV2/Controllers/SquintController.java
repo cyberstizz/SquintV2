@@ -114,5 +114,11 @@ public class SquintController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    @PostMapping
+    public ResponseEntity<?> createGoal(@RequestBody Goals newGoal) {
+        Goals createdGoal = goalsService.createGoal(newGoal);
+        return new ResponseEntity<>(createdGoal, HttpStatus.CREATED);
+    }
+
 }
 
