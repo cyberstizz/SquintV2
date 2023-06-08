@@ -120,5 +120,16 @@ public class SquintController {
         return new ResponseEntity<>(createdGoal, HttpStatus.CREATED);
     }
 
+    @PutMapping("/{goalId}")
+    public ResponseEntity<?> updateGoal(@PathVariable UUID goalId, @RequestBody Goals updatedGoal) {
+        Goals existingGoal = goalsService.getGoalById(goalId);
+        existingGoal.setTitle(updatedGoal.getTitle());
+        existingGoal.setDescription(updatedGoal.getDescription());
+        existingGoal.setDeadline(updatedGoal.getDeadline());
+
+        Goals updatedGoal = goalsService.updateGoal(goalId, existingGoal);
+        return new ResponseEntity<>(updatedGoal, HttpStatus.OK);
+    }
+
 }
 
