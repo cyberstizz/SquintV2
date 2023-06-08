@@ -30,23 +30,6 @@ public class SquintController {
     }
 
 
-    @GetMapping("/dashboard")
-    public String showSquintDashboard(Model model) {
-        // Get current date
-        LocalDate currentDate = LocalDate.now();
-
-        // Fetch tasks for the current day
-        List<Task> tasks = taskService.getTasksForDay(currentDate);
-
-        // Fetch goals for the current day
-        List<Goals> goals = goalsService.getGoalsForDay(currentDate);
-
-        // Add tasks and goals to the model
-        model.addAttribute("tasks", tasks);
-        model.addAttribute("goals", goals);
-
-        return "dashboard";
-    }
 
     @GetMapping("/tasks-and-goals/day")
     public ResponseEntity<?> getTasksAndGoalsForDay() {
