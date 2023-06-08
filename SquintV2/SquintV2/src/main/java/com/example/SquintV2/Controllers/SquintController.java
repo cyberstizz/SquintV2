@@ -102,6 +102,12 @@ public class SquintController {
 
         Task task = taskService.getTasksById(taskId);
 
+
+        // Update the task attributes based on the updatedTask object
+        task.setTitle(updatedTask.getTitle());
+        task.setDescription(updatedTask.getDescription());
+        task.setDeadline(updatedTask.getDeadline());
+
     }
 }
 
