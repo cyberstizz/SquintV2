@@ -108,6 +108,12 @@ public class SquintController {
         task.setDescription(updatedTask.getDescription());
         task.setDeadline(updatedTask.getDeadline());
 
+
+         // Set other attributes as needed
+
+         Task savedTask = taskService.updateTasks(taskId, task);
+         return new ResponseEntity<>(savedTask, HttpStatus.OK);
+
     }
 }
 
