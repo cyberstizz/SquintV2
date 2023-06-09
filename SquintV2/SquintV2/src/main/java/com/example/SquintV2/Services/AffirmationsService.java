@@ -1,5 +1,6 @@
 package main.java.com.example.SquintV2.Services;
 
+import main.java.com.example.SquintV2.Models.Affirmation;
 import main.java.com.example.SquintV2.Models.Tasks;
 import main.java.com.example.SquintV2.Repositories.AffirmationRepository;
 import main.java.com.example.SquintV2.Repositories.TasksRepository;
@@ -22,7 +23,7 @@ public class AffirmationsService {
     }
 
 
-    public String getAffirmation(UUID affirmationId) {
+    public Affirmation getAffirmation(UUID affirmationId) {
 
         return affirmationRepository.findById(affirmationId)
         .orElseThrow(() -> new RuntimeException("Tasks not found: " + tasksId));
