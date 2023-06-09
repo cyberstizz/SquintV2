@@ -27,4 +27,18 @@ public class AffirmationsService {
         return affirmationRepository.findByUserId(userId)
                 .orElseThrow(() -> new RuntimeException("Affirmation not found for user: " + userId));
     }
+
+
+    public Affirmation updateAffirmation(UUID affirmationId, Affirmation updatedAffirmation) {
+        Affirmation existingAffirmation = affirmationRepository.findById(affirmationId)
+                .orElseThrow(() -> new RuntimeException("Affirmation not found: " + affirmationId));
+
+        // Update the individual attributes of existingAffirmation using updatedAffirmation
+        existingAffirmation.setAffirmationId(updatedAffirmation.getAffirmationId());
+        existingAffirmation.setUserId(updatedAffirmation.getUserId());
+
+        return affirmationRepository.save(existingAffirmation);
+    }
+
+    
 }
