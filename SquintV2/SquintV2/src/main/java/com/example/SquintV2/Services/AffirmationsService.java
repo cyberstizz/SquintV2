@@ -15,4 +15,9 @@ import java.util.UUID;
 public class AffirmationsService {
 
     private final AffirmationRepository affirmationRepository;
+
+    @Autowired
+    public AffirmationsService(AffirmationRepository affirmationRepository) {
+        this.affirmationRepository = affirmationRepository;
+    }
 }
