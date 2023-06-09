@@ -20,4 +20,10 @@ public class AffirmationsService {
     public AffirmationsService(AffirmationRepository affirmationRepository) {
         this.affirmationRepository = affirmationRepository;
     }
+
+
+    public String getAffirmation(UUID affirmationId) {
+        
+        return affirmationRepository.getAffirmationId()
+    }
 }
