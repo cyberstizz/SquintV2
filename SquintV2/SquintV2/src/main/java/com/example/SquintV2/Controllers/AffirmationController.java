@@ -1,5 +1,9 @@
 package main.java.com.example.SquintV2.Controllers;
 
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.http.ResponseEntity;
 import main.java.com.example.SquintV2.Models.Affirmation;
 import main.java.com.example.SquintV2.Services.AffirmationsService;
 import org.springframework.beans.factory.annotation.Autowired;
