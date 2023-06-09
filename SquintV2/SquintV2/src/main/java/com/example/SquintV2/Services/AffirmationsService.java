@@ -23,9 +23,8 @@ public class AffirmationsService {
     }
 
 
-    public Affirmation getAffirmation(UUID affirmationId) {
-
-        return affirmationRepository.findById(affirmationId)
-        .orElseThrow(() -> new RuntimeException("Tasks not found: " + tasksId));
+    public Affirmation getAffirmation(UUID userId) {
+        return affirmationRepository.findByUserId(userId)
+                .orElseThrow(() -> new RuntimeException("Affirmation not found for user: " + userId));
     }
 }
