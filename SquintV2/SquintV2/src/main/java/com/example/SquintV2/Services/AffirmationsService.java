@@ -44,5 +44,9 @@ public class AffirmationsService {
         return affirmationRepository.save(affirmation);
     }
 
+    public void deleteAffirmation(UUID affirmationId) {
+        affirmationRepository.deleteById(affirmationId);
+    }
+
 
 }
