@@ -23,7 +23,7 @@ public class AffirmationsService {
 
 
     public String getAffirmation(UUID affirmationId) {
-        
-        return affirmationRepository.getAffirmationId()
+
+        return affirmationRepository.getAffirmationById(affirmationid)
     }
 }
