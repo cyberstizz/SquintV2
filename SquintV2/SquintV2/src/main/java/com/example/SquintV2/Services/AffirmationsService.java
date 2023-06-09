@@ -40,5 +40,9 @@ public class AffirmationsService {
         return affirmationRepository.save(existingAffirmation);
     }
 
-    
+    public Affirmation createAffirmation(Affirmation affirmation) {
+        return affirmationRepository.save(affirmation);
+    }
+
+
 }
