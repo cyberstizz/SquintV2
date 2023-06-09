@@ -24,6 +24,7 @@ public class AffirmationsService {
 
     public String getAffirmation(UUID affirmationId) {
 
-        return affirmationRepository.getAffirmationById(affirmationid)
+        return affirmationRepository.findById(affirmationid)
+        .orElseThrow(() -> new RuntimeException("Tasks not found: " + tasksId));
     }
 }
