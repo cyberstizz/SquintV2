@@ -32,4 +32,10 @@ public class AffirmationController {
         this.affirmationsService = affirmationsService;
     }
 
+    @GetMapping("/{userId}")
+    public ResponseEntity<Affirmation> getAffirmation(@PathVariable UUID userId) {
+        Affirmation affirmation = affirmationsService.getAffirmation(userId);
+        return ResponseEntity.ok(affirmation);
+    }
+
 }
