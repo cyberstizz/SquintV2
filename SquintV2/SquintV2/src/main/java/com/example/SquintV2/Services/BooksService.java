@@ -14,5 +14,7 @@ import java.util.UUID;
 
 @Service
 public class BooksService {
-    
+
+    private final BooksRepository booksRepository;
+    private final BooksReadRepository booksReadRepository;
 }
