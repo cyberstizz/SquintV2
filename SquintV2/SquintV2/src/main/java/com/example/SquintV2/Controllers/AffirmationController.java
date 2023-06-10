@@ -24,4 +24,7 @@ import java.util.UUID;
 @Controller
 public class AffirmationController {
 
+    private final AffirmationsService affirmationsService;
+
+
 }
