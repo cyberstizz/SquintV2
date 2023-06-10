@@ -10,8 +10,8 @@ import java.util.UUID;
 public interface BooksRepository extends CassandraRepository<Books, UUID>{
     List<Books> findByUserId(UUID userId);
 
-    Books findTopByUserIdOrderByCompletionDateAsc(UUID userId);git status
-    
+    Books findTopByUserIdOrderByCompletionDateAsc(UUID userId);
+
 
 }
 
