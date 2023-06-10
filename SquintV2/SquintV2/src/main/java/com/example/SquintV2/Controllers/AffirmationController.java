@@ -52,4 +52,11 @@ public class AffirmationController {
         return ResponseEntity.ok(affirmation);
     }
 
+
+    @DeleteMapping("/{affirmationId}")
+    public ResponseEntity<?> deleteAffirmation(@PathVariable UUID affirmationId) {
+        affirmationsService.deleteAffirmation(affirmationId);
+        return ResponseEntity.noContent().build();
+    }
+
 }
