@@ -27,4 +27,9 @@ public class AffirmationController {
     private final AffirmationsService affirmationsService;
 
 
+    @Autowired
+    public AffirmationController(AffirmationsService affirmationsService) {
+        this.affirmationsService = affirmationsService;
+    }
+
 }
