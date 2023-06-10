@@ -18,6 +18,7 @@ public class BooksService {
     private final BooksRepository booksRepository;
     private final BooksReadRepository booksReadRepository;
 
+    @Autowired
     public BooksService(BooksRepository booksRepository, BooksReadRepository booksReadRepository) {
         this.booksRepository = booksRepository;
         this.booksReadRepository = booksReadRepository;
