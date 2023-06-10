@@ -28,4 +28,8 @@ public class BooksService {
     public List<Books> getAllBooksForUser(UUID userId) {
         return BooksRepository.findByUserId(userId);
     }
+
+    public void deleteBookForUser(UUID bookId) {
+        booksRepository.deleteById(bookId);
+    }
 }
