@@ -38,4 +38,11 @@ public class AffirmationController {
         return ResponseEntity.ok(affirmation);
     }
 
+
+    @PostMapping
+    public ResponseEntity<Affirmation> createAffirmation(@RequestBody Affirmation affirmation) {
+        Affirmation createdAffirmation = affirmationsService.createAffirmation(affirmation);
+        return ResponseEntity.status(HttpStatus.CREATED).body(createdAffirmation);
+    }
+
 }
