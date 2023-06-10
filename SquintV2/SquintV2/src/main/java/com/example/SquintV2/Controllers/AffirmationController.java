@@ -45,4 +45,11 @@ public class AffirmationController {
         return ResponseEntity.status(HttpStatus.CREATED).body(createdAffirmation);
     }
 
+
+    @PutMapping("/{affirmationId}")
+    public ResponseEntity<Affirmation> updateAffirmation(@PathVariable UUID affirmationId, @RequestBody Affirmation updatedAffirmation) {
+        Affirmation affirmation = affirmationsService.updateAffirmation(affirmationId, updatedAffirmation);
+        return ResponseEntity.ok(affirmation);
+    }
+
 }
