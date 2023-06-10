@@ -23,4 +23,9 @@ public class BooksService {
         this.booksRepository = booksRepository;
         this.booksReadRepository = booksReadRepository;
     }
+
+
+    public List<Books> getAllBooksForUser(UUID userId) {
+        return BooksRepository.findByUserId(userId);
+    }
 }
