@@ -42,4 +42,9 @@ public class BooksService {
     public void deleteBookForUser(UUID bookId) {
         booksRepository.deleteById(bookId);
     }
+
+
+    public Books getNextBookByCompletionDate(UUID userId) {
+        return booksRepository.findTopByUserIdOrderByCompletionDateAsc(userId);
+    }
 }
