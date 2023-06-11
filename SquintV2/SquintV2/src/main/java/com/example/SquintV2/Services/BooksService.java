@@ -62,4 +62,29 @@ public class BooksService {
     public Books getNextBookByCompletionDate(UUID userId) {
         return booksRepository.findTopByUserIdOrderByCompletionDateAsc(userId);
     }
+
+
+    public void markBookAsReadForUser(UUID userId, UUID bookId) {
+        // Check if the book is already marked as read by the user
+        if (booksReadRepository.existsByUserId(userId)) {
+            // If the book is already marked as read, increment the count of books_read by 1
+            BooksRead booksRead = booksReadRepository.findByUserId(userId)
+                    .orElseThrow(() -> new RuntimeException("BooksRead not found for user: " + userId));
+            booksRead.setBooks_read(booksRead.getBooks_read() + 1);
+            booksReadRepository.save(booksRead);
+        } else {
+            // If the book is not marked as read, create a new BooksRead object and set books_read to 1
+            BooksRead booksRead = new BooksRead();
+            booksRead.setUser_id(userId);
+            booksRead.setBooks_read(1);
+            booksReadRepository.save(booksRead);
+        }
+    
+        // Update the book's completion date to the current date
+        Books book = booksRepository.findById(bookId)
+                .orElseThrow(() -> new RuntimeException("Book not found: " + bookId));
+        book.setCompletionDate(LocalDate.now());
+        booksRepository.save(book);
+    }
+    
 }
