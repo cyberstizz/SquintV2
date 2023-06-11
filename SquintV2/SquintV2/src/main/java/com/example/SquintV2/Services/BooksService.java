@@ -26,7 +26,7 @@ public class BooksService {
 
 
     public List<Books> getAllBooksForUser(UUID userId) {
-        return BooksRepository.findByUserId(userId);
+        return booksRepository.findByUserId(userId);
     }
 
     public void deleteBookForUser(UUID bookId) {
