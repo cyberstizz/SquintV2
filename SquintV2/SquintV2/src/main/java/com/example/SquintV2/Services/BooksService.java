@@ -44,6 +44,21 @@ public class BooksService {
     }
 
 
+    public Books updateBookForUser(UUID bookId, Books updatedBook) {
+        Books existingBook = booksRepository.findById(bookId)
+                .orElseThrow(() -> new RuntimeException("Book not found: " + bookId));
+    
+        // Update the individual attributes of the existing book using the updated book
+        existingBook.setBookTitle(updatedBook.getBookTitle());
+        existingBook.setAuthor(updatedBook.getAuthor());
+        existingBook.setTotalPages(updatedBook.getTotalPages());
+        existingBook.setCurrentPage(updatedBook.getCurrentPage());
+        existingBook.setCompletionDate(updatedBook.getCompletionDate());
+    
+        // Save the updated book using the repository
+        return booksRepository.save(existingBook);
+    }
+
     public Books getNextBookByCompletionDate(UUID userId) {
         return booksRepository.findTopByUserIdOrderByCompletionDateAsc(userId);
     }
