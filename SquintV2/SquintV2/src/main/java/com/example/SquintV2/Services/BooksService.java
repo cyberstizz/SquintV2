@@ -25,6 +25,16 @@ public class BooksService {
     }
 
 
+    public Books addBookForUser(Books book) {
+
+        book.setBookId(UUID.randomUUID()); // Generate a new UUID for the book
+        book.setCompletionDate(LocalDate.now()); // Set the completion date to the current date
+    
+        // Save the book using the repository
+        return booksRepository.save(book);
+    }
+
+
     public List<Books> getAllBooksForUser(UUID userId) {
         return booksRepository.findByUserId(userId);
     }
