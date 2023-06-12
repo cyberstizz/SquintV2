@@ -18,7 +18,7 @@ public class FriendService {
 
     private final FriendshipRepository friendshipRepository;
 
-
+    @Autowired
     public FriendService(FriendshipRepository friendshipRepository) {
         this.friendshipRepository = friendshipRepository;
     }
