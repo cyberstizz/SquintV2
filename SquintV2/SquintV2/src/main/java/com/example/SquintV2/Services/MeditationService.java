@@ -30,4 +30,10 @@ public class MeditationService {
         return meditationOptional.orElse(null);
     }
 
+    public Quote getRandomQuote() {
+        List<Quote> quotes = quoteRepository.findAll();
+        int randomIndex = (int) (Math.random() * quotes.size());
+        return quotes.get(randomIndex);
+    }
+
 }
