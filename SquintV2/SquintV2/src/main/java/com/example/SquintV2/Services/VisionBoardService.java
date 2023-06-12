@@ -11,5 +11,10 @@ import java.util.UUID;
 
 @Service
 public class VisionBoardService {
-    
+    private final PhotoRepository photoRepository;
+
+    @Autowired
+    public VisionboardService(PhotoRepository photoRepository) {
+        this.photoRepository = photoRepository;
+    }
 }
