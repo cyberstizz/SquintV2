@@ -89,9 +89,9 @@ public class SquintController {
     }
 
     @PutMapping("/{taskId}")
-    public ResponseEntity<?> updateTasks(@PathVariable UUID taskId, @RequestBody Task updatedTask) {
+    public ResponseEntity<?> updateTasks(@PathVariable UUID taskId, @RequestBody Tasks updatedTask) {
 
-        Task task = taskService.getTasksById(taskId);
+        Tasks task = taskService.getTasksById(taskId);
 
 
         // Update the task attributes based on the updatedTask object
@@ -102,7 +102,7 @@ public class SquintController {
 
          // Set other attributes as needed
 
-         Task savedTask = taskService.updateTasks(taskId, task);
+         Tasks savedTask = taskService.updateTasks(taskId, task);
          return new ResponseEntity<>(savedTask, HttpStatus.OK);
 
     }
