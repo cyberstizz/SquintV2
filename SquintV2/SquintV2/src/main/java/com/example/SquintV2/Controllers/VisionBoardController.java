@@ -10,3 +10,6 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
+public class VisionBoardController {
+    
+}
