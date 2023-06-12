@@ -26,4 +26,11 @@ public class VisionBoardController {
         Photo nextPhoto = visionboardService.getNextPhoto(userId);
         return ResponseEntity.ok(nextPhoto);
     }
+
+
+    @PostMapping("/add")
+    public ResponseEntity<Photo> addPhoto(@RequestBody Photo photo) {
+        Photo addedPhoto = visionboardService.addPhoto(photo);
+        return ResponseEntity.status(HttpStatus.CREATED).body(addedPhoto);
+    }
 }
