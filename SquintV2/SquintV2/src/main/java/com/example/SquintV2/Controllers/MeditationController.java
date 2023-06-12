@@ -30,4 +30,10 @@ public class MeditationController {
         return new DashboardData(meditation, quote);
     }
 
+
+    @PostMapping("/add/{userId}")
+    public Meditation addMeditation(@PathVariable UUID userId, @RequestBody Meditation newMeditation) {
+        return meditationService.addMeditation(userId, newMeditation);
+    }
+
 }
