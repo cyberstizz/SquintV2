@@ -40,4 +40,11 @@ public class VisionBoardController {
         Photo photo = visionboardService.updatePhoto(photoId, updatedPhoto);
         return ResponseEntity.ok(photo);
     }
+
+
+    @DeleteMapping("/delete/{photoId}")
+    public ResponseEntity<?> deletePhoto(@PathVariable UUID photoId) {
+        visionboardService.deletePhoto(photoId);
+        return ResponseEntity.noContent().build();
+    }
 }
