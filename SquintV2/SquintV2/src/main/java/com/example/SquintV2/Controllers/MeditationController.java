@@ -19,6 +19,7 @@ public class MeditationController {
     @Autowired
     public MeditationController(MeditationService meditationService, QuoteService quoteService) {
         this.meditationService = meditationService;
+        this.quoteService = quoteService;
     }
-    
+
 }
