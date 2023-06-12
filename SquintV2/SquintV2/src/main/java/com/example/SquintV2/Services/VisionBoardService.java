@@ -17,4 +17,9 @@ public class VisionBoardService {
     public VisionboardService(PhotoRepository photoRepository) {
         this.photoRepository = photoRepository;
     }
+
+    public Photo getNextPhoto(UUID userId) {
+        return photoRepository.findTopByUserIdOrderByDeadlineAsc(userId);
+    }
+
 }
