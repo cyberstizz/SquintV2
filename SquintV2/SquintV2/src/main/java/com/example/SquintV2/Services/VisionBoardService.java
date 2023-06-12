@@ -22,4 +22,8 @@ public class VisionBoardService {
         return photoRepository.findTopByUserIdOrderByDeadlineAsc(userId);
     }
 
+    public Photo addPhoto(Photo photo) {
+        return photoRepository.save(photo);
+    }
+
 }
