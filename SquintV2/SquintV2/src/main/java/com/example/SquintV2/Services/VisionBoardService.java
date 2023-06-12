@@ -1,4 +1,4 @@
-import main.java.com.example.SquintV2.Models.Books;
+import main.java.com.example.SquintV2.Models.Photo;
 import main.java.com.example.SquintV2.Repositories.PhotoRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
