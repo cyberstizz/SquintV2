@@ -16,7 +16,7 @@ public class VisionBoardController {
     private final VisionboardService visionboardService;
 
     @Autowired
-    public VisionboardController(VisionboardService visionboardService) {
+    public VisionBoardController(VisionboardService visionboardService) {
         this.visionboardService = visionboardService;
     }
 
