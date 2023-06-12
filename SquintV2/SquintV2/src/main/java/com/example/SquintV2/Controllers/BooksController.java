@@ -20,3 +20,31 @@ public class BooksController {
         this.booksService = booksService;
     }
 }
+
+
+ // Inner class for DashboardResponse
+ private static class DashboardResponse {
+    private final Books currentBook;
+    private final Books nextBook;
+
+    public DashboardResponse(Books currentBook, Books nextBook) {
+        this.currentBook = currentBook;
+        this.nextBook = nextBook;
+    }
+
+    public Books getCurrentBook() {
+        return currentBook;
+    }
+
+    public Books getNextBook() {
+        return nextBook;
+    }
+}
+
+
+
+
+
+
+
+
