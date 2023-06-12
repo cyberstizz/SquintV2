@@ -26,4 +26,16 @@ public class VisionBoardService {
         return photoRepository.save(photo);
     }
 
+
+    public Photo updatePhoto(UUID photoId, Photo updatedPhoto) {
+        Photo existingPhoto = photoRepository.findById(photoId)
+                .orElseThrow(() -> new RuntimeException("Photo not found: " + photoId));
+
+        existingPhoto.setPath_or_url(updatedPhoto.getPath_or_url());
+        existingPhoto.setDeadline(updatedPhoto.getDeadline());
+        existingPhoto.setGoal_id(updatedPhoto.getGoal_id());
+
+        return photoRepository.save(existingPhoto);
+    }
+
 }
