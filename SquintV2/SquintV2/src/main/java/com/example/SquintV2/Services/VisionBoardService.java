@@ -14,7 +14,7 @@ public class VisionBoardService {
     private final PhotoRepository photoRepository;
 
     @Autowired
-    public VisionboardService(PhotoRepository photoRepository) {
+    public VisionBoardService(PhotoRepository photoRepository) {
         this.photoRepository = photoRepository;
     }
 
