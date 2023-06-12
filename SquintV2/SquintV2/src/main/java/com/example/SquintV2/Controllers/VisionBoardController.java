@@ -19,4 +19,11 @@ public class VisionBoardController {
     public VisionboardController(VisionboardService visionboardService) {
         this.visionboardService = visionboardService;
     }
+
+
+    @GetMapping("/next/{userId}")
+    public ResponseEntity<Photo> getNextPhoto(@PathVariable UUID userId) {
+        Photo nextPhoto = visionboardService.getNextPhoto(userId);
+        return ResponseEntity.ok(nextPhoto);
+    }
 }
