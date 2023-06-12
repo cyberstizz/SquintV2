@@ -19,4 +19,10 @@ public class MeditationService {
     private final MeditationRepository meditationRepository;
     private final QuoteRepository quoteRepository;
 
+    @Autowired
+    public MeditationService(MeditationRepository meditationRepository, QuoteRepository quoteRepository) {
+        this.meditationRepository = meditationRepository;
+        this.quoteRepository = quoteRepository;
+    }
+
 }
