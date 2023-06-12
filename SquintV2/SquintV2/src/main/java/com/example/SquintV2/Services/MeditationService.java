@@ -36,4 +36,10 @@ public class MeditationService {
         return quotes.get(randomIndex);
     }
 
+
+    public Meditation addMeditation(UUID userId, Meditation meditation) {
+        meditation.setUser_id(userId);
+        return meditationRepository.save(meditation);
+    }
+
 }
