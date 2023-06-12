@@ -22,4 +22,12 @@ public class MeditationController {
         this.quoteService = quoteService;
     }
 
+
+    @GetMapping("/dashboard/{userId}")
+    public DashboardData showDashboard(@PathVariable UUID userId) {
+        Meditation meditation = meditationService.getUsersInfo(userId);
+        Quote quote = meditationService.getRandomQuote();
+        return new DashboardData(meditation, quote);
+    }
+
 }
