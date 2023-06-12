@@ -13,10 +13,10 @@ import java.util.UUID;
 @RequestMapping("/api/visionboard")
 public class VisionBoardController {
 
-    private final VisionboardService visionboardService;
+    private final VisionBoardService visionboardService;
 
     @Autowired
-    public VisionBoardController(VisionboardService visionboardService) {
+    public VisionBoardController(VisionBoardService visionboardService) {
         this.visionboardService = visionboardService;
     }
 
