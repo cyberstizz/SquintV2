@@ -13,5 +13,10 @@ import java.util.UUID;
 @RequestMapping("/api/books")
 public class BooksController { 
 
-    
+    private final BooksService booksService;
+
+    @Autowired
+    public BooksController(BooksService booksService) {
+        this.booksService = booksService;
+    }
 }
