@@ -1,5 +1,5 @@
 import main.java.com.example.SquintV2.Models.Photo;
-import main.java.com.example.SquintV2.Services.BooksService;
+import main.java.com.example.SquintV2.Services.VisionBoardService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,5 +11,5 @@ import java.util.UUID;
 
 @RestController
 public class VisionBoardController {
-    
+
 }
