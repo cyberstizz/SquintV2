@@ -38,6 +38,13 @@ public class BooksController {
     }
 
 
+    @DeleteMapping("/delete/{bookId}")
+    public ResponseEntity<?> deleteBook(@PathVariable UUID bookId) {
+        booksService.deleteBookForUser(bookId);
+        return ResponseEntity.noContent().build();
+    }
+
+
 }
 
 
