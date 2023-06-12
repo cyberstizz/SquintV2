@@ -19,6 +19,18 @@ public class BooksController {
     public BooksController(BooksService booksService) {
         this.booksService = booksService;
     }
+
+    @GetMapping("/dashboard/{userId}")
+    public ResponseEntity<DashboardResponse> showDashboard(@PathVariable UUID userId) {
+        Books currentBook = booksService.getCurrentBook(userId);
+        Books nextBook = booksService.getNextBookByCompletionDate(userId);
+
+        DashboardResponse dashboardResponse = new DashboardResponse(currentBook, nextBook);
+
+        return ResponseEntity.ok(dashboardResponse);
+    }
+
+
 }
 
 
