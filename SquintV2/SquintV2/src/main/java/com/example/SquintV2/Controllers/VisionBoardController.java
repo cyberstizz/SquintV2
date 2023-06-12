@@ -33,4 +33,11 @@ public class VisionBoardController {
         Photo addedPhoto = visionboardService.addPhoto(photo);
         return ResponseEntity.status(HttpStatus.CREATED).body(addedPhoto);
     }
+
+
+    @PutMapping("/update/{photoId}")
+    public ResponseEntity<Photo> updatePhoto(@PathVariable UUID photoId, @RequestBody Photo updatedPhoto) {
+        Photo photo = visionboardService.updatePhoto(photoId, updatedPhoto);
+        return ResponseEntity.ok(photo);
+    }
 }
