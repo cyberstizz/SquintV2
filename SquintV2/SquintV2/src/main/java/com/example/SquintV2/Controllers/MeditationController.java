@@ -13,4 +13,12 @@ import java.util.UUID;
 @RequestMapping("/api/meditation")
 public class MeditationController {
 
+    private final MeditationService meditationService;
+    private final QuoteService quoteService;
+
+    @Autowired
+    public MeditationController(MeditationService meditationService, QuoteService quoteService) {
+        this.meditationService = meditationService;
+    }
+    
 }
