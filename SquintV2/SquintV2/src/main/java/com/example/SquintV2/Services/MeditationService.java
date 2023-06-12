@@ -25,4 +25,9 @@ public class MeditationService {
         this.quoteRepository = quoteRepository;
     }
 
+    public Meditation getUsersInfo(UUID userId) {
+        Optional<Meditation> meditationOptional = meditationRepository.findById(userId);
+        return meditationOptional.orElse(null);
+    }
+
 }
