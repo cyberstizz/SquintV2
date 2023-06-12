@@ -36,4 +36,23 @@ public class MeditationController {
         return meditationService.addMeditation(userId, newMeditation);
     }
 
+
+    private static class DashboardData {
+        private final Meditation meditation;
+        private final Quote quote;
+
+        public DashboardData(Meditation meditation, Quote quote) {
+            this.meditation = meditation;
+            this.quote = quote;
+        }
+
+        public Meditation getMeditation() {
+            return meditation;
+        }
+
+        public Quote getQuote() {
+            return quote;
+        }
+    }
+
 }
