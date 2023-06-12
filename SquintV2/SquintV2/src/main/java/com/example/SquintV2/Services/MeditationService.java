@@ -16,4 +16,7 @@ import java.util.UUID;
 @Service
 public class MeditationService {
 
+    private final MeditationRepository meditationRepository;
+    private final QuoteRepository quoteRepository;
+
 }
