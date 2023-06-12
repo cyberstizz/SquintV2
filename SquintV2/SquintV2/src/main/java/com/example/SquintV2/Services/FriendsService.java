@@ -1,9 +1,7 @@
 package main.java.com.example.SquintV2.Services;
 
-import main.java.com.example.SquintV2.Models.Books;
-import main.java.com.example.SquintV2.Repositories.BooksRepository;
+import main.java.com.example.SquintV2.Models.Friendship;
 import main.java.com.example.SquintV2.Repositories.FriendshipRepository;
-import main.java.com.example.SquintV2.Repositories.BooksReadRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
