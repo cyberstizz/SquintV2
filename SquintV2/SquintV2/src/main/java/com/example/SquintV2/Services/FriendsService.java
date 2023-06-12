@@ -18,4 +18,8 @@ public class FriendService {
 
     private final FriendshipRepository friendshipRepository;
 
+
+    public FriendService(FriendshipRepository friendshipRepository) {
+        this.friendshipRepository = friendshipRepository;
+    }
 }
