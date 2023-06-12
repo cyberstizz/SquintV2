@@ -2,6 +2,7 @@ package main.java.com.example.SquintV2.Services;
 
 import main.java.com.example.SquintV2.Models.Books;
 import main.java.com.example.SquintV2.Repositories.BooksRepository;
+import main.java.com.example.SquintV2.Repositories.FriendshipRepository;
 import main.java.com.example.SquintV2.Repositories.BooksReadRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,5 +15,7 @@ import java.util.UUID;
 
 @Service
 public class FriendService {
-    
+
+    private final FriendshipRepository friendshipRepository;
+
 }
