@@ -31,6 +31,13 @@ public class BooksController {
     }
 
 
+    @PostMapping("/add")
+    public ResponseEntity<Books> addBook(@RequestBody Books book) {
+        Books addedBook = booksService.addBookForUser(book);
+        return ResponseEntity.status(HttpStatus.CREATED).body(addedBook);
+    }
+
+
 }
 
 
