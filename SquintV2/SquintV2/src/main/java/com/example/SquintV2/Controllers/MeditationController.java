@@ -11,3 +11,6 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/meditation")
+public class MeditationController {
+
+}
