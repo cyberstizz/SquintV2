@@ -109,7 +109,7 @@ public class SquintController {
 
 
     @PostMapping("/{taskId}")
-    public ResponseEntity<?> createTasks(@RequestBody Task newTask) {
+    public ResponseEntity<?> createTasks(@RequestBody Tasks newTask) {
         Task createdTask = taskService.createTask(newTask);
         return new ResponseEntity<>(createdTask, HttpStatus.CREATED);
     }
