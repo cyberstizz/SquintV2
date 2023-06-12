@@ -45,6 +45,13 @@ public class BooksController {
     }
 
 
+    @PostMapping("/complete/{userId}/{bookId}")
+    public ResponseEntity<?> completeBook(@PathVariable UUID userId, @PathVariable UUID bookId) {
+        booksService.markBookAsReadForUser(userId, bookId);
+        return ResponseEntity.noContent().build();
+    }
+
+
 }
 
 
