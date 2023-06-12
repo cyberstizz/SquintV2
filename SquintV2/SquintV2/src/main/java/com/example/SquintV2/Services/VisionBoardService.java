@@ -38,4 +38,9 @@ public class VisionBoardService {
         return photoRepository.save(existingPhoto);
     }
 
+
+    public void deletePhoto(UUID photoId) {
+        photoRepository.deleteById(photoId);
+    }
+
 }
