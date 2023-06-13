@@ -33,4 +33,33 @@ public class MailboxService {
         return mailboxRepository.save(message);
     }
 
+
+
+    public void deleteMessage(UUID messageId, UUID userId) {
+        Optional<Mailbox> mailboxOptional = mailboxRepository.findById(messageId);
+        if (mailboxOptional.isPresent()) {
+            Mailbox mailbox = mailboxOptional.get();
+            UUID recipientId = mailbox.getRecipient_id();
+            UUID senderId = mailbox.getSender_id();
+    
+            if (recipientId.equals(userId)) {
+                mailbox.setStatus("deleted_by_recipient");
+                mailboxRepository.save(mailbox);
+            } else if (senderId.equals(userId)) {
+                mailbox.setStatus("deleted_by_sender");
+                mailboxRepository.save(mailbox);
+            }
+        }
+    }
+
 }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
