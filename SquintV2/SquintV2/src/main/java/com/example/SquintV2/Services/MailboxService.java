@@ -29,4 +29,8 @@ public class MailboxService {
         return mailboxRepository.findById(messageId);
     }
 
+    public Mailbox sendMessage(Mailbox message) {
+        return mailboxRepository.save(message);
+    }
+
 }
