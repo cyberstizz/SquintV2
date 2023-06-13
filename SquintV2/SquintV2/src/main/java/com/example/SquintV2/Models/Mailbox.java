@@ -3,6 +3,7 @@ package main.java.com.example.SquintV2.Models;
 import org.springframework.data.annotation.Id;
 
 import java.time.LocalDate;
+import java.util.Map;
 import java.util.UUID;
 
 import org.springframework.data.cassandra.core.mapping.Column;
@@ -11,8 +12,8 @@ import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
 import org.springframework.data.cassandra.core.mapping.Table;
 import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 
-@Table(value="mailbox")
-public class Mailbox{
+@Table(value = "mailbox")
+public class Mailbox {
 
     @Id
     @PrimaryKeyColumn(name = "recipient_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
@@ -25,16 +26,16 @@ public class Mailbox{
     @Id
     @PrimaryKeyColumn(name = "date", ordinal = 2, type = PrimaryKeyType.CLUSTERED)
     private LocalDate date;
-    
+
     @Column(value = "message_id")
     private UUID message_id;
 
     @Column(value = "status")
-    private String status;
+    private Map<UUID, String> status;
 
     @Column(value = "header")
     private String header;
-    
+
     @Column(value = "body")
     private String body;
 
@@ -70,11 +71,11 @@ public class Mailbox{
         this.message_id = message_id;
     }
 
-    public String getStatus() {
+    public Map<UUID, String> getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Map<UUID, String> status) {
         this.status = status;
     }
 
@@ -93,7 +94,4 @@ public class Mailbox{
     public void setBody(String body) {
         this.body = body;
     }
-
-    
-
 }
