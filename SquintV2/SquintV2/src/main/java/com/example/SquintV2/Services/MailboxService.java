@@ -15,4 +15,10 @@ public class MailboxService {
 
     private final MailboxRepository mailboxRepository;
 
+
+    @Autowired
+    public MailboxService(MailboxRepository mailboxRepository) {
+        this.mailboxRepository = mailboxRepository;
+    }
+
 }
