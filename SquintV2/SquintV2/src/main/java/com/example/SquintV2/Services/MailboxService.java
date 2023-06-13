@@ -25,4 +25,8 @@ public class MailboxService {
         return mailboxRepository.findTop10ByRecipientIdOrderByDateDesc(recipientId);
     }
 
+    public Optional<Mailbox> getMessage(UUID messageId) {
+        return mailboxRepository.findById(messageId);
+    }
+
 }
