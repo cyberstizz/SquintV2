@@ -41,15 +41,23 @@ public class MailboxService {
             Mailbox mailbox = mailboxOptional.get();
             UUID recipientId = mailbox.getRecipient_id();
             UUID senderId = mailbox.getSender_id();
+            String deleted_by_recipient = "deleted_by_recipient";
+            String deleted_by_sender = "deleted_by_sender";
+
     
             if (recipientId.equals(userId)) {
-                mailbox.setStatus("deleted_by_recipient");
+                mailbox.setStatus(deleted_by_recipient);
                 mailboxRepository.save(mailbox);
             } else if (senderId.equals(userId)) {
-                mailbox.setStatus("deleted_by_sender");
+                mailbox.setStatus(deleted_by_sender);
                 mailboxRepository.save(mailbox);
             }
-        }
+
+            if (mailbox.getStatus().senderId == deleted_by_sender && mailbox.getStatus().recipeintId == deleted_by_recipient) {
+                mailboxRepository.deleteById(messageId);
+            }
+        } 
+
     }
 
 }
