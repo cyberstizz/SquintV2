@@ -32,6 +32,15 @@ public class StatsController {
     }
 
 
+    @PostMapping("/add")
+    public ResponseEntity<Stats> addStat(@RequestBody StatsRequest request) {
+        Stats newStat = statsService.addStat(request.getUserId(), request.getScore(), request.getTasksCompleted(),
+                request.getTimeManagement(), request.isReportCompleted(), request.getProductivity(),
+                request.isAccessible());
+        return ResponseEntity.status(HttpStatus.CREATED).body(newStat);
+    }
+
+
 
     // Inner class for the StatsDashboard response
     private static class StatsDashboard {
