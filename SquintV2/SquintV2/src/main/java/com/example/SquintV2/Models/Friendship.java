@@ -39,6 +39,14 @@ public class Friendship{
     @Transient
     private Stats stats;
 
+    public Stats getStats() {
+        return stats;
+    }
+
+    public void setStats(Stats stats) {
+        this.stats = stats;
+    }
+
     public UUID getUser_id() {
         return user_id;
     }
