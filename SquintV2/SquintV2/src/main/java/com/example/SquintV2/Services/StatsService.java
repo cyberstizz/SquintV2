@@ -30,4 +30,11 @@ public class StatsService {
         return statsRepository.findByUserIdAndDate(userId, currentDate);
     }
 
+
+    public List<Stats> getStatsForCurrentWeek(UUID userId) {
+        LocalDate currentDate = LocalDate.now();
+        LocalDate weekStartDate = currentDate.minusDays(currentDate.getDayOfWeek().getValue() - 1);
+        return statsRepository.findByUserIdAndDateBetween(userId, weekStartDate, currentDate);
+    }
+
 }
