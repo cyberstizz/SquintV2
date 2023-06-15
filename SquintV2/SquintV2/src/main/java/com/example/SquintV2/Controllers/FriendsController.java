@@ -22,4 +22,10 @@ public class FriendshipController {
         this.friendshipService = friendshipService;
     }
 
+
+    @GetMapping("/dashboard")
+    public List<Friendship> showDashboard(@RequestParam UUID userId) {
+        return friendshipService.getAllFriends(userId);
+    }
+
 }
