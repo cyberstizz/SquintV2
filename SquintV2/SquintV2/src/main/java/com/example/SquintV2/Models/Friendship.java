@@ -2,6 +2,7 @@ package main.java.com.example.SquintV2.Models;
 
 import org.springframework.data.annotation.Id;
 
+import java.beans.Transient;
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -34,6 +35,9 @@ public class Friendship{
 
     @Column(value ="status")
     private String status;
+
+    @Transient
+    private Stats stats;
 
     public UUID getUser_id() {
         return user_id;
