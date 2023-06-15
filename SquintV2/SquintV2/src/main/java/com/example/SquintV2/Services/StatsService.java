@@ -37,4 +37,10 @@ public class StatsService {
         return statsRepository.findByUserIdAndDateBetween(userId, weekStartDate, currentDate);
     }
 
+     public List<Stats> getStatsForCurrentMonth(UUID userId) {
+        LocalDate currentDate = LocalDate.now();
+        LocalDate monthStartDate = currentDate.withDayOfMonth(1);
+        return statsRepository.findByUserIdAndDateBetween(userId, monthStartDate, currentDate);
+    }
+
 }
