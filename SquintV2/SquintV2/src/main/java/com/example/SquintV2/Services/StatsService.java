@@ -24,4 +24,10 @@ public class StatsService {
         this.statsRepository = statsRepository;
     }
 
+
+    public Optional<Stats> getStatsForCurrentDay(UUID userId) {
+        LocalDate currentDate = LocalDate.now();
+        return statsRepository.findByUserIdAndDate(userId, currentDate);
+    }
+
 }
