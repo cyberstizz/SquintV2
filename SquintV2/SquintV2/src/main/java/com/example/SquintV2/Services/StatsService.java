@@ -62,6 +62,24 @@ public class StatsService {
     }
 
 
+
+    public BigDecimal getStatsPercentageForCurrentMonth(UUID userId) {
+        List<Stats> monthStats = getStatsForCurrentMonth(userId);
+        if (monthStats.isEmpty()) {
+            return BigDecimal.ZERO;
+        }
+
+        BigDecimal totalScore = BigDecimal.ZERO;
+        for (Stats stats : monthStats) {
+            totalScore = totalScore.add(stats.getScore());
+        }
+
+        BigDecimal averageScore = totalScore.divide(BigDecimal.valueOf(monthStats.size()), 2, BigDecimal.ROUND_HALF_UP);
+        return averageScore.multiply(BigDecimal.valueOf(100));
+    }
+
+
+
     public BigDecimal getStatsPercentageForEntireHistory(UUID userId) {
         List<Stats> allStats = statsRepository.findByUserId(userId);
         if (allStats.isEmpty()) {
