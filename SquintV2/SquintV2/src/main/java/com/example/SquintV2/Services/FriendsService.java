@@ -55,4 +55,13 @@ public class FriendService {
         });
     }
 
+
+    public void blockUser(UUID userId, UUID friendId) {
+        Optional<Friendship> friendship = friendshipRepository.findByUserIdAndFriendId(userId, friendId);
+        friendship.ifPresent(f -> {
+            f.setStatus("blocked");
+            friendshipRepository.save(f);
+        });
+    }
+
 }
