@@ -36,4 +36,14 @@ public class FriendService {
         friendship.ifPresent(friendshipRepository::delete);
     }
 
+
+    public Friendship sendFriendRequest(UUID userId, UUID friendId) {
+        Friendship friendship = new Friendship();
+        friendship.setUserId(userId);
+        friendship.setFriendId(friendId);
+        friendship.setStatus("pending");
+        friendship.setDate(LocalDate.now());
+        return friendshipRepository.save(friendship);
+    }
+
 }
