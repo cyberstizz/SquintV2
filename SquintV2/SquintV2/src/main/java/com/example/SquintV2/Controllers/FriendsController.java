@@ -34,4 +34,10 @@ public class FriendshipController {
         friendshipService.removeFriend(userId, friendId);
     }
 
+
+    @PostMapping("/send-request")
+    public void sendFriendRequest(@RequestParam UUID userId, @RequestParam UUID friendId) {
+        friendshipService.sendFriendRequest(userId, friendId);
+    }
+
 }
