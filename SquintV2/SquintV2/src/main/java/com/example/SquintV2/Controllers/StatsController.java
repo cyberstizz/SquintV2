@@ -84,4 +84,74 @@ public class StatsController {
         }
     }
 
+
+     // Inner class for the request body of the addStat method
+     private static class StatsRequest {
+        private UUID userId;
+        private BigDecimal score;
+        private BigDecimal tasksCompleted;
+        private BigDecimal timeManagement;
+        private boolean reportCompleted;
+        private BigDecimal productivity;
+        private boolean accessible;
+
+        // Getters and setters
+
+        public UUID getUserId() {
+            return userId;
+        }
+
+        public void setUserId(UUID userId) {
+            this.userId = userId;
+        }
+
+        public BigDecimal getScore() {
+            return score;
+        }
+
+        public void setScore(BigDecimal score) {
+            this.score = score;
+        }
+
+        public BigDecimal getTasksCompleted() {
+            return tasksCompleted;
+        }
+
+        public void setTasksCompleted(BigDecimal tasksCompleted) {
+            this.tasksCompleted = tasksCompleted;
+        }
+
+        public BigDecimal getTimeManagement() {
+            return timeManagement;
+        }
+
+        public void setTimeManagement(BigDecimal timeManagement) {
+            this.timeManagement = timeManagement;
+        }
+
+        public boolean isReportCompleted() {
+            return reportCompleted;
+        }
+
+        public void setReportCompleted(boolean reportCompleted) {
+            this.reportCompleted = reportCompleted;
+        }
+
+        public BigDecimal getProductivity() {
+            return productivity;
+        }
+
+        public void setProductivity(BigDecimal productivity) {
+            this.productivity = productivity;
+        }
+
+        public boolean isAccessible() {
+            return accessible;
+        }
+
+        public void setAccessible(boolean accessible) {
+            this.accessible = accessible;
+        }
+    }
+
 }
