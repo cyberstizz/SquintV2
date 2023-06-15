@@ -21,6 +21,17 @@ public class StatsController {
 
 
 
+    @GetMapping("/dashboard/{userId}")
+    public ResponseEntity<StatsDashboard> showDashboard(@PathVariable UUID userId) {
+        StatsDashboard dashboard = new StatsDashboard();
+        dashboard.setCurrentDayStats(statsService.getStatsForCurrentDay(userId).orElse(null));
+        dashboard.setCurrentWeekStats(statsService.getStatsForCurrentWeek(userId));
+        dashboard.setCurrentMonthStats(statsService.getStatsForCurrentMonth(userId));
+        dashboard.setTotalScore(statsService.getStatsPercentageForEntireHistory(userId));
+        return ResponseEntity.ok(dashboard);
+    }
+
+
 
     // Inner class for the StatsDashboard response
     private static class StatsDashboard {
