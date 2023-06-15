@@ -95,4 +95,21 @@ public class StatsService {
         return averageScore.multiply(BigDecimal.valueOf(100));
     }
 
+
+    public Stats addStat(UUID userId, BigDecimal score, BigDecimal tasksCompleted, BigDecimal timeManagement,
+    boolean reportCompleted, BigDecimal productivity, boolean accessible) {
+        Stats stat = new Stats();
+        stat.setUser_id(userId);
+        stat.setDate(LocalDate.now());
+        stat.setScore(score);
+        stat.setTasks_completed(tasksCompleted);
+        stat.setTime_management(timeManagement);
+        stat.setReport_completed(reportCompleted);
+        stat.setProductivity(productivity);
+        stat.setAccessible(accessible);
+        return statsRepository.save(stat);
+}
+
+
+
 }
