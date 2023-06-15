@@ -30,4 +30,10 @@ public class FriendService {
         return friendshipRepository.findByUserIdAndFriendId(userId, friendId);
     }
 
+
+    public void removeFriend(UUID userId, UUID friendId) {
+        Optional<Friendship> friendship = friendshipRepository.findByUserIdAndFriendId(userId, friendId);
+        friendship.ifPresent(friendshipRepository::delete);
+    }
+
 }
