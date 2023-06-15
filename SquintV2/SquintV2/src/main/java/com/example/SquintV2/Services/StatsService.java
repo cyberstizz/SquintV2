@@ -37,6 +37,24 @@ public class StatsService {
         return statsRepository.findByUserIdAndDateBetween(userId, weekStartDate, currentDate);
     }
 
+
+    public BigDecimal getStatsPercentageForCurrentWeek(UUID userId) {
+        List<Stats> weekStats = getStatsForCurrentWeek(userId);
+        if (weekStats.isEmpty()) {
+            return BigDecimal.ZERO;
+        }
+
+        BigDecimal totalScore = BigDecimal.ZERO;
+        for (Stats stats : weekStats) {
+            totalScore = totalScore.add(stats.getScore());
+        }
+
+        BigDecimal averageScore = totalScore.divide(BigDecimal.valueOf(weekStats.size()), 2, BigDecimal.ROUND_HALF_UP);
+        return averageScore.multiply(BigDecimal.valueOf(100));
+    }
+
+
+
      public List<Stats> getStatsForCurrentMonth(UUID userId) {
         LocalDate currentDate = LocalDate.now();
         LocalDate monthStartDate = currentDate.withDayOfMonth(1);
