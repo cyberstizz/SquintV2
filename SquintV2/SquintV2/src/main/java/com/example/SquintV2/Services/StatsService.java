@@ -17,4 +17,11 @@ import java.util.UUID;
 @Service
 public class StatsService {
 
+    private final StatsRepository statsRepository;
+
+    @Autowired
+    public StatsService(StatsRepository statsRepository) {
+        this.statsRepository = statsRepository;
+    }
+
 }
