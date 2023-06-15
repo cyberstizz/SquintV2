@@ -9,3 +9,17 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.UUID;
+
+
+@RestController
+@RequestMapping("/friendship")
+public class FriendshipController {
+
+    private final FriendshipService friendshipService;
+
+    @Autowired
+    public FriendshipController(FriendshipService friendshipService) {
+        this.friendshipService = friendshipService;
+    }
+
+}
