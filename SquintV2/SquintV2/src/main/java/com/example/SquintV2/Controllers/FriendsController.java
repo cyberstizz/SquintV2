@@ -40,4 +40,10 @@ public class FriendshipController {
         friendshipService.sendFriendRequest(userId, friendId);
     }
 
+
+    @PostMapping("/accept-request")
+    public void acceptFriendRequest(@RequestParam UUID userId, @RequestParam UUID friendId) {
+        friendshipService.acceptFriendRequest(userId, friendId);
+    }
+
 }
