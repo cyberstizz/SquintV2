@@ -28,4 +28,10 @@ public class FriendshipController {
         return friendshipService.getAllFriends(userId);
     }
 
+
+    @PostMapping("/remove")
+    public void removeFriend(@RequestParam UUID userId, @RequestParam UUID friendId) {
+        friendshipService.removeFriend(userId, friendId);
+    }
+
 }
