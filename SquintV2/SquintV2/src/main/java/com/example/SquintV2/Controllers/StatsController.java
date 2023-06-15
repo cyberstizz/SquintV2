@@ -11,4 +11,12 @@ import java.util.UUID;
 @RequestMapping("/stats")
 public class StatsController {
 
+
+    private final StatsService statsService;
+
+    @Autowired
+    public StatsController(StatsService statsService) {
+        this.statsService = statsService;
+    }
+
 }
