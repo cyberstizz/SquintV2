@@ -20,4 +20,9 @@ public class FriendService {
     public FriendService(FriendshipRepository friendshipRepository) {
         this.friendshipRepository = friendshipRepository;
     }
+
+    public List<Friendship> getAllFriends(UUID userId) {
+        return friendshipRepository.findByUserId(userId);
+    }
+
 }
