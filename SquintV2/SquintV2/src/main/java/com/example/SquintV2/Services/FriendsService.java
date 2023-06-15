@@ -22,7 +22,15 @@ public class FriendService {
     }
 
     public List<Friendship> getAllFriends(UUID userId) {
-        return friendshipRepository.findByUserId(userId);
+        List<Friendship> friends = friendshipRepository.findByUserId(userId);
+        LocalDate previousDay = LocalDate.now().minusDays(1);
+    
+        for (Friendship friend : friends) {
+            Optional<Stats> stats = statsService.getStatsForCurrentDay(friend.getFriendId());
+            stats.ifPresent(s -> friend.setStatsForPreviousDay(s));
+        }
+    
+        return friends;
     }
 
 
