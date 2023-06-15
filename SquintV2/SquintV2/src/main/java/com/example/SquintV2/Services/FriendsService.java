@@ -46,4 +46,13 @@ public class FriendService {
         return friendshipRepository.save(friendship);
     }
 
+
+    public void acceptFriendRequest(UUID userId, UUID friendId) {
+        Optional<Friendship> friendship = friendshipRepository.findByUserIdAndFriendId(userId, friendId);
+        friendship.ifPresent(f -> {
+            f.setStatus("accepted");
+            friendshipRepository.save(f);
+        });
+    }
+
 }
