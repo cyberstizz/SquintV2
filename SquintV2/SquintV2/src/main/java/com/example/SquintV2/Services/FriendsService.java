@@ -1,6 +1,7 @@
 package main.java.com.example.SquintV2.Services;
 
 import main.java.com.example.SquintV2.Models.Friendship;
+import main.java.com.example.SquintV2.Models.Stats;
 import main.java.com.example.SquintV2.Repositories.FriendshipRepository;
 import main.java.com.example.SquintV2.Repositories.StatsRepository;
 
