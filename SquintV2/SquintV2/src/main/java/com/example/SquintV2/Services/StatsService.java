@@ -43,4 +43,20 @@ public class StatsService {
         return statsRepository.findByUserIdAndDateBetween(userId, monthStartDate, currentDate);
     }
 
+
+    public BigDecimal getStatsPercentageForEntireHistory(UUID userId) {
+        List<Stats> allStats = statsRepository.findByUserId(userId);
+        if (allStats.isEmpty()) {
+            return BigDecimal.ZERO;
+        }
+
+        BigDecimal totalScore = BigDecimal.ZERO;
+        for (Stats stats : allStats) {
+            totalScore = totalScore.add(stats.getScore());
+        }
+
+        BigDecimal averageScore = totalScore.divide(BigDecimal.valueOf(allStats.size()), 2, BigDecimal.ROUND_HALF_UP);
+        return averageScore.multiply(BigDecimal.valueOf(100));
+    }
+
 }
