@@ -2,6 +2,8 @@ package main.java.com.example.SquintV2.Services;
 
 import main.java.com.example.SquintV2.Models.Friendship;
 import main.java.com.example.SquintV2.Repositories.FriendshipRepository;
+import main.java.com.example.SquintV2.Repositories.StatsRepository;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,10 +17,13 @@ import java.util.UUID;
 public class FriendService {
 
     private final FriendshipRepository friendshipRepository;
+    private final StatsRepository statsRepository;
+
 
     @Autowired
     public FriendService(FriendshipRepository friendshipRepository) {
         this.friendshipRepository = friendshipRepository;
+        this.statsRepository = statsRepository;
     }
 
     public List<Friendship> getAllFriends(UUID userId) {
