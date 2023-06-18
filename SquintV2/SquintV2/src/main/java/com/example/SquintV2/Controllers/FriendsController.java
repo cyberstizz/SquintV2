@@ -46,4 +46,10 @@ public class FriendshipController {
         friendshipService.acceptFriendRequest(userId, friendId);
     }
 
+
+     @PostMapping("/block")
+    public void blockUser(@RequestParam UUID userId, @RequestParam UUID friendId) {
+        friendshipService.blockUser(userId, friendId);
+    }
+
 }
