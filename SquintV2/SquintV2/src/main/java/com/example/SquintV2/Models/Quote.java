@@ -18,6 +18,10 @@ public class Quote {
     @Id
     @PrimaryKeyColumn(name = "quote_type", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private String quote_type;
+    
+    @Id
+    @PrimaryKeyColumn(name = "quote_id", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
+    private UUID quote_id;
 
     @Column(value = "quote_author")
     private String quote_author;
@@ -31,6 +35,14 @@ public class Quote {
 
     public void setQuote_type(String quote_type) {
         this.quote_type = quote_type;
+    }
+
+    public UUID getQuote_id() {
+        return quote_id;
+    }
+
+    public void setQuote_id(UUID quote_id) {
+        this.quote_id = quote_id;
     }
 
     public String getQuote_author() {
@@ -50,5 +62,10 @@ public class Quote {
     }
 
     
-
 }
+
+
+
+
+
+
