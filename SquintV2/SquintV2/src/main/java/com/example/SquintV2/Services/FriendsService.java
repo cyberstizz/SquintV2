@@ -63,8 +63,8 @@ public class FriendService {
 
     public void acceptFriendRequest(UUID userId, UUID friendId) {
         Optional<Friendship> friendship = friendshipRepository.findByUserIdAndFriendId(userId, friendId);
-        friendship.ifPresent(f -> {
-            f.setStatus("accepted");
+        friendship.ifPresent(friend -> {
+            friend.setStatus("accepted");
             friendshipRepository.save(f);
         });
     }
@@ -72,8 +72,8 @@ public class FriendService {
 
     public void blockUser(UUID userId, UUID friendId) {
         Optional<Friendship> friendship = friendshipRepository.findByUserIdAndFriendId(userId, friendId);
-        friendship.ifPresent(f -> {
-            f.setStatus("blocked");
+        friendship.ifPresent(friend -> {
+            friend.setStatus("blocked");
             friendshipRepository.save(f);
         });
     }
