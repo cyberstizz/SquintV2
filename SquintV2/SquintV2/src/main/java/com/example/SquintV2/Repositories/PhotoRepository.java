@@ -8,6 +8,6 @@ import java.util.UUID;
 
 @Repository
 public interface PhotoRepository extends CassandraRepository<Photo, UUID>{
-
+    Photo findTopByUserIdOrderByDeadlineAsc(UUID userId);
 }
 
