@@ -40,40 +40,62 @@ public class Books{
     @Column(value ="completion_date")
     private LocalDate completion_date;
 
-    public UUID getBookId() {
-        return this.book_id;
+    public UUID getUser_id() {
+        return user_id;
     }
 
-    public void setBookId(UUID book_id) {
-        this.book_id = book_id;
-    }
-
-    public UUID getUserId() {
-        return this.user_id;
-    }
-
-    public void setUserId(UUID user_id) {
+    public void setUser_id(UUID user_id) {
         this.user_id = user_id;
     }
 
-    public Integer getTotalPages() {
-        return this.total_pages;
+    public UUID getBook_id() {
+        return book_id;
     }
 
-    public void setTotalPages(Integer total_pages) {
+    public void setBook_id(UUID book_id) {
+        this.book_id = book_id;
+    }
+
+    public String getBook_title() {
+        return book_title;
+    }
+
+    public void setBook_title(String book_title) {
+        this.book_title = book_title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public Integer getTotal_pages() {
+        return total_pages;
+    }
+
+    public void setTotal_pages(Integer total_pages) {
         this.total_pages = total_pages;
     }
 
-    public Integer getCurrentPage() {
-        return this.current_page;
+    public Integer getCurrent_page() {
+        return current_page;
     }
 
-    public void setCurrentPage(Integer current_page) {
+    public void setCurrent_page(Integer current_page) {
         this.current_page = current_page;
     }
 
-    public LocalDate getCompletionDate() {
-        return this.completion_date;
+    public LocalDate getCompletion_date() {
+        return completion_date;
     }
+
+    public void setCompletion_date(LocalDate completion_date) {
+        this.completion_date = completion_date;
+    }
+
+    
 
 }

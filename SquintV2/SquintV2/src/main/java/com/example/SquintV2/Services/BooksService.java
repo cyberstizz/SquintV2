@@ -1,6 +1,7 @@
 package main.java.com.example.SquintV2.Services;
 
 import main.java.com.example.SquintV2.Models.Books;
+import main.java.com.example.SquintV2.Models.BooksRead;
 import main.java.com.example.SquintV2.Repositories.BooksRepository;
 import main.java.com.example.SquintV2.Repositories.BooksReadRepository;
 
@@ -27,8 +28,8 @@ public class BooksService {
 
     public Books addBookForUser(Books book) {
 
-        book.setBookId(UUID.randomUUID()); // Generate a new UUID for the book
-        book.setCompletionDate(LocalDate.now()); // Set the completion date to the current date
+        book.setBook_id(UUID.randomUUID()); // Generate a new UUID for the book
+        book.setCompletion_date(LocalDate.now()); // Set the completion date to the current date
     
         // Save the book using the repository
         return booksRepository.save(book);
@@ -49,11 +50,11 @@ public class BooksService {
                 .orElseThrow(() -> new RuntimeException("Book not found: " + bookId));
     
         // Update the individual attributes of the existing book using the updated book
-        existingBook.setBookTitle(updatedBook.getBookTitle());
+        existingBook.setBook_title(updatedBook.getBook_title());
         existingBook.setAuthor(updatedBook.getAuthor());
-        existingBook.setTotalPages(updatedBook.getTotalPages());
-        existingBook.setCurrentPage(updatedBook.getCurrentPage());
-        existingBook.setCompletionDate(updatedBook.getCompletionDate());
+        existingBook.setTotal_pages(updatedBook.getTotal_pages());
+        existingBook.setCurrent_page(updatedBook.getCurrent_page());
+        existingBook.setCompletion_date(updatedBook.getCompletion_date());
     
         // Save the updated book using the repository
         return booksRepository.save(existingBook);
