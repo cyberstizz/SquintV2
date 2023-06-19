@@ -22,7 +22,7 @@ public class FriendshipService {
 
 
     @Autowired
-    public FriendService(FriendshipRepository friendshipRepository) {
+    public FriendshipService(FriendshipRepository friendshipRepository) {
         this.friendshipRepository = friendshipRepository;
         this.statsRepository = statsRepository;
     }
