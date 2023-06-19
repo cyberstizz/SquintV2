@@ -33,7 +33,7 @@ public class FriendshipService {
     
         for (Friendship friend : friends) {
             Optional<Stats> stats = statsService.getStatsForCurrentDay(friend.getFriendId());
-            stats.ifPresent(s -> friend.setStatsForPreviousDay(s));
+            stats.ifPresent(userStats -> friend.setStatsForPreviousDay(userStats));
         }
     
         return friends;
