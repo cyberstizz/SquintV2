@@ -15,7 +15,7 @@ import java.util.UUID;
 
 
 @Service
-public class FriendService {
+public class FriendshipService {
 
     private final FriendshipRepository friendshipRepository;
     private final StatsRepository statsRepository;
