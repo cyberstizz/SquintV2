@@ -84,7 +84,7 @@ public class BooksService {
         // Update the book's completion date to the current date
         Books book = booksRepository.findById(bookId)
                 .orElseThrow(() -> new RuntimeException("Book not found: " + bookId));
-        book.setCompletionDate(LocalDate.now());
+        book.setCompletion_date(LocalDate.now());
         booksRepository.save(book);
     }
     
