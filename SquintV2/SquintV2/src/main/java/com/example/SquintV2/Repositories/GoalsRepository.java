@@ -11,5 +11,7 @@ import java.util.UUID;
 @Repository
 public interface GoalsRepository extends CassandraRepository<Goals, UUID>{
     List<Goals> findAllByUserId(UUID userId);
+    List<Goals> getGoalsForDay(UUID currentDate);
+
 }
 

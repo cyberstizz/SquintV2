@@ -4,6 +4,7 @@ package main.java.com.example.SquintV2.Controllers;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 import main.java.com.example.SquintV2.Models.Goals;
 import main.java.com.example.SquintV2.Models.Tasks;
 import main.java.com.example.SquintV2.Services.GoalsService;
@@ -23,6 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.time.DayOfWeek;
 
 
 @Controller
@@ -42,14 +44,14 @@ public class SquintController {
     @GetMapping("/tasks-and-goals/day")
     public ResponseEntity<?> getTasksAndGoalsForDay() {
         LocalDate currentDate = LocalDate.now();
-        List<Task> tasks = taskService.getTasksForDay(currentDate);
+        List<Tasks> tasks = taskService.getTasksForDay(currentDate);
         List<Goals> goals = goalsService.getGoalsForDay(currentDate);
 
         Map<String, Object> response = new HashMap<>();
         response.put("tasks", tasks);
         response.put("goals", goals);
 
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.ok);
     }    
 
 
