@@ -87,5 +87,13 @@ public class BooksService {
         book.setCompletion_date(LocalDate.now());
         booksRepository.save(book);
     }
+
+    public Books getCurrentBook(UUID userId) {
+        return booksRepository.findTopByUserIdOrderByCompletionDateDesc(userId);
+    }
+    
+    public Books getNextBook(UUID userId, UUID currentBookId) {
+        return booksRepository.findNextByUserIdAndCurrentBookIdOrderByCompletionDateAsc(userId, currentBookId);
+    }
     
 }
