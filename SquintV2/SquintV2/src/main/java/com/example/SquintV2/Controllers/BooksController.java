@@ -22,9 +22,8 @@ public class BooksController {
 
     @GetMapping("/dashboard/{userId}")
     public ResponseEntity<DashboardResponse> showDashboard(@PathVariable UUID userId) {
-        DashboardResponse dashboardResponse = new DashboardResponse(null, null)
         Books currentBook = booksService.getCurrentBook(userId);
-        Books nextBook = booksService.getNextBookByCompletionDate(userId);
+        Books nextBook = booksService.getNextBook(userId, currentBook.getBook_id());
 
         DashboardResponse dashboardResponse = new DashboardResponse(currentBook, nextBook);
 
