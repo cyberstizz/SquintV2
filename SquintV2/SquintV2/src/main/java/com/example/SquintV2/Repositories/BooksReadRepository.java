@@ -11,7 +11,6 @@ import java.util.UUID;
 @Repository
 public interface BooksReadRepository extends CassandraRepository<BooksRead, UUID>{
     Boolean existsByUserId(UUID userId);
-    Optional<UUID> findByUserId(UUID userId);
 
 }
 
