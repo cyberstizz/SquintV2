@@ -8,6 +8,10 @@ import java.util.UUID;
 
 @Repository
 public interface StatsRepository extends CassandraRepository<Stats, UUID>{
-
+    Optional<Stats> findByUserIdAndDate(UUID userId, LocalDate date);
+    
+    List<Stats> findByUserIdAndDateBetween(UUID userId, LocalDate startDate, LocalDate endDate);
+    
+    List<Stats> findByUserId(UUID userId);
 }
 
