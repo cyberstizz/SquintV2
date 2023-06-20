@@ -61,7 +61,7 @@ public class BooksService {
     }
 
     public Books getNextBookByCompletionDate(UUID userId) {
-        return booksRepository.findTopByUserIdOrderByCompletionDateAsc(userId);
+        return booksRepository.findTopByUserIdOrderByCompletionDateDesc(userId);
     }
 
 

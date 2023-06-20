@@ -40,12 +40,12 @@ public class SquintController {
     }
 
 
-
-    @GetMapping("/tasks-and-goals/day")
-    public ResponseEntity<?> getTasksAndGoalsForDay() {
+ 
+    @GetMapping("/tasks-and-goals/day/{userId}")
+    public ResponseEntity<?> getTasksAndGoalsForDay(@PathVariable UUID userId) {
         LocalDate currentDate = LocalDate.now();
-        List<Tasks> tasks = taskService.getTasksForDay(currentDate);
-        List<Goals> goals = goalsService.getGoalsForDay(currentDate);
+        List<Tasks> tasks = taskService.getTasksForUserAndDay(userId, currentDate);
+        List<Goals> goals = goalsService.getGoalsForUserAndDay(userId, currentDate);
 
         Map<String, Object> response = new HashMap<>();
         response.put("tasks", tasks);
