@@ -8,6 +8,8 @@ import java.util.UUID;
 
 @Repository
 public interface FriendshipRepository extends CassandraRepository<Friendship, UUID>{
+    List<Friendship> findByUserId(UUID userId);
+    Optional<Friendship> findByUserIdAndFriendId(UUID userId, UUID friendId);
 
 }
 
