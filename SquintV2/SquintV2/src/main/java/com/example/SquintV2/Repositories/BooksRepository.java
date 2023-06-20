@@ -11,7 +11,7 @@ import java.util.UUID;
 
 @Repository
 public interface BooksRepository extends CassandraRepository<Books, UUID>{
-    Optional<Books> findByUserId(UUID userId);
+    List<Books> findByUserId(UUID userId);
 
     Books findTopByUserIdOrderByCompletionDateAsc(UUID userId);
 
