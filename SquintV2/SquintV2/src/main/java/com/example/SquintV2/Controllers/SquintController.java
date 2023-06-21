@@ -51,18 +51,17 @@ public class SquintController {
         response.put("tasks", tasks);
         response.put("goals", goals);
 
-        return new ResponseEntity<>(response, HttpStatus.ok);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }    
 
 
-    @GetMapping("/tasks-and-goals/week")
-    public ResponseEntity<?> getTasksAndGoalsForWeek() {
+    @GetMapping("/tasks-and-goals/week/{userId}")
+    public ResponseEntity<?> getTasksAndGoalsForWeek(@PathVariable UUID userId) {
         // Logic to fetch tasks and goals for the current week
         LocalDate currentDate = LocalDate.now();
-        LocalDate startOfWeek = currentDate.with(TemporalAdjusters.previousOrSame(DayOfWeek.MONDAY));
-        LocalDate endOfWeek = currentDate.with(TemporalAdjusters.nextOrSame(DayOfWeek.SUNDAY));
-        List<Task> tasks = taskService.getTasksForWeek(startOfWeek, endOfWeek);
-        List<Goals> goals = goalsService.getGoalsForWeek(startOfWeek, endOfWeek);
+
+        List<Tasks> tasks = taskService.getTasksForUserAndWeek(userId, currentDate);
+        List<Goals> goals = goalsService.getGoalsForUserAndWeek(userId, currentDate);
 
         Map<String, Object> response = new HashMap<>();
         response.put("tasks", tasks);
@@ -78,10 +77,8 @@ public class SquintController {
     public ResponseEntity<?> getTasksAndGoalsForMonth() {
         // Logic to fetch tasks and goals for the current month
         LocalDate currentDate = LocalDate.now();
-        LocalDate startOfMonth = currentDate.with(TemporalAdjusters.firstDayOfMonth());
-        LocalDate endOfMonth = currentDate.with(TemporalAdjusters.lastDayOfMonth());
-        List<Task> tasks = taskService.getTasksForMonth(startOfMonth, endOfMonth);
-        List<Goals> goals = goalsService.getGoalsForMonth(startOfMonth, endOfMonth);
+        List<Tasks> tasks = taskService.getTasksForUserAndMonth(userId, currentDate);
+        List<Goals> goals = goalsService.getGoalsForUserAndMonth(userId, currentDate);
 
         Map<String, Object> response = new HashMap<>();
         response.put("tasks", tasks);
