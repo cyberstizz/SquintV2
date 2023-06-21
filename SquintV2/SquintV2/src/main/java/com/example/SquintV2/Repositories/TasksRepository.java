@@ -11,6 +11,7 @@ import java.util.UUID;
 @Repository
 public interface TasksRepository extends CassandraRepository<Tasks, UUID>{
     List<Tasks> getTasksForDay(UUID currentDate);
+    Tasks findByUserId(UUID userId);
 
 }
 

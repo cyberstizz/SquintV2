@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -13,7 +14,7 @@ import java.util.UUID;
 @Service
 public class TasksService {
 
-        private final TasksRepository tasksrepository;
+        private final TasksRepository tasksRepository;
 
     @Autowired
     public TasksService(TasksRepository tasksRepository) {
@@ -95,7 +96,7 @@ public class TasksService {
         return tasksRepository.save(existingTasks);
     }
 
-    public void deleteTasks(UUID tasksId) {
+    public void deleteTask(UUID tasksId) {
         tasksRepository.deleteById(tasksId);
     }
 

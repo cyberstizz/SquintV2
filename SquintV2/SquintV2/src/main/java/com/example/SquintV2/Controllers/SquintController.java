@@ -73,8 +73,8 @@ public class SquintController {
 
 
 
-    @GetMapping("/tasks-and-goals/month")
-    public ResponseEntity<?> getTasksAndGoalsForMonth() {
+    @GetMapping("/tasks-and-goals/month/{userId}")
+    public ResponseEntity<?> getTasksAndGoalsForMonth(@PathVariable UUID userId) {
         // Logic to fetch tasks and goals for the current month
         LocalDate currentDate = LocalDate.now();
         List<Tasks> tasks = taskService.getTasksForUserAndMonth(userId, currentDate);
@@ -94,9 +94,9 @@ public class SquintController {
 
 
         // Update the task attributes based on the updatedTask object
-        task.setTitle(updatedTask.getTitle());
-        task.setDescription(updatedTask.getDescription());
-        task.setDeadline(updatedTask.getDeadline());
+        task.setTask_name(updatedTask.getTask_name());
+        task.setTask_description(updatedTask.getTask_description());
+        task.setTask_deadline(updatedTask.getTask_deadline());
 
 
          // Set other attributes as needed
@@ -108,15 +108,15 @@ public class SquintController {
 
 
     @PostMapping("/{taskId}")
-    public ResponseEntity<?> createTasks(@RequestBody Tasks newTask) {
-        Task createdTask = taskService.createTask(newTask);
+    public ResponseEntity<?> createTasks(@PathVariable Tasks newTask) {
+        Tasks createdTask = taskService.createTask(newTask);
         return new ResponseEntity<>(createdTask, HttpStatus.CREATED);
     }
 
 
 
     @DeleteMapping("/{taskId}")
-    public ResponseEntity<?> deleteTasks(@PathVariable UUID taskId) {
+    public ResponseEntity<?> deleteTask(@PathVariable UUID taskId) {
         taskService.deleteTask(taskId);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
