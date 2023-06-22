@@ -140,7 +140,7 @@ public class SquintController {
 
     @PutMapping("/{goalId}")
     public ResponseEntity<?> updateGoal(@PathVariable UUID goalId, @RequestBody Goals updatedGoal) {
-        Goals existingGoal = goalsService.getGoalById(goalId);
+        Goals existingGoal = goalsService.getGoalById(goalId).orElseThrow(() -> new RuntimeException("Goal not found: " + goalId));
         existingGoal.setTitle(updatedGoal.getTitle());
         existingGoal.setDescription(updatedGoal.getDescription());
         existingGoal.setDeadline(updatedGoal.getDeadline());
