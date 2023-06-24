@@ -26,6 +26,9 @@ public class Tasks {
     @PrimaryKeyColumn(name = "schedule_item", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     private LocalDate task_deadline;
 
+    @Column(value ="task_id")
+    private UUID task_id;
+    
     @Column(value ="task_name")
     private String task_name;
 
@@ -46,6 +49,10 @@ public class Tasks {
 
     public void setTask_deadline(LocalDate task_deadline) {
         this.task_deadline = task_deadline;
+    }
+
+    public UUID getTasl_id(UUID task_id) {
+        return task_id;
     }
 
     public String getTask_name() {
