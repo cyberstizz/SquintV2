@@ -4,6 +4,7 @@ import main.java.com.example.SquintV2.Models.Goals;
 import org.springframework.data.cassandra.repository.CassandraRepository;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
