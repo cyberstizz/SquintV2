@@ -27,6 +27,11 @@ public class GoalsService {
         return goalsRepository.findAllByUserId(user_Id);
     }
 
+
+    public List<Goals> findGoalsForUserInTimeRange(UUID user_id, LocalDate start, LocalDate end) {
+        return gaolsRepository.findByUser_idAndGoal_deadlineBetween(user_id, start, end);
+    }
+
     public Optional<Goals> getGoalById(UUID goalId) {
         return goalsRepository.findById(goalId);
     }

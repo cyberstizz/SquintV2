@@ -40,52 +40,80 @@ public class SquintController {
     }
 
 
+    @GetMapping("/combinedSchedule")
+public List<Object> getCombinedSchedule(UUID user_id, LocalDate start, LocalDate end) {
+    List<Tasks> tasks = tasksService.findTasksForUserInTimeRange(user_id, start, end);
+    List<Goals> goals = goalsService.findGoalsForUserInTimeRange(user_id, start, end);
+    
+    List<Object> combined = new ArrayList<>();
+    combined.addAll(tasks);
+    combined.addAll(goals);
+    
+    combined.sort((o1, o2) -> {
+        LocalDate date1, date2;
+        if (o1 instanceof Tasks) {
+            date1 = ((Tasks) o1).getTask_deadline();
+        } else {
+            date1 = ((Goals) o1).getGoal_deadline();
+        }
+        if (o2 instanceof Tasks) {
+            date2 = ((Tasks) o2).getTask_deadline();
+        } else {
+            date2 = ((Goals) o2).getGoal_deadline();
+        }
+        return date1.compareTo(date2);
+    });
+    
+    return combined;
+}
+
+
  
-    @GetMapping("/tasks-and-goals/day/{userId}")
-    public ResponseEntity<?> getTasksAndGoalsForDay(@PathVariable UUID userId) {
-        LocalDate currentDate = LocalDate.now();
-        List<Tasks> tasks = taskService.getTasksForUserAndDay(userId, currentDate);
-        List<Goals> goals = goalsService.getGoalsForUserAndDay(userId, currentDate);
+    // @GetMapping("/tasks-and-goals/day/{userId}")
+    // public ResponseEntity<?> getTasksAndGoalsForDay(@PathVariable UUID userId) {
+    //     LocalDate currentDate = LocalDate.now();
+    //     List<Tasks> tasks = taskService.getTasksForUserAndDay(userId, currentDate);
+    //     List<Goals> goals = goalsService.getGoalsForUserAndDay(userId, currentDate);
 
-        Map<String, Object> response = new HashMap<>();
-        response.put("tasks", tasks);
-        response.put("goals", goals);
+    //     Map<String, Object> response = new HashMap<>();
+    //     response.put("tasks", tasks);
+    //     response.put("goals", goals);
 
-        return new ResponseEntity<>(response, HttpStatus.OK);
-    }    
-
-
-    @GetMapping("/tasks-and-goals/week/{userId}")
-    public ResponseEntity<?> getTasksAndGoalsForWeek(@PathVariable UUID userId) {
-        // Logic to fetch tasks and goals for the current week
-        LocalDate currentDate = LocalDate.now();
-
-        List<Tasks> tasks = taskService.getTasksForUserAndWeek(userId, currentDate);
-        List<Goals> goals = goalsService.getGoalsForUserAndWeek(userId, currentDate);
-
-        Map<String, Object> response = new HashMap<>();
-        response.put("tasks", tasks);
-        response.put("goals", goals);
-
-        return new ResponseEntity<>(response, HttpStatus.OK);
-    }
+    //     return new ResponseEntity<>(response, HttpStatus.OK);
+    // }    
 
 
+    // @GetMapping("/tasks-and-goals/week/{userId}")
+    // public ResponseEntity<?> getTasksAndGoalsForWeek(@PathVariable UUID userId) {
+    //     // Logic to fetch tasks and goals for the current week
+    //     LocalDate currentDate = LocalDate.now();
+
+    //     List<Tasks> tasks = taskService.getTasksForUserAndWeek(userId, currentDate);
+    //     List<Goals> goals = goalsService.getGoalsForUserAndWeek(userId, currentDate);
+
+    //     Map<String, Object> response = new HashMap<>();
+    //     response.put("tasks", tasks);
+    //     response.put("goals", goals);
+
+    //     return new ResponseEntity<>(response, HttpStatus.OK);
+    // }
 
 
-    @GetMapping("/tasks-and-goals/month/{userId}")
-    public ResponseEntity<?> getTasksAndGoalsForMonth(@PathVariable UUID userId) {
-        // Logic to fetch tasks and goals for the current month
-        LocalDate currentDate = LocalDate.now();
-        List<Tasks> tasks = taskService.getTasksForUserAndMonth(userId, currentDate);
-        List<Goals> goals = goalsService.getGoalsForUserAndMonth(userId, currentDate);
 
-        Map<String, Object> response = new HashMap<>();
-        response.put("tasks", tasks);
-        response.put("goals", goals);
 
-        return new ResponseEntity<>(response, HttpStatus.OK);
-    }
+    // @GetMapping("/tasks-and-goals/month/{userId}")
+    // public ResponseEntity<?> getTasksAndGoalsForMonth(@PathVariable UUID userId) {
+    //     // Logic to fetch tasks and goals for the current month
+    //     LocalDate currentDate = LocalDate.now();
+    //     List<Tasks> tasks = taskService.getTasksForUserAndMonth(userId, currentDate);
+    //     List<Goals> goals = goalsService.getGoalsForUserAndMonth(userId, currentDate);
+
+    //     Map<String, Object> response = new HashMap<>();
+    //     response.put("tasks", tasks);
+    //     response.put("goals", goals);
+
+    //     return new ResponseEntity<>(response, HttpStatus.OK);
+    // }
 
     @PutMapping("/{taskId}")
     public ResponseEntity<?> updateTasks(@PathVariable UUID taskId, @RequestBody Tasks updatedTask) {
