@@ -28,6 +28,10 @@ public class TasksService {
         return tasksRepository.findAll();
     }
 
+    public List<Tasks> findTasksForUserInTimeRange(UUID user_id, LocalDate start, LocalDate end) {
+        return tasksRepository.findByUser_idAndTask_deadlineBetween(user_id, start, end);
+    }
+
     public Tasks getTasksById(UUID tasksId) {
         return tasksRepository.findById(tasksId)
                 .orElseThrow(() -> new RuntimeException("Tasks not found: " + tasksId));
