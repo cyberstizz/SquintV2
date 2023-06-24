@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 
 import java.time.LocalDate;
 import java.time.temporal.TemporalAdjusters;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +46,7 @@ public List<Object> getCombinedSchedule(UUID user_id, LocalDate start, LocalDate
     List<Tasks> tasks = tasksService.findTasksForUserInTimeRange(user_id, start, end);
     List<Goals> goals = goalsService.findGoalsForUserInTimeRange(user_id, start, end);
     
-    List<Object> combined = new ArrayList<>();
+    List<Object> combined = new ArrayList()<>();
     combined.addAll(tasks);
     combined.addAll(goals);
     
@@ -169,9 +170,9 @@ public List<Object> getCombinedSchedule(UUID user_id, LocalDate start, LocalDate
     @PutMapping("/{goalId}")
     public ResponseEntity<?> updateGoal(@PathVariable UUID goalId, @RequestBody Goals updatedGoal) {
         Goals existingGoal = goalsService.getGoalById(goalId).orElseThrow(() -> new RuntimeException("Goal not found: " + goalId));
-        existingGoal.setTitle(updatedGoal.getTitle());
-        existingGoal.setDescription(updatedGoal.getDescription());
-        existingGoal.setDeadline(updatedGoal.getDeadline());
+        existingGoal.setTitle(updatedGoal.getGoal_name());
+        existingGoal.setDescription(updatedGoal.getGoal_description());
+        existingGoal.setDeadline(updatedGoal.getGoal_deadline());
 
         Goals updatedGoalEntity = goalsService.updateGoal(goalId, existingGoal);
         return new ResponseEntity<>(updatedGoal, HttpStatus.OK);

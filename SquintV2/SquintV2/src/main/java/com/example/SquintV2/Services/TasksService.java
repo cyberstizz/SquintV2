@@ -37,54 +37,54 @@ public class TasksService {
                 .orElseThrow(() -> new RuntimeException("Tasks not found: " + tasksId));
     }
 
-    public List<Tasks> getTasksForUserAndDay(UUID userId, LocalDate day) {
-        List<Tasks> userTasks = tasksRepository.findByUserId(userId);
-        List<Tasks> tasksForDay = new ArrayList<>();
+    // public List<Tasks> getTasksForUserAndDay(UUID userId, LocalDate day) {
+    //     List<Tasks> userTasks = tasksRepository.findByUserId(userId);
+    //     List<Tasks> tasksForDay = new ArrayList<>();
     
-        for (Tasks task : userTasks) {
-            if (task.getTask_deadline().equals(day)) {
-                tasksForDay.add(task);
-            }
-        }
+    //     for (Tasks task : userTasks) {
+    //         if (task.getTask_deadline().equals(day)) {
+    //             tasksForDay.add(task);
+    //         }
+    //     }
     
-        return tasksForDay;
-    }
+    //     return tasksForDay;
+    // }
 
 
-    public List<Tasks> getTasksForUserAndWeek(UUID userId, LocalDate currentDate) {
-        LocalDate startOfWeek = currentDate.with(DayOfWeek.MONDAY);
-        LocalDate endOfWeek = startOfWeek.plus(6, ChronoUnit.DAYS);
+    // public List<Tasks> getTasksForUserAndWeek(UUID userId, LocalDate currentDate) {
+    //     LocalDate startOfWeek = currentDate.with(DayOfWeek.MONDAY);
+    //     LocalDate endOfWeek = startOfWeek.plus(6, ChronoUnit.DAYS);
 
-        List<Tasks> userTasks = tasksRepository.findByUserId(userId);
-        List<Tasks> tasksForWeek = new ArrayList<>();
+    //     List<Tasks> userTasks = tasksRepository.findByUserId(userId);
+    //     List<Tasks> tasksForWeek = new ArrayList<>();
 
-        for (Tasks task : userTasks) {
-            LocalDate taskDeadline = task.getTask_deadline();
-            if (!taskDeadline.isBefore(startOfWeek) && !taskDeadline.isAfter(endOfWeek)) {
-                tasksForWeek.add(task);
-            }
-        }
+    //     for (Tasks task : userTasks) {
+    //         LocalDate taskDeadline = task.getTask_deadline();
+    //         if (!taskDeadline.isBefore(startOfWeek) && !taskDeadline.isAfter(endOfWeek)) {
+    //             tasksForWeek.add(task);
+    //         }
+    //     }
 
-        return tasksForWeek;
-    }
+    //     return tasksForWeek;
+    // }
 
 
-    public List<Tasks> getTasksForUserAndMonth(UUID userId, LocalDate currentDate) {
-        LocalDate startOfMonth = currentDate.withDayOfMonth(1);
-        LocalDate endOfMonth = startOfMonth.withDayOfMonth(startOfMonth.lengthOfMonth());
+    // public List<Tasks> getTasksForUserAndMonth(UUID userId, LocalDate currentDate) {
+    //     LocalDate startOfMonth = currentDate.withDayOfMonth(1);
+    //     LocalDate endOfMonth = startOfMonth.withDayOfMonth(startOfMonth.lengthOfMonth());
 
-        List<Tasks> userTasks = tasksRepository.findByUserId(userId);
-        List<Tasks> tasksForMonth = new ArrayList<>();
+    //     List<Tasks> userTasks = tasksRepository.findByUserId(userId);
+    //     List<Tasks> tasksForMonth = new ArrayList<>();
 
-        for (Tasks task : userTasks) {
-            LocalDate taskDeadline = task.getTask_deadline();
-            if (!taskDeadline.isBefore(startOfMonth) && !taskDeadline.isAfter(endOfMonth)) {
-                tasksForMonth.add(task);
-            }
-        }
+    //     for (Tasks task : userTasks) {
+    //         LocalDate taskDeadline = task.getTask_deadline();
+    //         if (!taskDeadline.isBefore(startOfMonth) && !taskDeadline.isAfter(endOfMonth)) {
+    //             tasksForMonth.add(task);
+    //         }
+    //     }
 
-        return tasksForMonth;
-    }
+    //     return tasksForMonth;
+    // }
 
     public Tasks createTasks(Tasks tasks) {
         // Set any necessary attributes for the tasks
