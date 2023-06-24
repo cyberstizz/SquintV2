@@ -51,8 +51,12 @@ public class Tasks {
         this.task_deadline = task_deadline;
     }
 
-    public UUID getTasl_id(UUID task_id) {
+    public UUID getTasl_id() {
         return task_id;
+    }
+
+    public void setTask_id(UUID task_id) {
+        this.task_id = task_id;
     }
 
     public String getTask_name() {
