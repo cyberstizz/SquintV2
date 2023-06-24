@@ -43,10 +43,10 @@ public class SquintController {
 
     @GetMapping("/combinedSchedule")
 public List<Object> getCombinedSchedule(UUID user_id, LocalDate start, LocalDate end) {
-    List<Tasks> tasks = tasksService.findTasksForUserInTimeRange(user_id, start, end);
+    List<Tasks> tasks = taskService.findTasksForUserInTimeRange(user_id, start, end);
     List<Goals> goals = goalsService.findGoalsForUserInTimeRange(user_id, start, end);
     
-    List<Object> combined = new ArrayList()<>();
+    List<Object> combined = new ArrayList<>();
     combined.addAll(tasks);
     combined.addAll(goals);
     
@@ -168,13 +168,13 @@ public List<Object> getCombinedSchedule(UUID user_id, LocalDate start, LocalDate
 
 
     @PutMapping("/{goalId}")
-    public ResponseEntity<?> updateGoal(@PathVariable UUID goalId, @RequestBody Goals updatedGoal) {
+    public ResponseEntity<?> updateGoalById(@PathVariable UUID goalId, @RequestBody Goals updatedGoal) {
         Goals existingGoal = goalsService.getGoalById(goalId).orElseThrow(() -> new RuntimeException("Goal not found: " + goalId));
-        existingGoal.setTitle(updatedGoal.getGoal_name());
-        existingGoal.setDescription(updatedGoal.getGoal_description());
-        existingGoal.setDeadline(updatedGoal.getGoal_deadline());
+        existingGoal.setGoal_name(updatedGoal.getGoal_name());
+        existingGoal.setGoal_description(updatedGoal.getGoal_description());
+        existingGoal.setGoal_deadline(updatedGoal.getGoal_deadline());
 
-        Goals updatedGoalEntity = goalsService.updateGoal(goalId, existingGoal);
+        Goals updatedGoalEntity = goalsService.updateGoal(existingGoal);
         return new ResponseEntity<>(updatedGoal, HttpStatus.OK);
     }
 

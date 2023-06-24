@@ -8,6 +8,6 @@ import java.util.UUID;
 
 @Repository
 public interface MailboxRepository extends CassandraRepository<Mailbox, UUID>{
-
+    findTop10ByRecipientIdOrderByDateDesc(recipientId)
 }
 

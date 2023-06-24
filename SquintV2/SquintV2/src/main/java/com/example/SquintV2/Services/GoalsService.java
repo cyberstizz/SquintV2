@@ -5,7 +5,9 @@ import main.java.com.example.SquintV2.Repositories.GoalsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -29,7 +31,7 @@ public class GoalsService {
 
 
     public List<Goals> findGoalsForUserInTimeRange(UUID user_id, LocalDate start, LocalDate end) {
-        return gaolsRepository.findByUser_idAndGoal_deadlineBetween(user_id, start, end);
+        return goalsRepository.findByUser_idAndGoal_deadlineBetween(user_id, start, end);
     }
 
     public Optional<Goals> getGoalById(UUID goalId) {
@@ -37,54 +39,54 @@ public class GoalsService {
     }
 
 
-    public List<Goals> getGoalsForUserAndDay(UUID userId, LocalDate day) {
-        List<Goals> userGoals = goalsRepository.findByUserId(userId);
-        List<Goals> goalsForDay = new ArrayList<>();
+    // public List<Goals> getGoalsForUserAndDay(UUID userId, LocalDate day) {
+    //     List<Goals> userGoals = goalsRepository.findAllByUserId(userId);
+    //     List<Goals> goalsForDay = new ArrayList<>();
     
-        for (Goals goal : userGoals) {
-            if (goal.getGoal_deadline().equals(day)) {
-                goalsForDay.add(goal);
-            }
-        }
+    //     for (Goals goal : userGoals) {
+    //         if (goal.getGoal_deadline().equals(day)) {
+    //             goalsForDay.add(goal);
+    //         }
+    //     }
     
-        return goalsForDay;
-    }
+    //     return goalsForDay;
+    // }
 
 
-    public List<Goals> getGoalsForUserAndWeek(UUID userId, LocalDate currentDate) {
-        LocalDate startOfWeek = currentDate.with(DayOfWeek.MONDAY);
-        LocalDate endOfWeek = startOfWeek.plus(6, ChronoUnit.DAYS);
+    // public List<Goals> getGoalsForUserAndWeek(UUID userId, LocalDate currentDate) {
+    //     LocalDate startOfWeek = currentDate.with(DayOfWeek.MONDAY);
+    //     LocalDate endOfWeek = startOfWeek.plus(6, ChronoUnit.DAYS);
 
-        List<Goals> userGoals = goalsRepository.findByUserId(userId);
-        List<Goals> goalsForWeek = new ArrayList<>();
+    //     List<Goals> userGoals = goalsRepository.findAllByUserId(userId);
+    //     List<Goals> goalsForWeek = new ArrayList<>();
 
-        for (Goals goal : userGoals) {
-            LocalDate goalDeadline = goal.getGoal_deadline();
-            if (!goalDeadline.isBefore(startOfWeek) && !goalDeadline.isAfter(endOfWeek)) {
-                goalsForWeek.add(goal);
-            }
-        }
+    //     for (Goals goal : userGoals) {
+    //         LocalDate goalDeadline = goal.getGoal_deadline();
+    //         if (!goalDeadline.isBefore(startOfWeek) && !goalDeadline.isAfter(endOfWeek)) {
+    //             goalsForWeek.add(goal);
+    //         }
+    //     }
 
-        return goalsForWeek;
-    }
+    //     return goalsForWeek;
+    // }
 
 
-    public List<Goals> getGoalsForUserAndMonth(UUID userId, LocalDate currentDate) {
-        LocalDate startOfMonth = currentDate.withDayOfMonth(1);
-        LocalDate endOfMonth = startOfMonth.withDayOfMonth(startOfMonth.lengthOfMonth());
+    // public List<Goals> getGoalsForUserAndMonth(UUID userId, LocalDate currentDate) {
+    //     LocalDate startOfMonth = currentDate.withDayOfMonth(1);
+    //     LocalDate endOfMonth = startOfMonth.withDayOfMonth(startOfMonth.lengthOfMonth());
 
-        List<Goals> userGoals = goalsRepository.findByUserId(userId);
-        List<Goals> goalsForMonth = new ArrayList<>();
+    //     List<Goals> userGoals = goalsRepository.findAllByUserId(userId);
+    //     List<Goals> goalsForMonth = new ArrayList<>();
 
-        for (Goals goal : userGoals) {
-            LocalDate goalDeadline = goal.getGoal_deadline();
-            if (!goalDeadline.isBefore(startOfMonth) && !goalDeadline.isAfter(endOfMonth)) {
-                goalsForMonth.add(goal);
-            }
-        }
+    //     for (Goals goal : userGoals) {
+    //         LocalDate goalDeadline = goal.getGoal_deadline();
+    //         if (!goalDeadline.isBefore(startOfMonth) && !goalDeadline.isAfter(endOfMonth)) {
+    //             goalsForMonth.add(goal);
+    //         }
+    //     }
 
-        return goalsForMonth;
-    }
+    //     return goalsForMonth;
+    // }
 
     
 
