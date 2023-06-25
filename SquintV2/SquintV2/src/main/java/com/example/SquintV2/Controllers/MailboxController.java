@@ -23,13 +23,13 @@ public class MailboxController {
     }
 
     @GetMapping("/messages/{recipientId}")
-    public ResponseEntity<List<String>> getMessages(@PathVariable UUID recipientId) {
-        List<String> messages = mailboxService.getMessages(recipientId);
+    public ResponseEntity<List<Mailbox>> getMessages(@PathVariable UUID recipientId) {
+        List<Mailbox> messages = mailboxService.getMessages(recipientId);
         return ResponseEntity.ok(messages);
     }
 
     @GetMapping("/message/{messageId}")
-    public ResponseEntity<Mailbox> getMessage(@PathVariable UUID messageId) {
+    public <ResponseEntity><Mailbox> getMessage(@PathVariable UUID messageId) {
         Optional<Mailbox> message = mailboxService.getMessage(messageId);
         return message.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }

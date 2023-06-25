@@ -22,7 +22,7 @@ public class MailboxService {
         this.mailboxRepository = mailboxRepository;
     }
 
-    public List<String> getMessages(UUID recipientId) {
+    public List<Mailbox> getMessages(UUID recipientId) {
         return mailboxRepository.findTop10ByRecipientIdOrderByDateDesc(recipientId);
     }
 
