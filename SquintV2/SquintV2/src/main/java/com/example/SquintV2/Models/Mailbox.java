@@ -31,7 +31,7 @@ public class Mailbox {
     private UUID message_id;
 
     @Column(value = "status")
-    private Map<UUID, String> status;
+    private String status;
 
     @Column(value = "header")
     private String header;

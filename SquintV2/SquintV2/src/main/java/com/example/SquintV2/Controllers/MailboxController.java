@@ -29,7 +29,7 @@ public class MailboxController {
     }
 
     @GetMapping("/message/{messageId}")
-    public <ResponseEntity><Mailbox> getMessage(@PathVariable UUID messageId) {
+    public ResponseEntity<Mailbox> getMessage(@PathVariable UUID messageId) {
         Optional<Mailbox> message = mailboxService.getMessage(messageId);
         return message.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }

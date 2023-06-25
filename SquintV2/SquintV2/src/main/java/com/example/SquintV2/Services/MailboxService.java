@@ -44,6 +44,17 @@ public class MailboxService {
             UUID senderId = mailbox.getSender_id();
             String deletedByRecipient = "deleted_by_recipient";
             String deletedBySender = "deleted_by_sender";
+
+
+               //this code will delete the message if the status is deletedbysender and the recipient is the
+                //one whom initiated this function.
+                if (mailbox.getStatus().equals(deletedBySender) && recipientId.equals(userId)) {
+                    mailboxRepository.deleteById(messageId);
+                }
+    
+                if (mailbox.getStatus().equals(deletedByRecipient) && senderId.equals(userId)) {
+                    mailboxRepository.deleteById(messageId);        
+                }
     
             if (recipientId.equals(userId)) {
                 mailbox.setStatus(deletedByRecipient);
@@ -53,9 +64,7 @@ public class MailboxService {
                 mailboxRepository.save(mailbox);
             }
     
-            if (mailbox.getStatus().equals(deletedBySender) && mailbox.getStatus().equals(deletedByRecipient)) {
-                mailboxRepository.deleteById(messageId);
-            }
+             
         }
     }
 
