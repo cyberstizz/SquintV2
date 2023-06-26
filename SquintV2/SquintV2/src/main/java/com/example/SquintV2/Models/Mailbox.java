@@ -71,11 +71,11 @@ public class Mailbox {
         this.message_id = message_id;
     }
 
-    public Map<UUID, String> getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Map<UUID, String> status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 

@@ -1,9 +1,8 @@
 spring:
   data:
     cassandra:
-      keyspace-name: my_keyspace
-      contact-points: your_datastax_astra_contact_points
-      port: your_port
-      username: your_username
-      password: your_password
-      ssl: true
+      username: your-username
+      password: your-password
+      keyspace-name: "squint"
+      cloud:
+        secure-connect-bundle: path/to/secure-connect-bundle.zip
