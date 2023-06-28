@@ -5,4 +5,4 @@ spring:
       password: your-password
       keyspace-name: "squint"
       cloud:
-        secure-connect-bundle: ../../..//../secure-connect-squint.zip
+        secure-connect-bundle: ../../../../secure-connect-squint.zip
