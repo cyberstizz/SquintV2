@@ -1,8 +1,8 @@
 spring:
   data:
     cassandra:
+      keyspace-name: "squint"
       username: your-username
       password: your-password
-      keyspace-name: "squint"
       cloud:
         secure-connect-bundle: ../../../../secure-connect-squint.zip
