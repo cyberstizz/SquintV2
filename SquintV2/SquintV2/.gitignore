@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### secure bundle ###
+/home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/resources/secure-connect-squint.zip
