@@ -1,7 +1,7 @@
-package main.java.com.example.SquintV2.Controllers;
+package com.example.SquintV2.Controllers;
 
-import main.java.com.example.SquintV2.Models.Goals;
-import main.java.com.example.SquintV2.Services.GoalsService;
+import com.example.SquintV2.Models.Goals;
+import com.example.SquintV2.Services.GoalsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
