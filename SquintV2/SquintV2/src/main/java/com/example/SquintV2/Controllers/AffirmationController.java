@@ -8,19 +8,13 @@ import com.example.SquintV2.Models.Affirmation;
 import com.example.SquintV2.Services.AffirmationsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.http.HttpStatus;
 
-import java.net.http.HttpClient;
-import java.time.LocalDate;
-import java.time.temporal.TemporalAdjusters;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
 import java.util.UUID;
 
 @Controller
