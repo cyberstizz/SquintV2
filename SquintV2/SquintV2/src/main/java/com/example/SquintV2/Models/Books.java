@@ -1,4 +1,4 @@
-package main.java.com.example.SquintV2.Models;
+package com.example.SquintV2.Models;
 
 import java.time.LocalDate;
 
