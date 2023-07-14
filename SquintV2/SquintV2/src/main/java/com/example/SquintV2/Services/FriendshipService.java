@@ -1,10 +1,10 @@
-package main.java.com.example.SquintV2.Services;
+package com.example.SquintV2.Services;
 
-import main.java.com.example.SquintV2.Models.Friendship;
-import main.java.com.example.SquintV2.Models.Stats;
-import main.java.com.example.SquintV2.Repositories.FriendshipRepository;
-import main.java.com.example.SquintV2.Repositories.StatsRepository;
-import main.java.com.example.SquintV2.Services.StatsService;
+import com.example.SquintV2.Models.Friendship;
+import com.example.SquintV2.Models.Stats;
+import com.example.SquintV2.Repositories.FriendshipRepository;
+import com.example.SquintV2.Repositories.StatsRepository;
+import com.example.SquintV2.Services.StatsService;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,17 +1,14 @@
-package main.java.com.example.SquintV2.Services;
+package com.example.SquintV2.Services;
 
-import main.java.com.example.SquintV2.Models.Tasks;
-import main.java.com.example.SquintV2.Repositories.TasksRepository;
+import com.example.SquintV2.Models.Tasks;
+import com.example.SquintV2.Repositories.TasksRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import java.time.DayOfWeek;
-import java.time.temporal.ChronoUnit;
 
 
 @Service

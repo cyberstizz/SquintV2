@@ -1,9 +1,9 @@
-package main.java.com.example.SquintV2.Services;
+package com.example.SquintV2.Services;
 
-import main.java.com.example.SquintV2.Models.Playbook;
-import main.java.com.example.SquintV2.Models.Alarm;
-import main.java.com.example.SquintV2.Repositories.PlaybookRepository;
-import main.java.com.example.SquintV2.Repositories.AlarmRepository;
+import com.example.SquintV2.Models.Playbook;
+import com.example.SquintV2.Models.Alarm;
+import com.example.SquintV2.Repositories.PlaybookRepository;
+import com.example.SquintV2.Repositories.AlarmRepository;
 
 import java.util.List;
 import java.util.Optional;
