@@ -1,7 +1,13 @@
 package com.example.SquintV2;
 
+import java.nio.file.Path;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.cassandra.CqlSessionBuilderCustomizer;
+import org.springframework.context.annotation.Bean;
+
+import com.example.SquintV2.connect.DataStaxAstraProperties;
 
 @SpringBootApplication
 public class SquintV2Application {
