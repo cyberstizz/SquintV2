@@ -1,6 +1,6 @@
-package main.java.com.example.SquintV2.Repositories;
+package com.example.SquintV2.Repositories;
 
-import main.java.com.example.SquintV2.Models.Books;
+import com.example.SquintV2.Models.Books;
 import org.springframework.data.cassandra.repository.CassandraRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.cassandra.repository.Query;

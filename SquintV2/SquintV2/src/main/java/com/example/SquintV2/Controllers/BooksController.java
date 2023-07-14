@@ -1,5 +1,6 @@
-import main.java.com.example.SquintV2.Models.Books;
-import main.java.com.example.SquintV2.Services.BooksService;
+package com.example.SquintV2.Controllers;
+
+import com.example.SquintV2.Services.BooksService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,8 +23,8 @@ public class BooksController {
 
     @GetMapping("/dashboard/{userId}")
     public ResponseEntity<DashboardResponse> showDashboard(@PathVariable UUID userId) {
-        Books currentBook = booksService.getCurrentBook(userId);
-        Books nextBook = booksService.getNextBook(userId, currentBook.getBook_id());
+        BooksService currentBook = booksService.getCurrentBook(userId);
+        BooksService nextBook = booksService.getNextBook(userId, currentBook.getBook_id());
 
         DashboardResponse dashboardResponse = new DashboardResponse(currentBook, nextBook);
 
