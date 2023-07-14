@@ -1,7 +1,7 @@
-package main.java.com.example.SquintV2.Controllers;
+package com.example.SquintV2.Controllers;
 
-import main.java.com.example.SquintV2.Models.Mailbox;
-import main.java.com.example.SquintV2.Services.MailboxService;
+import com.example.SquintV2.Models.Mailbox;
+import com.example.SquintV2.Services.MailboxService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,8 +1,8 @@
-package main.java.com.example.SquintV2.Controllers;
+package com.example.SquintV2.Controllers;
 
-import main.java.com.example.SquintV2.Models.Meditation;
-import main.java.com.example.SquintV2.Models.Quote;
-import main.java.com.example.SquintV2.Services.MeditationService;
+import com.example.SquintV2.Models.Meditation;
+import com.example.SquintV2.Models.Quote;
+import com.example.SquintV2.Services.MeditationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
