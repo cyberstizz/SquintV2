@@ -1,9 +1,9 @@
-package main.java.com.example.SquintV2.Services;
+package com.example.SquintV2.Services;
 
-import main.java.com.example.SquintV2.Models.Affirmation;
-import main.java.com.example.SquintV2.Models.Tasks;
-import main.java.com.example.SquintV2.Repositories.AffirmationRepository;
-import main.java.com.example.SquintV2.Repositories.TasksRepository;
+import com.example.SquintV2.Models.Affirmation;
+import com.example.SquintV2.Models.Tasks;
+import com.example.SquintV2.Repositories.AffirmationRepository;
+import com.example.SquintV2.Repositories.TasksRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
