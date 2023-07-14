@@ -1,8 +1,8 @@
-package main.java.com.example.SquintV2.Controllers;
+package com.example.SquintV2.Controllers;
 
 
-import main.java.com.example.SquintV2.Models.Photo;
-import main.java.com.example.SquintV2.Services.VisionBoardService;
+import com.example.SquintV2.Models.Photo;
+import com.example.SquintV2.Services.VisionBoardService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
