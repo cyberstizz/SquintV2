@@ -1,4 +1,4 @@
-package main.java.com.example.SquintV2.Enums;
+package com.example.SquintV2.Enums;
 
 
 public enum Alarms {
