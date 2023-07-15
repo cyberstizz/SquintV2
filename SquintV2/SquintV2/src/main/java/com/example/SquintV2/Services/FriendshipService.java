@@ -1,10 +1,10 @@
 package com.example.SquintV2.Services;
 
 import com.example.SquintV2.Models.Friendship;
-import com.example.SquintV2.Models.Stats;
+// import com.example.SquintV2.Models.Stats;
 import com.example.SquintV2.Repositories.FriendshipRepository;
 import com.example.SquintV2.Repositories.StatsRepository;
-import com.example.SquintV2.Services.StatsService;
+// import com.example.SquintV2.Services.StatsService;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,27 +20,27 @@ import java.util.UUID;
 public class FriendshipService {
 
     private final FriendshipRepository friendshipRepository;
-    private final StatsRepository statsRepository;
-    private final StatsService statsService;
+    // private final StatsRepository statsRepository;
+    // private final StatsService statsService;
 
 
 
     @Autowired
     public FriendshipService(FriendshipRepository friendshipRepository, StatsRepository statsRepository, StatsService statsService) {
         this.friendshipRepository = friendshipRepository;
-        this.statsRepository = statsRepository;
-        this.statsService = statsService;
+        // this.statsRepository = statsRepository;
+        // this.statsService = statsService;
     }
 
     public List<Friendship> getAllFriends(UUID userId) {
         List<Friendship> friends = friendshipRepository.findByUserId(userId);
-        LocalDate previousDay = LocalDate.now().minusDays(1);
+        // LocalDate previousDay = LocalDate.now().minusDays(1);
     
-        for (Friendship friend : friends) {
-            Optional<Stats> stats = statsService.getStatsForCurrentDay(friend.getFriend_id());
-            // as it currently stands i am not doing anything with the fetched stats for each friend.
-            //i have to make adjustments in order to include the stats with the friends in the returned data
-        }
+        // for (Friendship friend : friends) {
+        //     Optional<Stats> stats = statsService.getStatsForCurrentDay(friend.getFriend_id());
+        //     // as it currently stands i am not doing anything with the fetched stats for each friend.
+        //     //i have to make adjustments in order to include the stats with the friends in the returned data
+        // }
     
         return friends;
     }

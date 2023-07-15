@@ -8,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -71,13 +70,13 @@ public class BooksController {
         this.nextBook = nextBook;
     }
 
-    public Books getCurrentBook() {
-        return currentBook;
-    }
+    // public Books getCurrentBook() {
+    //     return currentBook;
+    // }
 
-    public Books getNextBook() {
-        return nextBook;
-    }
+    // public Books getNextBook() {
+    //     return nextBook;
+    // }
 }
 
 

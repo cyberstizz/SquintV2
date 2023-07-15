@@ -11,7 +11,6 @@ import com.example.SquintV2.Services.GoalsService;
 import com.example.SquintV2.Services.TasksService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -19,13 +18,9 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 
 
 import java.time.LocalDate;
-import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.UUID;
-import java.time.DayOfWeek;
 
 
 @Controller
@@ -175,7 +170,7 @@ public List<Object> getCombinedSchedule(UUID user_id, LocalDate start, LocalDate
         existingGoal.setGoal_deadline(updatedGoal.getGoal_deadline());
 
         Goals updatedGoalEntity = goalsService.updateGoal(existingGoal);
-        return new ResponseEntity<>(updatedGoal, HttpStatus.OK);
+        return new ResponseEntity<>(updatedGoalEntity, HttpStatus.OK);
     }
 
 }

@@ -35,21 +35,19 @@ public class MeditationController {
 
 
     private static class DashboardData {
-        private final Meditation meditation;
-        private final Quote quote;
+        // private final Quote quote;
 
         public DashboardData(Meditation meditation, Quote quote) {
-            this.meditation = meditation;
-            this.quote = quote;
+            // this.quote = quote;
         }
 
-        public Meditation getMeditation() {
-            return meditation;
-        }
+        // public Meditation getMeditation() {
+        //     return meditation;
+        // }
 
-        public Quote getQuote() {
-            return quote;
-        }
+        // public Quote getQuote() {
+        //     return quote;
+        // }
     }
 
 }

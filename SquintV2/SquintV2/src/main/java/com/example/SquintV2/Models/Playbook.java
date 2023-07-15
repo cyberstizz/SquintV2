@@ -1,6 +1,5 @@
 package com.example.SquintV2.Models;
 
-import java.time.LocalDate;
 
 import jakarta.persistence.Id;
 
@@ -15,12 +14,12 @@ import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 
 
 
-import main.java.com.example.SquintV2.Enums.Alarms;
-import main.java.com.example.SquintV2.Enums.CheckCompletion;
-import main.java.com.example.SquintV2.Enums.Conflicts;
-import main.java.com.example.SquintV2.Enums.Reminder;
-import main.java.com.example.SquintV2.Enums.ReminderTime;
-import main.java.com.example.SquintV2.Enums.Reschedules;
+import com.example.SquintV2.Enums.Alarms;
+import com.example.SquintV2.Enums.CheckCompletion;
+import com.example.SquintV2.Enums.Conflicts;
+import com.example.SquintV2.Enums.Reminder;
+import com.example.SquintV2.Enums.ReminderTime;
+import com.example.SquintV2.Enums.Reschedules;
 
 
 

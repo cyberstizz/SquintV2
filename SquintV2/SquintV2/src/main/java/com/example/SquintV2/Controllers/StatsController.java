@@ -51,20 +51,20 @@ public class StatsController {
 
     // Inner class for the StatsDashboard response
     private static class StatsDashboard {
-        private Stats currentDayStats;
+        // private Stats currentDayStats;
         private List<Stats> currentWeekStats;
         private List<Stats> currentMonthStats;
         private BigDecimal totalScore;
 
         // Getters and setters
 
-        public Stats getCurrentDayStats() {
-            return currentDayStats;
-        }
+        // public Stats getCurrentDayStats() {
+        //     return currentDayStats;
+        // }
 
-        public void setCurrentDayStats(Stats currentDayStats) {
-            this.currentDayStats = currentDayStats;
-        }
+        // public void setCurrentDayStats(Stats currentDayStats) {
+        //     this.currentDayStats = currentDayStats;
+        // }
 
         public List<Stats> getCurrentWeekStats() {
             return currentWeekStats;
