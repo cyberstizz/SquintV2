@@ -27,7 +27,6 @@ public class StatsController {
     }
 
 
-
     @GetMapping("/dashboard/{userId}")
     public ResponseEntity<StatsDashboard> showDashboard(@PathVariable UUID userId) {
         StatsDashboard dashboard = new StatsDashboard();
@@ -51,16 +50,22 @@ public class StatsController {
 
     // Inner class for the StatsDashboard response
     private static class StatsDashboard {
-        // private Stats currentDayStats;
+        private Stats currentDayStats;
         private List<Stats> currentWeekStats;
         private List<Stats> currentMonthStats;
         private BigDecimal totalScore;
 
-        // Getters and setters
 
-        // public Stats getCurrentDayStats() {
-        //     return currentDayStats;
+        // public StatsDashboard(List<Stats> currentDayStats, List<Stats> currentWeekStats, List<Stats> currentMonthStats, BigDecimal totalScore) {
+        //     this.currentDayStats = currentDayStats;
+        //     this.currentWeekStats = currentWeekStats;
+        //     this.currentMonthStats = currentMonthStats;
+        //     this.totalScore = totalScore;
         // }
+
+         public void setCurrentDayStats(Stats stats) {
+            currentDayStats = stats;
+         }
 
         // public void setCurrentDayStats(Stats currentDayStats) {
         //     this.currentDayStats = currentDayStats;

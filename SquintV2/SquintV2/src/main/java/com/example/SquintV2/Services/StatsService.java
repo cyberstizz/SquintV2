@@ -36,7 +36,7 @@ public class StatsService {
         return statsRepository.findByUserIdAndDateBetween(userId, weekStartDate, currentDate);
     }
 
-
+    @SuppressWarnings("deprecation")
     public BigDecimal getStatsPercentageForCurrentWeek(UUID userId) {
         List<Stats> weekStats = getStatsForCurrentWeek(userId);
         if (weekStats.isEmpty()) {
@@ -61,7 +61,7 @@ public class StatsService {
     }
 
 
-
+    @SuppressWarnings("deprecation")
     public BigDecimal getStatsPercentageForCurrentMonth(UUID userId) {
         List<Stats> monthStats = getStatsForCurrentMonth(userId);
         if (monthStats.isEmpty()) {
@@ -78,7 +78,7 @@ public class StatsService {
     }
 
 
-
+    @SuppressWarnings("deprecation")
     public BigDecimal getStatsPercentageForEntireHistory(UUID userId) {
         List<Stats> allStats = statsRepository.findByUserId(userId);
         if (allStats.isEmpty()) {

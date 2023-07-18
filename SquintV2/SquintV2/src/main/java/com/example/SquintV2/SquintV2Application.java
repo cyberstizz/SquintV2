@@ -7,10 +7,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.cassandra.CqlSessionBuilderCustomizer;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.cassandra.repository.config.EnableCassandraRepositories;
 
 import com.example.SquintV2.connect.DataStaxAstraProperties;
 
 @SpringBootApplication
+@EnableCassandraRepositories(basePackages = { "org.spring.cassandra.example.repo" })
 @EnableConfigurationProperties(DataStaxAstraProperties.class)
 public class SquintV2Application {
 
