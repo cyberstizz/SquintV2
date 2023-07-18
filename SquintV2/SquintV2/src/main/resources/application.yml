@@ -19,7 +19,7 @@ spring:
 
 
   astra.db:
-    id: 68d7f79c-a209-4ea7-969a-215f6973eeaf-1
+    id: 68d7f79c-a209-4ea7-969a-215f6973eeaf
     region: us-east1
     keyspace: squint
     application.token: AstraCS:377773f1c4c7f0e67d769e0284416d0e3cab375689f2922fce59ee20cef2bfbf

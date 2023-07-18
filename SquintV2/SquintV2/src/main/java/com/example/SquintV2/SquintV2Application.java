@@ -12,7 +12,6 @@ import org.springframework.data.cassandra.repository.config.EnableCassandraRepos
 import com.example.SquintV2.connect.DataStaxAstraProperties;
 
 @SpringBootApplication
-@EnableCassandraRepositories(basePackages = { "org.spring.cassandra.example.repo" })
 @EnableConfigurationProperties(DataStaxAstraProperties.class)
 public class SquintV2Application {
 
