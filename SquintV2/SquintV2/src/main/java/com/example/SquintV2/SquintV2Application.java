@@ -16,7 +16,7 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import com.example.SquintV2.Connect.DataStaxAstraProperties;
 
 @SpringBootApplication
-// @EnableConfigurationProperties(DataStaxAstraProperties.class)
+@EnableConfigurationProperties(DataStaxAstraProperties.class)
 @ConfigurationPropertiesScan("com.example.SquintV2.Connect")
 @ComponentScan("com.example.SquintV2.Connect")
 public class SquintV2Application {
