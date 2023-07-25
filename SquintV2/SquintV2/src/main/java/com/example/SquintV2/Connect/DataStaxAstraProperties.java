@@ -1,4 +1,4 @@
-package com.example.SquintV2.connect;
+package com.example.SquintV2.Connect;
 
 import java.io.File;
 
