@@ -4,10 +4,12 @@ import java.io.File;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 
 @Configuration
 @ConfigurationProperties(prefix = "datastax.astra")
+@Primary
 public class DataStaxAstraProperties {
 
     private File secureConnectBundle;
