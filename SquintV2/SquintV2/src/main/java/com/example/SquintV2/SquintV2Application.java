@@ -7,12 +7,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.cassandra.CqlSessionBuilderCustomizer;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.data.cassandra.repository.config.EnableCassandraRepositories;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 
-import com.example.SquintV2.connect.DataStaxAstraProperties;
+
+// import org.springframework.data.cassandra.repository.config.EnableCassandraRepositories;
+
+import com.example.SquintV2.Connect.DataStaxAstraProperties;
 
 @SpringBootApplication
-@EnableConfigurationProperties(DataStaxAstraProperties.class)
+// @EnableConfigurationProperties(DataStaxAstraProperties.class)
+@ConfigurationPropertiesScan("com.example.SquintV2.Connect")
+@ComponentScan("com.example.SquintV2.Connect")
 public class SquintV2Application {
 
 	public static void main(String[] args) {
