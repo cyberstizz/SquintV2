@@ -1,4 +1,7 @@
 spring:
+  logging:
+    level:
+      org.springframework: DEBUG
   application:
     name: Squint
   data:
@@ -8,12 +11,11 @@ spring:
       password: MAm_9kjPHOnnGKQB93+YwOf2P+Ni.SEmjR1pPXYUrgw9oRPA.ev5zwoXE.+YFY4ke,Hf+PRirlgkRJ2IS,gZnZmZ9kpdhzZ9ldhFcDkNXjNehFTvPHK5sIXujGcc2Cbl
       schema-action: create-if-not-exists
       request:
-        timeout: 10s
+        timeout: 30s
       connection:
-        connect-timeout: 10s
-        init-query-timeout: 10s
+        connect-timeout: 30s
+        init-query-timeout: 30s
 
-  
   datastax.astra:
     secure-connect-bundle: secure-connect.zip
 
