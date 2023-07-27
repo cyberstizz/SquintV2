@@ -21,7 +21,7 @@ datastax.astra:
 
 
 astra.db:
-  id: 68d7f79c-a209-4ea7-969a-215f6973eeaf-1
+  id: 68d7f79c-a209-4ea7-969a-215f6973eeaf
   region: us-east1
   keyspace: squint
   application.token: AstraCS:vDngddCabSoPtxIpXOcLfvBq:d9d9fc75ae3a39acd9e5ac75e986ac2c49a383d68cd85c36b9ec3b25809a9b90
