@@ -16,12 +16,12 @@ spring:
         connect-timeout: 30s
         init-query-timeout: 30s
 
-  datastax.astra:
-    secure-connect-bundle: secure-connect.zip
+datastax.astra:
+  secure-connect-bundle: secure-connect.zip
 
 
-  astra.db:
-    id: 68d7f79c-a209-4ea7-969a-215f6973eeaf-1
-    region: us-east1
-    keyspace: squint
-    application.token: AstraCS:vDngddCabSoPtxIpXOcLfvBq:d9d9fc75ae3a39acd9e5ac75e986ac2c49a383d68cd85c36b9ec3b25809a9b90
+astra.db:
+  id: 68d7f79c-a209-4ea7-969a-215f6973eeaf-1
+  region: us-east1
+  keyspace: squint
+  application.token: AstraCS:vDngddCabSoPtxIpXOcLfvBq:d9d9fc75ae3a39acd9e5ac75e986ac2c49a383d68cd85c36b9ec3b25809a9b90
