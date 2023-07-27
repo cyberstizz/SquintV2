@@ -10,6 +10,7 @@ spring:
       username: vDngddCabSoPtxIpXOcLfvBq
       password: HdWs0T21.fkFZe3tvUHkhzsYE-QxvKTeCMRTNBN95_0AHI8blUpND,PzD+3.eYYGAXYa6ymf9nOOhvIXKq604e.HcWKWyJEY0A6ZlCFJeLz2NFYjQTm35kFNOuHqSyzF
       schema-action: create-if-not-exists
+      ssl: true
       request:
         timeout: 30s
       connection:
