@@ -7,8 +7,8 @@ spring:
   data:
     cassandra:
       keyspace-name: squint
-      username: vDngddCabSoPtxIpXOcLfvBq
-      password: HdWs0T21.fkFZe3tvUHkhzsYE-QxvKTeCMRTNBN95_0AHI8blUpND,PzD+3.eYYGAXYa6ymf9nOOhvIXKq604e.HcWKWyJEY0A6ZlCFJeLz2NFYjQTm35kFNOuHqSyzF
+      username: nwAesSXGRFCPNmWNPbXXAFsh
+      password: dRR+.pPtWZ0PSYPKgY2OpKMH+kcmba-F,ZRIDeNgrm++lFX4KCZhOjTsfn-B.5bIQm8lu7KpIZulqwSzRuGbk9LHxZnCM,Om5uo_T4Rk+f6QgGSHPDvDoAzTT.ZErNJ_
       schema-action: create-if-not-exists
       ssl: true
       request:
@@ -25,4 +25,4 @@ astra.db:
   id: 68d7f79c-a209-4ea7-969a-215f6973eeaf
   region: us-east1
   keyspace: squint
-  application.token: AstraCS:vDngddCabSoPtxIpXOcLfvBq:d9d9fc75ae3a39acd9e5ac75e986ac2c49a383d68cd85c36b9ec3b25809a9b90
+  application.token: AstraCS:nwAesSXGRFCPNmWNPbXXAFsh:2f3149b05c15fe28ccbea7f8e62e87e5230bcc0988958f1eae5620447f8dfb7e
