@@ -13,14 +13,23 @@
 * Apache Cassandra
 
 
-
-![Screenshot](./public/Basic%20Bank%20ER%20diagram%20(1).png)
-
 ### Synopsis
 Dedicated to the teachings and philosophies like the late great Kobe Bryant
 and Floyd Mayweather jr. Squint is a "Structure For Success"!
 
-Squint is a productivity web application that will follow the strucure of a task management system. the application will allow users to monitor some of the most important aspects
+Squint is a productivity web application that will follow the strucure of a task management system. the application will allow users to monitor some of the most important aspects in life when it comes to goal achievement. The app will use Google compatible calendars to create what we call "A Structure For Success".
+
+
+### Goal Setting
+this application is centered around goal setting. since every action has some 
+motivation or end goal behind it, it is the core of the Squint application.
+
+
+### whats the catch
+users can net set a goal without an expeted time to complete it, as well
+as steps that will be taken to complete it in the users daily schedule.
+because this, users are forced to hold themselves accountable.
+
 
 
 
