@@ -5,7 +5,7 @@
 
 #      **Squint**
 
-## _this is a Spring Boot application
+## This is a Spring Boot application
 
 ### this project includes
 * Java
@@ -25,8 +25,8 @@ this application is centered around goal setting. since every action has some
 motivation or end goal behind it, it is the core of the Squint application.
 
 
-### whats the catch
-users can net set a goal without an expeted time to complete it, as well
+### whats the catch?
+users can not set a goal without an expeted time to complete it, as well
 as steps that will be taken to complete it in the users daily schedule.
 because this, users are forced to hold themselves accountable.
 
