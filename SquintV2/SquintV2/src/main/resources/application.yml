@@ -7,8 +7,8 @@ spring:
   data:
     cassandra:
       keyspace-name: squint
-      username: nwAesSXGRFCPNmWNPbXXAFsh
-      password: dRR+.pPtWZ0PSYPKgY2OpKMH+kcmba-F,ZRIDeNgrm++lFX4KCZhOjTsfn-B.5bIQm8lu7KpIZulqwSzRuGbk9LHxZnCM,Om5uo_T4Rk+f6QgGSHPDvDoAzTT.ZErNJ_
+      username: gwQJeTiYLTgDSoujOovbvuKf
+      password: fQlCRQAfGUOnMpI.yuSJFrPUkQHH,-dh1-fZ9MwrP9XbA9AtupFrF96RjYkGhDlc17T6bDt,IF2boBEqJ7T58iEoXDd9yYXkHnkmtOIO4XKYdTas8nrBE-lXHQF6pNsW
       schema-action: create-if-not-exists
       request:
         timeout: 30s
@@ -21,7 +21,7 @@ datastax.astra:
 
 
 astra.db:
-  id: 68d7f79c-a209-4ea7-969a-215f6973eeaf-1
+  id: 68d7f79c-a209-4ea7-969a-215f6973eeaf
   region: us-east1
   keyspace: squint
-  application.token: AstraCS:nwAesSXGRFCPNmWNPbXXAFsh:2f3149b05c15fe28ccbea7f8e62e87e5230bcc0988958f1eae5620447f8dfb7e
+  application.token: AstraCS:gwQJeTiYLTgDSoujOovbvuKf:d7c80ad022bb33c1788f4cee18d0287c0932207f128287eb0bf59de41d117733
