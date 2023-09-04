@@ -1,27 +1,12 @@
 spring:
-  logging:
-    level:
-      org.springframework: DEBUG
-  application:
-    name: Squint
   data:
     cassandra:
       keyspace-name: squint
-      username: gwQJeTiYLTgDSoujOovbvuKf
-      password: fQlCRQAfGUOnMpI.yuSJFrPUkQHH,-dh1-fZ9MwrP9XbA9AtupFrF96RjYkGhDlc17T6bDt,IF2boBEqJ7T58iEoXDd9yYXkHnkmtOIO4XKYdTas8nrBE-lXHQF6pNsW
+      username: MqQMFAROoZZruoWlMMkiRwlQ
+      Password: JyK8DQ03Arh72ifEWv7A22tTgmoaHFgBdW0cji+sRbrNyzQX9WWu6K2ZKSG6s,gkqo5lvQcb6TEuKI2LQwoResxs.dDI1STo2.REyBC515CPZMl,U_Eh6TJ4609JgGeA
       schema-action: create-if-not-exists
       request:
-        timeout: 30s
+        timeout: 10s
       connection:
-        connect-timeout: 30s
-        init-query-timeout: 30s
-
-datastax.astra:
-  secure-connect-bundle: secure-connect.zip
-
-
-astra.db:
-  id: 68d7f79c-a209-4ea7-969a-215f6973eeaf
-  region: us-east1
-  keyspace: squint
-  application.token: AstraCS:gwQJeTiYLTgDSoujOovbvuKf:d7c80ad022bb33c1788f4cee18d0287c0932207f128287eb0bf59de41d117733
+        connect-timeout: 10s
+        init-query-timeout: 10s
