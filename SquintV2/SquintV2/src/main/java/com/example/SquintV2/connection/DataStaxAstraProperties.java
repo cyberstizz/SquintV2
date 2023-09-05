@@ -14,5 +14,8 @@ public class DataStaxAstraProperties {
         return secureConnectBundle;
     }
 
-    
+    public void setSecureConnectBundle(File secureConnectBundle) {
+        this.secureConnectBundle = secureConnectBundle;
+    }
+
 }
