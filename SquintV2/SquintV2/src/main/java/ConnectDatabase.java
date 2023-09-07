@@ -8,7 +8,7 @@ public class ConnectDatabase {
    public static void main(String[] args) {
        // Create the CqlSession object:
        try (CqlSession session = CqlSession.builder()
-           .withCloudSecureConnectBundle(Paths.get("/com/example/SquintV2/secure-connect-SquintV2.zip"))
+           .withCloudSecureConnectBundle(Paths.get("../resources/secure-connect.zip"))
            .withAuthCredentials("MqQMFAROoZZruoWlMMkiRwlQ","JyK8DQ03Arh72ifEWv7A22tTgmoaHFgBdW0cji+sRbrNyzQX9WWu6K2ZKSG6s,gkqo5lvQcb6TEuKI2LQwoResxs.dDI1STo2.REyBC515CPZMl,U_Eh6TJ4609JgGeA")
            .withKeyspace("squint")
            .build()) {
