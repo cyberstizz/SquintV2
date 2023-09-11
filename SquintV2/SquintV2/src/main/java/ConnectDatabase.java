@@ -7,9 +7,9 @@ public class ConnectDatabase {
 
    public static void main(String[] args) {
        // Create the CqlSession object:
-       try (CqlSession session = CqlSession.builder()
-           .withCloudSecureConnectBundle(Paths.get("/home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/resources/secure-connect.zip"))
-           .withAuthCredentials("MqQMFAROoZZruoWlMMkiRwlQ", "JyK8DQ03Arh72ifEWv7A22tTgmoaHFgBdW0cji+sRbrNyzQX9WWu6K2ZKSG6s,gkqo5lvQcb6TEuKI2LQwoResxs.dDI1STo2.REyBC515CPZMl,U_Eh6TJ4609JgGeA")
+       try (CqlSession session = CqlSession.builder()     
+           .withCloudSecureConnectBundle(Paths.get("/home/charleslambdev/projects/SquintV2/SquintV2/SquintV2/src/main/resources/secure-connect-squint.zip"))
+           .withAuthCredentials("itawHceirGBSuSiOOcPYIvJL", "SGh,dJwgH,l_nnvI9FSEPpAu1Qc2TI7L0HBziyu0P8EUm5SvD,n1ysYBWZD4kZqpKqG0LF,FG6nWnNaw,GA6kDeN2R+LZqm_S+6T9qbIDhAft32PG0l51kn6R1D5Z029")
            .withKeyspace("squint")
            .build()) {
            // Select the release_version from the system.local table:
